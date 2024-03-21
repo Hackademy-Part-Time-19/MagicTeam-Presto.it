@@ -1,0 +1,527 @@
+
+
+/* Codice Livia */
+
+.navbar1 {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    background-color:white;
+    justify-content: center;
+    align-items: center;
+ }
+
+ ul {
+    
+    margin-left: 120px; 
+    display: flex;
+    justify-content: space-between;
+    color: black;
+ 
+ }
+ .navbar-brand {
+    display: flex;
+    justify-content: center;
+    position:relative;
+    align-items: center;
+    margin-left: 250px;
+ }
+ .nav-link {
+    color: black;
+ 
+ }
+ 
+ 
+ .btn-1 {
+    display: flex;
+     justify-content: center;
+     align-items: center;
+      height: 30px;
+      width: 100px;
+      border-style: none; 
+      color: white; 
+      margin: 10px; 
+      padding: auto;
+      margin-right:30px;
+      border-radius: 20px; 
+    background: linear-gradient(135.95deg, #FDC627 11.74%, #EC6907 100%);
+ 
+ }
+ 
+ 
+ 
+ .btn-2 {
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    height: 30px;
+    width: 100px; 
+    border-style: solid;
+    border-color:#EC6907;
+    background-color: white; 
+    color:black; 
+    margin-left:0px; 
+    margin-right: 90px;
+    border-radius: 20px;
+ }
+ 
+ .btn-3 {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 35px; 
+    width: 35px; 
+    border-radius: 100%;  
+    background-color: rgba(238, 112, 10, 1); 
+    margin-top: 20px; 
+    border-style: none; 
+    background-image: url(media/carello.png);
+    background-repeat: no-repeat; 
+    background-position: center;
+    margin-bottom: 30px;
+    margin-right: 250px;
+ }
+ 
+ .card1 {
+    display: flex; 
+    width: 150vh; 
+    height: 415px;
+    position: fixed; 
+    background-color:white;
+    justify-content: center; 
+    align-items: center; 
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+    margin-left: 260px; 
+    margin-top: 50px;
+ }
+ .img-card {
+    margin-bottom:250px;  
+    position: absolute; 
+    left: 65vh;
+ }
+ .card-title1 {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    position: absolute; 
+    left:  60vh;
+ }
+ .input :hover{
+    border-color: #EC6907;
+ }
+ /* Card First Page*/
+ 
+ .title-box {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    position: absolute; 
+    left:  60vh; 
+    top: 150px;
+ }
+ .subtitle-box {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    position: absolute; 
+    left:  55vh; 
+    top: 200px; 
+    color: #EC6907;
+ }
+ .div-imput {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+ }
+ .div-input1 {
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    position: absolute; 
+    left:  60px; 
+    top: 250px;
+ }
+ .text-input1 {
+    text-align: center;
+    font-weight: 400;
+    font-size: large;  
+    margin-bottom: 120px; 
+    margin-left: 12px;
+ }
+ .input1 {
+    display: flex;
+    position: absolute; 
+    left:  10px; 
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px; 
+    width: 30vh;
+ }
+ .div-input2 {
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    position: absolute; 
+    left: 400px; 
+    top: 250px;
+ }
+ .text-input2 {
+    text-align: center;
+    font-weight: 400;
+    font-size: large; 
+    margin-bottom: 120px; 
+    margin-left: 18px;
+ }
+ .input2 {
+    display: flex;
+    position: absolute;
+     left:  10px; 
+     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+     border-radius: 10px; 
+     width: 30vh;
+ }
+ .div-input3 {
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    position: absolute; 
+    left:  600px; 
+    top: 250px;
+ }
+ .text-input3 {
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 120px;
+    font-size: large; 
+    margin-left: 150px;
+ }
+ .input3 {
+    display: flex;
+    position: absolute; 
+    left:  150px; 
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px; 
+    width: 30vh;
+ }
+ .btn-cerca {
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    position: absolute; 
+    left: 120vh; 
+    margin-left: 30px;
+    bottom: 60px;
+    height: 30px;
+    width: 100px;
+    border-style: none; 
+    color: white; 
+    margin: 20px; 
+    border-radius: 20px; 
+    background: linear-gradient(135.95deg, #FDC627 11.74%, #EC6907 100%);
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* V Codice Fede V */
+
+.vendere-main-div {
+
+    margin-top:50px
+
+}
+
+.vendere-img {
+
+    width:340px;
+
+}
+
+.vendere-h2 {
+
+    font-family: IBM Plex Sans, sans-serif;
+    color:rgb(53, 53, 53);
+    text-align:left;
+    font-size:37px;
+    font-weight:700;
+    margin-top: 20px;
+
+}
+
+.vendere-div-1 {
+
+    display: flex;
+    margin-top:30px;
+
+}
+
+.vendere-div-colonna {
+
+    display: flex;
+    flex-direction:column;
+
+}
+
+.vendere-div-3 {
+
+    display:flex;
+    align-items:center;
+
+}
+
+.vendere-mini-img {
+
+    width:35px;
+    margin:10px
+
+}
+
+.vendere-mini-title {
+
+    font-family: IBM Plex Sans, sans-serif;
+    margin-top:15px;
+    margin-right:20px;
+    color:rgb(53, 53, 53);
+    text-align:left;
+    font-size:17px;
+    font-weight:600;
+
+}
+
+.vendere-button {
+
+    margin-top: 20px;
+    margin-bottom:20px;
+}
+
+
+
+
+.buttonCard {
+    font-size: 15px;
+    color: #222;
+    font-family: IBM Plex Sans, sans-serif;
+    font-weight: 800;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    border: none;
+    background: none;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+}
+
+.buttonCard:focus,
+.buttonCard:hover {
+    color: #222;
+}
+
+.buttonCard:focus:after,
+.buttonCard:hover:after {
+    width: 100%;
+    left: 0%;
+}
+
+.buttonCard:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #FDC627;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+}
+
+#productImage {
+    transition-duration: 0.5s;
+}
+
+
+.button1 {
+    position: relative;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background:  linear-gradient(101.43deg, #FDC627 12.64%, #EC6907 112.5%);
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 15px;
+    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+}
+
+.button1:after {
+    content: " ";
+    width: 0%;
+    height: 100%;
+    background: #ffd401;
+    position: absolute;
+    transition: all 0.4s ease-in-out;
+    right: 0;
+}
+
+.button1:hover::after {
+    right: auto;
+    left: 0;
+    width: 100%;
+}
+
+.button1 span {
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    padding: 18px 25px;
+    color: #fff;
+    font-size: 1.125em;
+    font-weight: 600;
+    z-index: 20;
+    transition: all 0.3s ease-in-out;
+}
+
+.button1:hover span {
+    color: #183153;
+    animation: scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(1);
+    }
+    
+    50% {
+        transform: scale(0.95);
+    }
+    
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Codice Fra */
+
+
+body {
+    
+    font-family: IBM Plex Sans, sans-serif;
+}
+
+.div-annuncio{
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 1px 12.6px rgba(0, 0, 0, 0.15);
+}
+
+.img-annuncio{
+    width: 28%;
+    height: 50%;
+    padding-top: 2%;
+}
+
+.titolo-annuncio {
+    font-family: 'IBM Plex Sans';
+    color: #000000;
+}
+
+.sottotitolo-annuncio{
+    font-weight: 400;
+    font-size: 16px;
+    color: #999999;
+}
+
+.immagine-annuncio {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.immagine-annuncio .circle {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: linear-gradient(135.95deg, #FDC627 11.74%, #EC6907 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.immagine-annuncio .icon {
+    font-size: 50px;
+    color: white;
+    padding-bottom: 3px;
+}
+
+#carica-immagine-annuncio {
+    display: none;
+}
+
+#carica-immagine-annuncio ~ img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.label-annuncio{
+    font-family: 'IBM Plex Sans';
+    font-weight: 700;
+    font-size: 16px;
+    color: #000000;
+}
+
+.input-annuncio{
+    font-size: 16px;
+    background: #F6F6F6;
+    box-shadow: -1px 1px 5.9px rgba(0, 0, 0, 0.08), inset -2px 2px 5.4px rgba(0, 0, 0, 0.11);
+    border-radius: 5px;
+    border: none;
+}
+
+.input-annuncio:focus{
+    border-color: linear-gradient(135.95deg, #FDC627 11.74%, #EC6907 100%); 
+    box-shadow: 0 0 0 0.2rem #FDC627;
+}
+
+.button-annuncio{
+    background: linear-gradient(135.95deg, #FDC627 11.74%, #EC6907 100%);
+    border-radius: 6px;
+    border: none;
+    color: white;
+    font-family: 'IBM Plex Sans';
+    font-weight: 700;
+    transition: transform 0.2s ease;
+}
+
+.button-annuncio:hover{
+    transform: scale(1.05);
+    color: white;
+}

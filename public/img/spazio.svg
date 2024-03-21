@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Livello_2" data-name="Livello 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 15.66 15.66">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#Sfumatura_senza_nome_239);
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+    <linearGradient id="Sfumatura_senza_nome_239" data-name="Sfumatura senza nome 239" x1="0" y1="7.83" x2="15.66" y2="7.83" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fdc627"/>
+      <stop offset=".17" stop-color="#fbbe24"/>
+      <stop offset=".43" stop-color="#f8aa1d"/>
+      <stop offset=".74" stop-color="#f28a12"/>
+      <stop offset="1" stop-color="#ec6907"/>
+    </linearGradient>
+  </defs>
+  <g id="Livello_1-2" data-name="Livello 1">
+    <g>
+      <circle class="cls-1" cx="7.83" cy="7.83" r="7.83"/>
+      <g id="Q60IiB.tif">
+        <g>
+          <path class="cls-2" d="M7.51,11.8c-.12-.09-.24-.18-.37-.26-.89-.51-1.78-1.02-2.67-1.54-.09-.05-.2-.17-.2-.26-.01-1.19,0-2.39,0-3.62.1.04.17.07.24.11.96.54,1.91,1.09,2.86,1.64.1.06.22.19.22.29.01,1.22,0,2.43,0,3.65h-.06Z"/>
+          <path class="cls-2" d="M8.07,11.8c0-1.22-.01-2.43,0-3.65,0-.08.05-.19.11-.23,1.05-.61,2.1-1.21,3.19-1.83,0,.14.02.24.02.34,0,1.05,0,2.1,0,3.15,0,.25-.08.37-.29.48-.91.5-1.8,1.02-2.7,1.54-.09.05-.18.13-.27.19h-.06Z"/>
+          <path class="cls-2" d="M11.16,5.68c-.79.46-1.54.88-2.28,1.31-.35.2-.71.53-1.06.53-.34,0-.69-.34-1.03-.53-.67-.38-1.33-.76-2-1.14-.08-.04-.15-.1-.27-.17.25-.15.47-.28.69-.4.79-.45,1.58-.91,2.38-1.35.11-.06.31-.09.42-.03,1.03.57,2.06,1.16,3.15,1.79Z"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
