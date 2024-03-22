@@ -16,7 +16,7 @@ use App\Http\Controllers\ArticleController;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name("home");
 
 Route::resource('article', ArticleController::class);
 

@@ -48,7 +48,7 @@
                 </div>
                 <div class="vendere-button" >
                     <button  class="button1">
-                        <span><a href="">Unisciti a noi</a></span>
+                        <span><a href="{{route("register")}}">Unisciti a noi</a></span>
                         
                     </button>
                 </div>
@@ -79,7 +79,7 @@
                         onmouseover="changeImage()" onmouseout="restoreImage()">
                     <h3 class="main_card_h3"
                         {{-- style="font-family: IBM Plex Sans, sans-serif;color:rgb(53, 53, 53);width:200px;text-align:center;font-size:18px;font-weight:700;margin-top: 15px;" --}}>
-                        Titolo del prodotto anche lungo sta bene</h3>
+                        Titolo del prodotto anche molto lungo</h3>
                     <h2 class="main_card_h2"
                         {{-- style="margin-top:10px;margin-bottom:10px; font-family: 'IBM Plex Sans'; font-weight: 700;background: linear-gradient(96.64deg, #FDC627 7.25%, #EC6907 110.91%, #666666 110.92%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;text-fill-color: transparent;" --}}>
                         12,99€</h2>

@@ -1,13 +1,22 @@
 <div>
 <nav class="navbar">
 
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="{{route("home")}}">
     <img src="/img/logo.webp" width="120" height="40" alt="" loading="lazy">
     </a>
 
     <ul class="nav">
        <li class="nav-item">
-         <a class="nav-link active" href="#">INSERISCI ANNUNCI</a>
+         <a class="nav-link active" href="@guest
+           {{route("register")}}
+
+         @endguest
+
+        @auth
+        {{route("article.create")}}
+        @endauth
+         
+         ">INSERISCI ANNUNCI</a>
        </li>
        <li class="nav-item">
          <a class="nav-link active" href="#">PRODOTTI</a>
