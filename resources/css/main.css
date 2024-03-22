@@ -1,4 +1,8 @@
-
+a {
+    text-decoration: none;
+    color: #fff;
+    
+}
 
 /* Codice Livia */
 
@@ -240,6 +244,118 @@
 
 /* V Codice Fede V */
 
+.main_card_div_bg {
+
+    background: rgba(254, 234, 174, 0.53);
+    padding-top:10px;
+
+}
+
+.main_card_h2 {
+
+    font-family: IBM Plex Sans, sans-serif;
+    color:rgb(53, 53, 53);
+    text-align:center;
+    font-size:37px;
+    font-weight:700;
+    margin-top: 15px;
+
+}
+
+.main_card_container {
+
+    margin-top: 60px;
+
+}
+
+.main_card_inner_container {
+
+    margin-left:20px;
+    margin-right:20px;
+    margin-bottom:40px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 9.3px rgba(0, 0, 0, 0.15);
+    width:260px;
+    height: 370px;
+    border-radius:15px;
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+    position:relative
+
+}
+
+.main_card_category_image_div {
+
+    display:flex;
+    justify-content:center;
+    height:30px; 
+    background-color:#2739fd;
+    border-radius:100px; 
+    position:absolute;
+    position:absolute;
+    top:-15px; 
+    margin-bottom:15px;
+
+}
+
+.main_card_category_image {
+
+    width:25px;
+    margin-left:18px
+
+}
+
+.main_card_category_image_h5 {
+
+    font-family: IBM Plex Sans, sans-serif;
+    color:rgb(255, 255, 255);
+    text-align:center;
+    font-size:15px;
+    font-weight:700;
+    margin-left: 7px;
+    margin-top:6px;
+    margin-right: 18px;
+
+}
+
+.main_card_image {
+
+    width:250px; 
+    height: 160px; 
+    border-radius:10px; 
+    background:white;
+    margin-top:30px;
+    
+}
+
+.main_card_h3 {
+
+    font-family: IBM Plex Sans, sans-serif;
+    color:rgb(53, 53, 53);
+    width:200px;
+    text-align:center;
+    font-size:18px;
+    font-weight:700;
+    margin-top: 15px;
+    
+}
+
+.main_card_h2 {
+
+    margin-top:10px;
+    margin-bottom:10px; 
+    font-family: 'IBM Plex Sans'; 
+    font-weight: 700;
+    background: linear-gradient(96.64deg, #FDC627 7.25%, #EC6907 110.91%, #666666 110.92%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+
+}
+
+
 .vendere-main-div {
 
     margin-top:50px
@@ -371,6 +487,7 @@
     overflow: hidden;
     cursor: pointer;
     border: none;
+    
 }
 
 .button1:after {

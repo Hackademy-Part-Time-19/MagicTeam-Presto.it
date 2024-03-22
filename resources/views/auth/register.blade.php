@@ -6,7 +6,8 @@
                     <div class="card-body div-annuncio">
                         <img src="/img/login-8.webp" alt="Logo" class="img-fluid mx-auto d-block img-annuncio">
                         <h1 class="card-title text-center mt-3 titolo-annuncio">Registrati</h1>
-                        <p class="card-text text-center mb-5 sottotitolo-annuncio">Compila tutti i campi per registrarti sulla piattaforma</p>
+                        <p class="card-text text-center mb-5 sottotitolo-annuncio">Compila tutti i campi per registrarti sulla piattaforma <br><a href="{{route("login")}}" class="sottotitolo-annuncio">Hai già un account?</a></p>
+                        
                         <form id="productForm" method="POST">
                             @csrf
                             <div class="form-group mb-3">
@@ -32,6 +33,7 @@
                             
                             <button type="submit" class="btn d-block mx-auto button-annuncio">Registrati</button>
                         </form>
+                        
                     </div>
                 </div>
             </div>
