@@ -1,5 +1,6 @@
 <x-layout>
-    <div class="container mt-5">
+    
+     <div class="container mt-5">
         <div class="row">
             <div class="col-md-6 offset-md-3">
                 <div class="card div-annuncio">
@@ -18,7 +19,7 @@
                                 <input type="password" class="form-control input-annuncio" name="password" id="password">
                             </div>
 
-                            {{$errors}}
+                            
                             
                             <button type="submit" class="btn d-block mx-auto button-annuncio">Login</button>
                         </form>
@@ -26,5 +27,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> 
 </x-layout>

@@ -12,13 +12,24 @@ class ArticleController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index($category_id = null)
     {
         // 
+        
+        $articles = Article::query();
 
-        $articles = Article::all();
+         if ( $category_id !== null) {
 
-        return view("article.index",[$articles]);
+            $articles->where("category_id", $category_id)->get();
+
+        } else {
+
+            $articles = Article::all();
+        } 
+
+        //$articles = Article::all();
+
+        return view("article.index", compact("articles"));
     }
 
     /**
@@ -36,7 +47,7 @@ class ArticleController extends Controller
      */
     public function store(ArticleMakeRequest $request)
     {
-        //
+        //Deprecated
 
         $article = auth()->user()->articles()->create([
 

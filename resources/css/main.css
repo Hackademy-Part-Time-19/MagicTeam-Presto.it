@@ -30,10 +30,10 @@ a {
     align-items: center;
     margin-left: 250px;
  }
- .nav-link {
+ /* .nav-link {
     color: black;
  
- }
+ } */
  
  
  .btn-1 {
@@ -244,6 +244,880 @@ a {
 
 /* V Codice Fede V */
 
+
+.titoloRicercaCategoria {
+    font-family: IBM Plex Sans, sans-serif;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 20px;
+
+}
+
+.titoloCategoriaElettronica {
+    font-family: IBM Plex Sans, sans-serif;
+    font-weight: 800;
+    margin-left: 10px;
+    color: #1F33E5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #1F33E5;
+    border-radius: 63px;
+    height: 45px;
+    margin-inline: 10px;
+    padding-top: 8px;
+    width:250px;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom:10px;
+}
+
+.titoloCategoriaElettronica:hover {
+    scale: 102%;
+    transition: all 0.3s ease-in-out;
+}
+
+.titoloCategoriaAbbigliamento {
+    font-family: IBM Plex Sans, sans-serif;
+    font-weight: 600;
+    margin-left: 10px;
+    color: #006837;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #006837;
+    border-radius: 63px;
+    height: 45px;
+    margin-inline: 10px;
+    padding-top: 8px;
+    width:250px;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom:10px;
+}
+
+.titoloCategoriaAbbigliamento:hover {
+    scale: 102%;
+    transition: all 0.3s ease-in-out;
+}
+
+.titoloCategoriaCasa {
+    font-family: IBM Plex Sans, sans-serif;
+    font-weight: 600;
+    margin-left: 10px;
+    color: #29ABE2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:250px;
+    font-size: 14px;
+    border: 2px solid #29ABE2;
+    border-radius: 63px;
+    height: 45px;
+    margin-inline: 10px;
+    padding-top: 8px;
+    margin-top: 10px;
+    margin-bottom:10px;
+
+}
+
+.titoloCategoriaCasa:hover {
+    scale: 102%;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.titoloCategoriaAnimali {
+    font-family: IBM Plex Sans, sans-serif;
+    font-weight: 600;
+    margin-left: 10px;
+    color: #D4145A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:250px;
+    font-size: 14px;
+    border: 2px solid #D4145A;
+    border-radius: 63px;
+    height: 45px;
+    margin-inline: 10px;
+    padding-top: 8px;
+    margin-top: 10px;
+    margin-bottom:10px;
+
+}
+
+.titoloCategoriaAnimali:hover {
+    scale: 102%;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.titoloCategoriaSport {
+    font-family: IBM Plex Sans, sans-serif;
+    font-weight: 600;
+    margin-left: 10px;
+    color: #ED1C24;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:250px;
+    font-size: 14px;
+    border: 2px solid #ED1C24;
+    border-radius: 63px;
+    height: 45px;
+    margin-inline: 10px;
+    padding-top: 8px;            
+    margin-top: 10px;
+    margin-bottom:10px;
+
+}
+
+.titoloCategoriaSport:hover {
+    scale: 102%;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.titoloCategoriaBeauty {
+    font-family: IBM Plex Sans, sans-serif;
+    font-weight: 600;
+    margin-left: 10px;
+    color: #E0C121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:250px;
+    font-size: 14px;
+    border: 2px solid #E0C121;
+    border-radius: 63px;
+    height: 45px;
+    margin-inline: 10px;
+    padding-top: 8px;
+    margin-top: 10px;
+    margin-bottom:10px;
+
+}
+
+.titoloCategoriaBeauty:hover {
+    scale: 102%;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.titoloCategoriaGioielli {
+    font-family: IBM Plex Sans, sans-serif;
+    font-weight: 600;
+    margin-left: 10px;
+    color: #00C508;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:250px;
+    font-size: 14px;
+    border: 2px solid #00C508;
+    border-radius: 63px;
+    height: 45px;
+    margin-inline: 10px;
+    padding-top: 8px;
+    margin-top: 10px;
+    margin-bottom:10px;
+
+}
+
+.titoloCategoriaGioielli:hover {
+    scale: 102%;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.titoloCategoriaLibri {
+    font-family: IBM Plex Sans, sans-serif;
+    font-weight: 600;
+    margin-left: 10px;
+    color: #93278F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:250px;
+    font-size: 14px;
+    border: 2px solid #93278F;
+    border-radius: 63px;
+    height: 45px;
+    margin-inline: 10px;
+    padding-top: 8px;
+    margin-top: 10px;
+    margin-bottom:10px;
+}
+
+.titoloCategoriaLibri:hover {
+    scale: 102%;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.titoloCategoriaFaiDaTe {
+    font-family: IBM Plex Sans, sans-serif;
+    font-weight: 600;
+    margin-left: 10px;
+    color: #00A99D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:250px;
+    font-size: 14px;
+    border: 2px solid #00A99D;
+    border-radius: 63px;
+    height: 45px;
+    margin-inline: 10px;
+    padding-top: 8px;
+    margin-top: 10px;
+    margin-bottom:10px;
+
+}
+
+.titoloCategoriaFaiDaTe:hover {
+    scale: 102%;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.titoloCategoriaFood {
+    font-family: IBM Plex Sans, sans-serif;
+    font-weight: 600;
+    margin-left: 10px;
+    color: #ED751E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:250px;
+    font-size: 14px;
+    border: 2px solid #ED751E;
+    border-radius: 63px;
+    height: 45px;
+    margin-inline: 10px;
+    padding-top: 8px;
+    margin-top: 10px;
+    margin-bottom:10px;
+
+}
+
+.titoloCategoriaFood:hover {
+    scale: 102%;
+    transition: all 0.3s ease-in-out;
+}
+
+.cointainerBoxCategorie {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.iconBoxCategoria {
+    margin-bottom: 6px;
+    margin-right: 10px;
+
+}
+
+.buttonSearch {
+    position: relative;
+    height: 40px;
+    width: 100%;
+    border-radius: 5px;
+    background: linear-gradient(101.43deg, #FDC627 12.64%, #EC6907 112.5%);
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 15px;
+    box-shadow: 0px 6px px 0px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 30px;
+}
+
+.buttonSearch:hover {
+    scale: 102%;
+    transition: all 0.3s ease-in-out;
+}
+
+.custom-style-html {
+    background: #FFFFFF;
+    box-shadow: 0px 1px 12.6px rgba(0, 0, 0, 0.15);
+}
+
+.containerImgTxtFormRicercaHome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imgFormRicercaHome {
+    width: 160px;
+    margin: 10px;
+}
+
+.txtFormRicercaHome {
+    font-family: IBM Plex Sans, sans-serif;
+    font-weight: 800;
+    margin: 10px
+}
+
+.sottotitoloFormRicercaHome {
+    font-family: IBM Plex Sans, sans-serif;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #ffd401;
+    font-size: 18px;
+    text-align: center;
+    margin-inline: 10px;
+}
+
+.custom-input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: #F7F7F7;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.11);
+    border-radius: 5px;
+}
+
+.navbar-toggler {
+    background-color: transparent;
+    border: none;
+    color: #EE700A;
+
+}
+
+.navbar-toggler:focus {
+    outline: none;
+}
+
+.navbar-nav .nav-link {
+    text-transform: uppercase;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #EE700A;
+}
+
+.navbar-toggler:focus {
+    color: #44200300;
+
+}
+
+
+.button_navbar_1 {
+    position: relative;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: linear-gradient(101.43deg, #FDC627 12.64%, #EC6907 112.5%);
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 15px;
+    box-shadow: 0px 6px px 0px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+}
+
+.button_navbar_1:after {
+    content: " ";
+    width: 0%;
+    height: 100%;
+    background: #ffd401;
+    position: absolute;
+    transition: all 0.4s ease-in-out;
+    right: 0;
+}
+
+.button_navbar_1:hover::after {
+    right: auto;
+    left: 0;
+    width: 100%;
+}
+
+.button_navbar_1 span {
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    padding: 18px 18px;
+    color: #fff;
+    font-size: 1.125em;
+    font-weight: 600;
+    z-index: 20;
+    transition: all 0.3s ease-in-out;
+}
+
+.button_navbar_1:hover span {
+    color: #183153;
+    animation: scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.BtnLogout {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    background-color: #EC6907;
+    margin: 10px;
+}
+
+
+.sign {
+    width: 100%;
+    transition-duration: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign svg {
+    width: 17px;
+}
+
+.sign svg path {
+    fill: white;
+}
+
+.textBtnLogout {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition-duration: .3s;
+    font-family: IBM Plex Sans, sans-serif;
+}
+
+.BtnLogout:hover {
+    width: 125px;
+    border-radius: 40px;
+    transition-duration: .3s;
+}
+
+.BtnLogout:hover .sign {
+    width: 30%;
+    transition-duration: .3s;
+    padding-left: 20px;
+}
+
+.BtnLogout:hover .textBtnLogout {
+    opacity: 1;
+    width: 70%;
+    transition-duration: .3s;
+    padding-right: 10px;
+}
+
+.BtnLogout:active {
+    transform: translate(2px, 2px);
+}
+
+.button_navbar_2 {
+    position: relative;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: #ffffff00;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 15px;
+    box-shadow: 0px 6px px 0px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    border: solid 2px #EC6907;
+}
+
+.button_navbar_2:after {
+    content: " ";
+    width: 0%;
+    height: 100%;
+    background: #EC6907;
+    position: absolute;
+    transition: all 0.4s ease-in-out;
+    right: 0;
+}
+
+.button_navbar_2:hover::after {
+    right: auto;
+    left: 0;
+    width: 100%;
+}
+
+.button_navbar_2 span {
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    padding: 18px 18px;
+    color: #1f1f1f;
+    font-size: 1.125em;
+    font-weight: 600;
+    z-index: 20;
+    transition: all 0.3s ease-in-out;
+}
+
+.button_navbar_2:hover span {
+    color: white;
+    animation: scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.dropdown-menu {
+    border: none;
+    box-shadow: 0px 1px 12.6px rgba(0, 0, 0, 0.15);
+    background-color: rgba(245, 245, 245, 0.876);
+}
+
+.BtnCarrello {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    background-color: #ffd401;
+    margin-top: 10px;
+    margin-inline: 5px;
+}
+
+.sign {
+    width: 100%;
+    transition-duration: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign svg {
+    width: 17px;
+}
+
+.sign svg path {
+    fill: white;
+}
+
+.textCarrello {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: "IBM Plex Sans", sans-serif;
+    transition-duration: .3s;
+}
+
+
+.BtnCarrello:hover {
+    width: 125px;
+    border-radius: 40px;
+    transition-duration: .3s;
+}
+
+.BtnCarrello:hover .sign {
+    width: 30%;
+    transition-duration: .3s;
+    padding-left: 20px;
+}
+
+
+.BtnCarrello:hover .textCarrello {
+    opacity: 1;
+    width: 70%;
+    transition-duration: .3s;
+    padding-right: 10px;
+}
+
+.BtnCarrello:active {
+    transform: translate(2px, 2px);
+}
+
+.navbar {
+    box-shadow: 0px 1px 12.6px rgba(0, 0, 0, 0.15);
+    background-color: rgb(255, 255, 255);
+}
+
+.custom-style {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.containerBottoniNavBar{
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .separatoreTastiNavBar {
+            width:2px;
+            height:40px;
+            background-color:rgb(216, 216, 216);
+            margin: 10px;
+        }
+
+.button2 {
+    position: relative;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: linear-gradient(101.43deg, #FDC627 12.64%, #EC6907 112.5%);
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 15px;
+    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+}
+
+.button2:after {
+    content: " ";
+    width: 0%;
+    height: 100%;
+    background: #ffd401;
+    position: absolute;
+    transition: all 0.4s ease-in-out;
+    right: 0;
+}
+
+.button2:hover::after {
+    right: auto;
+    left: 0;
+    width: 100%;
+}
+
+.button2 span {
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    padding: 18px 25px;
+    color: #fff;
+    font-size: 1.125em;
+    font-weight: 600;
+    z-index: 20;
+    transition: all 0.3s ease-in-out;
+}
+
+.button2:hover span {
+    color: #183153;
+    animation: scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.BtnContatti {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 10%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    background-color: green;
+}
+
+
+.sign {
+    width: 100%;
+    transition-duration: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign svg {
+    width: 17px;
+}
+
+.sign svg path {
+    fill: white;
+}
+
+.textContatti {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    transition-duration: .3s;
+}
+
+.BtnContatti:hover {
+    width: 200px;
+    border-radius: 5px;
+    transition-duration: .3s;
+}
+
+.BtnContatti:hover .sign {
+    width: 30%;
+    transition-duration: .3s;
+    padding-left: 20px;
+}
+
+.BtnContatti:hover .textContatti {
+    opacity: 1;
+    width: 70%;
+    transition-duration: .3s;
+    padding-right: 10px;
+}
+
+.BtnContatti:active {
+    transform: translate(2px, 2px);
+}
+
+
+
+.containerBoxCategoria {
+    display: flex;
+    justify-content: center;
+
+}
+
+.boxCategoria {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    height: 30px;
+    background-color: #2739fd;
+    border-radius: 100px;
+    margin-bottom: 15px;
+    margin-top: 20px
+}
+
+.iconaBoxCategoria {
+    width: 25px;
+    margin-left: 18px
+}
+
+.titoloBoxCategoria {
+    font-family: IBM Plex Sans, sans-serif;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    margin-left: 7px;
+    margin-top: 6px;
+    margin-right: 18px;
+}
+
+.carousel-custom {
+    margin: 20px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 12.6px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    align-item: center;
+    justify-content: center;
+}
+
+.containerInfoProdotto {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dataInfoProdotto {
+    color: #EE700A;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.titoloInfoProdotto {
+    font-family: IBM Plex Sans, sans-serif;
+    text-align: center;
+    font-weight: 800;
+}
+
+.descrizioneInfoProdotto {
+    color: #B6B6B6;
+    text-align: center;
+    font-size: 15px;
+    margin:  10px 20px 10px 20px;
+}
+
+.prezzoInfoProdotto {
+    background: linear-gradient(96.64deg, #FDC627 7.25%, #EC6907 110.91%, #666666 110.92%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-width: 800;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.containerBtnInfoProdotto {
+    display: flex;
+    margin-bottom: 30px;
+}
+
 .main_card_div_bg {
 
     background: rgba(254, 234, 174, 0.53);
@@ -251,7 +1125,9 @@ a {
 
 }
 
-.main_card_h2 {
+/* Card Dettaglio  */
+
+ .main_card_h2_titolo {
 
     font-family: IBM Plex Sans, sans-serif;
     color:rgb(53, 53, 53);
@@ -261,7 +1137,7 @@ a {
     margin-top: 15px;
 
 }
-
+ 
 .main_card_container {
 
     margin-top: 60px;
@@ -298,6 +1174,162 @@ a {
     margin-bottom:15px;
 
 }
+
+
+
+
+
+
+/* Card categories, "/article/category/{category_id}" pages */
+
+.main_card_category_image_div_1 {
+
+    display:flex;
+    justify-content:center;
+    height:30px; 
+    background-color:#2739fd;
+    border-radius:100px; 
+    position:absolute;
+    position:absolute;
+    top:-15px; 
+    margin-bottom:15px;
+
+}
+
+.main_card_category_image_div_2 {
+
+    display:flex;
+    justify-content:center;
+    height:30px; 
+    background-color:#006837;
+    border-radius:100px; 
+    position:absolute;
+    position:absolute;
+    top:-15px; 
+    margin-bottom:15px;
+
+}
+
+.main_card_category_image_div_3 {
+
+    display:flex;
+    justify-content:center;
+    height:30px; 
+    background-color:#29ABE2;
+    border-radius:100px; 
+    position:absolute;
+    position:absolute;
+    top:-15px; 
+    margin-bottom:15px;
+
+}
+
+.main_card_category_image_div_4 {
+
+    display:flex;
+    justify-content:center;
+    height:30px; 
+    background-color:#D4145A;
+    border-radius:100px; 
+    position:absolute;
+    position:absolute;
+    top:-15px; 
+    margin-bottom:15px;
+
+}
+
+.main_card_category_image_div_5 {
+
+    display:flex;
+    justify-content:center;
+    height:30px; 
+    background-color:#ED1C24;
+    border-radius:100px; 
+    position:absolute;
+    position:absolute;
+    top:-15px; 
+    margin-bottom:15px;
+
+}
+
+.main_card_category_image_div_6 {
+
+    display:flex;
+    justify-content:center;
+    height:30px; 
+    background-color:#E0C121;
+    border-radius:100px; 
+    position:absolute;
+    position:absolute;
+    top:-15px; 
+    margin-bottom:15px;
+
+}
+
+.main_card_category_image_div_7 {
+
+    display:flex;
+    justify-content:center;
+    height:30px; 
+    background-color:#00C508;
+    border-radius:100px; 
+    position:absolute;
+    position:absolute;
+    top:-15px; 
+    margin-bottom:15px;
+
+}
+
+.main_card_category_image_div_8 {
+
+    display:flex;
+    justify-content:center;
+    height:30px; 
+    background-color:#93278F;
+    border-radius:100px; 
+    position:absolute;
+    position:absolute;
+    top:-15px; 
+    margin-bottom:15px;
+
+}
+
+.main_card_category_image_div_9 {
+
+    display:flex;
+    justify-content:center;
+    height:30px; 
+    background-color:#00A99D;
+    border-radius:100px; 
+    position:absolute;
+    position:absolute;
+    top:-15px; 
+    margin-bottom:15px;
+
+}
+
+.main_card_category_image_div_10 {
+
+    display:flex;
+    justify-content:center;
+    height:30px; 
+    background-color:#ED751E;
+    border-radius:100px; 
+    position:absolute;
+    position:absolute;
+    top:-15px; 
+    margin-bottom:15px;
+
+}
+
+
+
+/* Fine categories */
+
+
+
+
+
 
 .main_card_category_image {
 
@@ -340,6 +1372,8 @@ a {
     margin-top: 15px;
     
 }
+
+/* Mini_card */
 
 .main_card_h2 {
 
