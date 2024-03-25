@@ -8,7 +8,8 @@
                         <h1 class="card-title text-center mt-3 titolo-annuncio">Registrati</h1>
                         <p class="card-text text-center mb-5 sottotitolo-annuncio">Compila tutti i campi per registrarti sulla piattaforma <br><a href="{{route("login")}}" class="sottotitolo-annuncio">Hai già un account?</a></p>
                         
-                        <form id="productForm" method="POST">
+                        <form action="{{route("register")}}" id="productForm" method="POST">
+                            
                             @csrf
                             <div class="form-group mb-3">
                                 <label for="name" class="label-annuncio">Nome</label>
