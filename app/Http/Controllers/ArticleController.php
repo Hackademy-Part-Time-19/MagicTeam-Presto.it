@@ -28,6 +28,8 @@ class ArticleController extends Controller
         
     }
 
+    SortByTime($query);
+
     $articles = $query->get();
 
     return view('article.index', compact('articles'));
@@ -121,4 +123,10 @@ class ArticleController extends Controller
 
         return redirect()->route("article.index")->with("success", "Post deleted successfully");
     }
+     
+}
+
+function SortByTime($articoli){
+    $articoli->orderByDesc("created_at");
+    return $articoli;
 }
