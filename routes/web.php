@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\RevisorController;
 
 
 /*
@@ -36,15 +37,11 @@ Route::get('/article/category/{category_id}', function ($category_id = null) {
     return view('article.index', ["articles" => $articles]);
 })->name("category");
 
-Route::get('article',[ArticleController::class, 'index'] )->name('article.index');
 
-Route::get('article/{article}', [ArticleController::class, 'show'])->name('article.show');
 
 Route::middleware(['auth'])->group(function () {
     
-    Route::resource('article', ArticleController::class)->except(['index','show']);
-
-   
+    Route::resource('article', ArticleController::class);
 
 });
 
