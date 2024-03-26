@@ -1072,7 +1072,7 @@ a {
     background: #FFFFFF;
     box-shadow: 0px 1px 12.6px rgba(0, 0, 0, 0.15);
     border-radius: 15px;
-    align-item: center;
+    
     justify-content: center;
 }
 
@@ -1107,8 +1107,7 @@ a {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent;
-    font-width: 800;
+    width: 800;
     margin-bottom: 20px;
     font-size: 32px;
 }
@@ -1207,6 +1206,7 @@ a {
     position:absolute;
     top:-15px; 
     margin-bottom:15px;
+    
 
 }
 
@@ -1385,7 +1385,7 @@ a {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent;
+
 
 }
 

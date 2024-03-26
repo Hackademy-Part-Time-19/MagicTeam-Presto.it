@@ -13,10 +13,10 @@
         <div class="col-lg-6 mx-auto col-10 text-center">
 
             <div class="col">
-                <input type="text" class="form-control custom-input" placeholder="First name" aria-label="First name">
+                <input type="text" class="form-control custom-input" placeholder="Nome articolo" aria-label="First name">
             </div>
             <div class="col">
-                <input type="text" class="form-control custom-input" placeholder="Prezzo.."
+                <input type="text" class="form-control custom-input" placeholder="Prezzo"
                     aria-label="Prezzo.." style="margin-top:10px;margin-bottom:10px">
             </div>
             <div class="col">
@@ -151,7 +151,7 @@
 
 
     <div class="container text-center vendere-main-div" >
-        <div class="row align-items-center">
+        <div class="row align-items-center mb-5">
             <div class="col">
                 <img src="/img/vuoivendere-8.webp" alt=""  class="vendere-img">
             </div>
