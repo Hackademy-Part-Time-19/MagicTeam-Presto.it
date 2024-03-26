@@ -33,6 +33,8 @@
                             </div>
                             
                             <button type="submit" class="btn d-block mx-auto button-annuncio">Registrati</button>
+                           
+
                         </form>
                         
                     </div>
