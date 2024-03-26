@@ -11,18 +11,21 @@
                 Se stai cercando qualcosa, hai finito di cercare</h4>
         </div>
         <div class="col-lg-6 mx-auto col-10 text-center">
+            <form action="{{ route("article.index", ['name' => $name ?? '', 'category_id' => $category_id ?? '', 'description' => $description ?? '']) }}" >
 
+            
+                
             <div class="col">
-                <input type="text" class="form-control custom-input" placeholder="First name" aria-label="First name">
+                <input name="name" type="text" class="form-control custom-input" placeholder="Articolo.." aria-label="Articolo..">
             </div>
             <div class="col">
-                <input type="text" class="form-control custom-input" placeholder="Prezzo.."
-                    aria-label="Prezzo.." style="margin-top:10px;margin-bottom:10px">
+                <input name="description" type="text" class="form-control custom-input" placeholder="Descrizione.."
+                    aria-label="Descrizione.." style="margin-top:10px;margin-bottom:10px">
             </div>
             <div class="col">
-                <select class="form-select  custom-input"
+                <select name="category_id" class="form-select  custom-input"
                     aria-label="Default select example"style="margin-top:10px;margin-bottom:10px">
-                    <option selected>Seleziona una categoria</option>
+                    <option value="{{null}}" selected>Seleziona una categoria</option>
                     <option value="1">Elettronica</option>
                     <option value="2">Abbigliamento</option>
                     <option value="3">Casa</option>
@@ -36,7 +39,7 @@
                 </select>
             </div>
             <div class="col">
-                <button class="buttonSearch"><span><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                <button type="submit" class="buttonSearch"><span><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_144_169)">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -51,7 +54,7 @@
                         </svg>
                     </span></button>
             </div>
-
+        </form>
         </div>
 
     </div>

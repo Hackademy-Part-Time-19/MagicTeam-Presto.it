@@ -7,7 +7,7 @@
                     <div class="card-body div-annuncio">
                         <img src="/img/login-8.webp" alt="Logo" class="img-fluid mx-auto d-block img-annuncio">
                         <h1 class="card-title text-center mt-3 titolo-annuncio">Login</h1>
-                        <p class="card-text text-center mb-5 sottotitolo-annuncio">Entra nella piattaforma e inizia a pubblicare annunci<br><a href="{{route("login")}}" class="sottotitolo-annuncio">Non hai ancora un account?</a></p>
+                        <p class="card-text text-center mb-5 sottotitolo-annuncio">Entra nella piattaforma e inizia a pubblicare annunci<br><a href="{{route("register")}}" class="sottotitolo-annuncio">Non hai ancora un account?</a></p>
                         <form action="{{route("login")}}" method="POST" id="productForm">
                             @csrf
                             <div class="form-group mb-3">

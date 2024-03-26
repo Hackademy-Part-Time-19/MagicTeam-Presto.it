@@ -36,8 +36,22 @@ Route::get('/article/category/{category_id}', function ($category_id = null) {
     return view('article.index', ["articles" => $articles]);
 })->name("category");
 
-Route::resource('article', ArticleController::class);
+Route::get('article',[ArticleController::class, 'index'] )->name('article.index');
+
+Route::get('article/{article}', [ArticleController::class, 'show'])->name('article.show');
+
+Route::middleware(['auth'])->group(function () {
+    
+    Route::resource('article', ArticleController::class)->except(['index','show']);
+
+   
+
+});
 
 
+Route::get("/revisor/home", [RevisorController::class, 'index'])->name('revisor.index');
 
+Route::patch("/accept/article/{article}", [RevisorController::class, 'acceptArticle'])->name("revisor.accept_article");
+
+Route::patch("/refuse/article/{article}", [RevisorController::class, 'refuseArticle'])->name("revisor.refuse_article");
 
