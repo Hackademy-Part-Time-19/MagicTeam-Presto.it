@@ -1,66 +1,86 @@
 <x-layout>
-
-    <div class="main_card_div_bg" style="display: flex; flex-direction:row" >
-
     @if (count($articles) == 0)
-        
-        <p>NON CI SONO ARTICOLI AO</p>    
 
 
-        @else
-
-        @foreach ($articles as $article)
-
-        
-        
-            <div class="container main_card_container" >
-                <div class="row justify-content-center">
-                    <div class="main_card_inner_container"
-                        >
-
-                        <div class="main_card_category_image_div_{{$article->category_id}}">
-
-                                <img class="main_card_category_image" src="/img/{{$article->category->name}}.svg" alt="" >
-                                <h5 class="main_card_category_image_h5">
-                                {{$article->category->name}}</h5>
-
-                        </div>
-                           
-    
-                        <img id="productImage_{{$article->id}}" src="/img/prova1.png" class="img-fluid main_card_image" alt=""
-                            
-                            onmouseover="changeImage({{$article->id}})" onmouseout="restoreImage({{$article->id}})">
-                        <h3 class="main_card_h3"
-                           >
-                            {{$article->name}}</h3>
-                        <h2 class="main_card_h2"
-                            >
-                            {{$article->price}}€</h2>
-                        
-                        <a href="{{route("article.show", ["article" => $article])}}" style="display: flex; justify-content:center"><button class="buttonCard">Scopri di più</button></a>
-                    </div>
+        <div class="col-lg-8 mx-auto col-10 noarticle">
+            <p>NON CI SONO ARTICOLI</p>
+        </div>
+    @else
+        @if ($category_id  == 1)
+            <div class="cointainerCircleIconCategory">
+                <div class="circleIconCategoryElettronica">
+                    <svg width="32" height="24" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M26.3333 0.666672C28.1767 0.666672 29.5917 2.07167 30.64 3.58334L30.995 4.11834L31.32 4.65167C31.4233 4.825 31.5217 4.99834 31.6167 5.165C32.9283 7.51 34.07 10.5717 34.825 13.5967C35.575 16.5983 35.99 19.7333 35.725 22.1983C35.4583 24.6733 34.1833 27.3333 31.3333 27.3333C28.7767 27.3333 26.7617 25.9667 25.125 24.6317L23.275 23.08C21.7367 21.82 20.0533 20.6667 18 20.6667C15.9467 20.6667 14.2617 21.82 12.7267 23.08L10.8767 24.63C9.23667 25.9667 7.22167 27.3333 4.66667 27.3333C1.815 27.3333 0.540003 24.6733 0.275003 22.1983C0.0116697 19.7317 0.425003 16.5983 1.175 13.5967C1.93 10.5717 3.07167 7.51 4.38334 5.165L4.68 4.65L5.005 4.11834L5.36 3.58334C6.40834 2.07167 7.82334 0.666672 9.66667 0.666672C10.5167 0.666672 11.3617 0.873338 12.1917 1.11667L13.18 1.42001C13.3433 1.47001 13.505 1.51834 13.6667 1.56334C15.1083 1.97667 16.5833 2.33334 18 2.33334C19.4167 2.33334 20.8917 1.97667 22.3333 1.56334L23.8083 1.11834C24.6383 0.873338 25.4833 0.666672 26.3333 0.666672ZM12.1667 7.33334C11.0616 7.33334 10.0018 7.77233 9.22039 8.55373C8.43899 9.33513 8 10.3949 8 11.5C8 12.6051 8.43899 13.6649 9.22039 14.4463C10.0018 15.2277 11.0616 15.6667 12.1667 15.6667C13.2717 15.6667 14.3315 15.2277 15.1129 14.4463C15.8944 13.6649 16.3333 12.6051 16.3333 11.5C16.3333 10.3949 15.8944 9.33513 15.1129 8.55373C14.3315 7.77233 13.2717 7.33334 12.1667 7.33334ZM23.8333 7.33334C23.3913 7.33334 22.9674 7.50893 22.6548 7.82149C22.3423 8.13405 22.1667 8.55798 22.1667 9V9.83334H21.3333C20.8913 9.83334 20.4674 10.0089 20.1548 10.3215C19.8423 10.6341 19.6667 11.058 19.6667 11.5C19.6667 11.942 19.8423 12.366 20.1548 12.6785C20.4674 12.9911 20.8913 13.1667 21.3333 13.1667H22.1667V14C22.1667 14.442 22.3423 14.866 22.6548 15.1785C22.9674 15.4911 23.3913 15.6667 23.8333 15.6667C24.2754 15.6667 24.6993 15.4911 25.0119 15.1785C25.3244 14.866 25.5 14.442 25.5 14V13.1667H26.3333C26.7754 13.1667 27.1993 12.9911 27.5119 12.6785C27.8244 12.366 28 11.942 28 11.5C28 11.058 27.8244 10.6341 27.5119 10.3215C27.1993 10.0089 26.7754 9.83334 26.3333 9.83334H25.5V9C25.5 8.55798 25.3244 8.13405 25.0119 7.82149C24.6993 7.50893 24.2754 7.33334 23.8333 7.33334ZM12.1667 10.6667C12.3877 10.6667 12.5996 10.7545 12.7559 10.9107C12.9122 11.067 13 11.279 13 11.5C13 11.721 12.9122 11.933 12.7559 12.0893C12.5996 12.2455 12.3877 12.3333 12.1667 12.3333C11.9457 12.3333 11.7337 12.2455 11.5774 12.0893C11.4211 11.933 11.3333 11.721 11.3333 11.5C11.3333 11.279 11.4211 11.067 11.5774 10.9107C11.7337 10.7545 11.9457 10.6667 12.1667 10.6667Z"
+                            fill="#ffffff" />
+                    </svg>
                 </div>
             </div>
-    
-            
-    
-            <script>
-                function changeImage(id) {
-                    document.getElementById('productImage_' + id).src = '/img/prova2.png';
-                }
-    
-                function restoreImage(id) {
-                    document.getElementById('productImage_' + id).src = '/img/prova1.png';
-                }
-            </script>
+            @elseif ($category_id  == 4)
+            <div class="cointainerCircleIconCategory">
+                <div class="circleIconCategoryAnimali">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.95799 25.2H18.2V23.1C18.2 22.1717 17.8312 21.2815 17.1749 20.6251C16.5185 19.9688 15.6283 19.6 14.7 19.6H13.3C13.1143 19.6 12.9363 19.5263 12.805 19.395C12.6737 19.2637 12.6 19.0857 12.6 18.9C12.6 18.7144 12.6737 18.5363 12.805 18.405C12.9363 18.2738 13.1143 18.2 13.3 18.2H14.7C15.9996 18.2 17.2459 18.7163 18.1648 19.6352C19.0837 20.5541 19.6 21.8004 19.6 23.1V25.2H19.95C20.6108 25.2 21.21 24.9326 21.644 24.5H21.7V24.4426C22.1191 23.9975 22.352 23.4089 22.351 22.7976V12.1436C24.605 12.054 25.9532 9.5536 24.7492 7.6104L24.0464 6.4764C23.7803 6.0467 23.409 5.69205 22.9675 5.44607C22.526 5.20009 22.029 5.07092 21.5236 5.0708H19.5146V4.1804C19.5146 3.99913 19.4789 3.81962 19.4095 3.65215C19.3401 3.48467 19.2385 3.33249 19.1103 3.20431C18.9821 3.07613 18.8299 2.97445 18.6625 2.90508C18.495 2.83571 18.3155 2.8 18.1342 2.8C17.6847 2.80019 17.2396 2.88891 16.8244 3.0611C16.4091 3.23329 16.0319 3.48558 15.7142 3.80357C15.3965 4.12155 15.1445 4.499 14.9726 4.91437C14.8008 5.32974 14.7124 5.77489 14.7126 6.2244V11.0628C12.9234 11.2392 11.5724 12.0848 10.5798 13.2776C9.9638 14.0168 9.48919 14.8848 9.1238 15.7948C8.80599 16.4388 8.58339 17.1374 8.47419 17.8738L8.45599 17.9564C8.06959 19.6112 7.93379 21.2576 7.89179 22.4812C7.87499 23.0048 7.87499 23.4556 7.88059 23.8H6.95799C6.42013 23.8 5.89397 23.6429 5.44423 23.3479C4.9945 23.0529 4.64078 22.6328 4.42659 22.1395C4.2124 21.6461 4.14708 21.1009 4.23864 20.5708C4.33021 20.0408 4.57468 19.5491 4.94199 19.1562L6.22999 17.7744C7.11769 16.8223 7.60122 15.5628 7.57877 14.2613C7.55631 12.9598 7.0296 11.7177 6.10959 10.7968L4.84539 9.5326C4.78082 9.46575 4.70358 9.41242 4.61818 9.37573C4.53277 9.33905 4.44092 9.31974 4.34798 9.31893C4.25503 9.31812 4.16285 9.33583 4.07683 9.37103C3.9908 9.40622 3.91264 9.4582 3.84692 9.52393C3.78119 9.58965 3.72922 9.66781 3.69402 9.75384C3.65882 9.83986 3.64111 9.93204 3.64192 10.025C3.64273 10.1179 3.66204 10.2098 3.69872 10.2952C3.73541 10.3806 3.78874 10.4578 3.85559 10.5224L5.11979 11.7866C5.78397 12.4506 6.16427 13.3466 6.18047 14.2856C6.19666 15.2246 5.84748 16.1331 5.20659 16.8196L3.91859 18.2014C3.3666 18.7942 2.99957 19.5352 2.86251 20.3335C2.72545 21.1319 2.82431 21.9528 3.14697 22.6958C3.46963 23.4388 4.00207 24.0714 4.67902 24.5163C5.35596 24.9611 6.14799 25.1987 6.95799 25.2Z" fill="#ffffff"/>
+                        </svg>
+                    </svg>
+                </div>
+            </div>
+        @endif
 
-        @endforeach
 
-    
+        <div class="main_card_div_bg" style="display: flex; flex-direction:row">
+
+
+
+
+            @foreach ($articles as $article)
+                <div class="container main_card_container">
+                    <div class="row justify-content-center">
+                        <div class="main_card_inner_container">
+
+                            <div class="main_card_category_image_div_{{ $article->category_id }}">
+
+                                <img class="main_card_category_image" src="/img/{{ $article->category->name }}.svg"
+                                    alt="">
+                                <h5 class="main_card_category_image_h5">
+                                    {{ $article->category->name }}</h5>
+
+                            </div>
+
+                            <div class="main_card_image_container">
+                                <img id="productImage_{{ $article->id }}" src="/img/default-img.gif"
+                                    class="img-fluid main_card_image" alt=""
+                                    onmouseover="changeImage({{ $article->id }})"
+                                    onmouseout="restoreImage({{ $article->id }})">
+                            </div>
+
+                            <h3 class="main_card_h3">
+                                {{ $article->name }}</h3>
+                            <h2 class="main_card_h2">
+                                {{ $article->price }}€</h2>
+
+                            <a href="{{ route('article.show', ['article' => $article]) }}"
+                                style="display: flex; justify-content:center"><button class="buttonCard">Scopri di
+                                    più</button></a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <script>
+                    function changeImage(id) {
+                        document.getElementById('productImage_' + id).src = '/img/default-img.gif';
+                    }
+
+                    function restoreImage(id) {
+                        document.getElementById('productImage_' + id).src = '/img/default-img.gif';
+                    }
+                </script>
+            @endforeach
+
+
     @endif
 
-    
-
-        
-
+    </div>
 </x-layout>

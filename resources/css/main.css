@@ -253,6 +253,24 @@ a {
 
 }
 
+.cointainerCircleIconCategory {
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:20px;
+}
+
+
+.circleIconCategoryElettronica {
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:300px;
+    width:60px;
+    height:60px;
+    background-color:#1F33E5
+}
+
 .titoloCategoriaElettronica {
     font-family: IBM Plex Sans, sans-serif;
     font-weight: 800;
@@ -326,6 +344,15 @@ a {
     transition: all 0.3s ease-in-out;
 }
 
+.circleIconCategoryAnimali {
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:300px;
+    width:60px;
+    height:60px;
+    background-color:#D4145A;
+}
 
 .titoloCategoriaAnimali {
     font-family: IBM Plex Sans, sans-serif;
@@ -1124,6 +1151,15 @@ a {
 
 }
 
+
+.noarticle{
+    background-color: #f3e2ad;
+    padding:13px;
+    height:50px;
+    color:rgb(81, 81, 81);
+    border-radius:6px;
+}
+
 /* Card Dettaglio  */
 
  .main_card_h2_titolo {
@@ -1351,11 +1387,17 @@ a {
 
 }
 
-.main_card_image {
-
+.main_card_image_container {
     width:250px; 
-    height: 160px; 
-    border-radius:10px; 
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.main_card_image {
+     border-radius:10px;
     background:white;
     margin-top:30px;
     
@@ -1676,3 +1718,25 @@ body {
     transform: scale(1.05);
     color: white;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

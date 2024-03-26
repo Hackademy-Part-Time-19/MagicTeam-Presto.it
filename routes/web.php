@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\RevisorController;
-
+use \App\Models\Article;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,11 +30,11 @@ Route::get('/article/category/{category_id}', function ($category_id = null) {
 
     else {
 
-        $articles = \App\Models\Articles::all();
+        $articles = \App\Models\Article::all();
 
     }
 
-    return view('article.index', ["articles" => $articles]);
+    return view('article.index', ["articles" => $articles , "category_id" => $category_id]);
 })->name("category");
 
 

@@ -1,7 +1,7 @@
 
 26/03 
 
-Cambio immagine di default (FRONTEND) - Fede
+fatto-- Cambio immagine di default (FRONTEND) - Fede
 **Stile messaggi success/error (FRONTEND) 
 Pagina categorie e icone (FRONTEND) - Fede
 Input singolo nella index (FRONTEND E BACKEND) - Giangi
