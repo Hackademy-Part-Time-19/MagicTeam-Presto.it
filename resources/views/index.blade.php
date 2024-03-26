@@ -154,7 +154,7 @@
 
 
     <div class="container text-center vendere-main-div" >
-        <div class="row align-items-center">
+        <div class="row align-items-center mb-5">
             <div class="col">
                 <img src="/img/vuoivendere-8.webp" alt=""  class="vendere-img">
             </div>
