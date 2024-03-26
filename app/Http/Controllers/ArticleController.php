@@ -11,26 +11,34 @@ class ArticleController extends Controller
 {
     /**
      * Display a listing of the resource.
+     * 
      */
-    public function index($category_id = null)
-    {
-        // 
-        
-        $articles = Article::query();
+    public function index(Request $request)
+{
+    $name = $request->query('name');
+    $description = $request->query('description');
+    $category_id = $request->query('category_id');
 
-         if ( $category_id !== null) {
+    $query = Article::query();
 
-            $articles->where("category_id", $category_id)->get();
+    $query->where('is_accepted', true);
 
-        } else {
-
-            $articles = Article::all();
-        } 
-
-        //$articles = Article::all();
-
-        return view("article.index", compact("articles"));
+    if ($name) {
+        $query->where('name', 'like', "%$name%");
     }
+
+    if ($description) {
+        $query->where('description', 'like', "%$description%");
+    }
+
+    if ($category_id) {
+        $query->where('category_id', $category_id);
+    }
+
+    $articles = $query->get();
+
+    return view('article.index', compact('articles'));
+}
 
     /**
      * Show the form for creating a new resource.

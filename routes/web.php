@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\RevisorController;
 
 
 /*
@@ -36,8 +37,18 @@ Route::get('/article/category/{category_id}', function ($category_id = null) {
     return view('article.index', ["articles" => $articles]);
 })->name("category");
 
-Route::resource('article', ArticleController::class);
 
 
+Route::middleware(['auth'])->group(function () {
+    
+    Route::resource('article', ArticleController::class);
 
+});
+
+
+Route::get("/revisor/home", [RevisorController::class, 'index'])->name('revisor.index');
+
+Route::patch("/accept/article/{article}", [RevisorController::class, 'acceptArticle'])->name("revisor.accept_article");
+
+Route::patch("/refuse/article/{article}", [RevisorController::class, 'refuseArticle'])->name("revisor.refuse_article");
 
