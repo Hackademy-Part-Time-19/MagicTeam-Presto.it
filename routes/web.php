@@ -22,8 +22,6 @@ Route::get('/', function () {
 
 Route::get('/article/category/{category_id}', function ($category_id = null) {
 
-    
-
     if ($category_id !== null)
 
         $articles = \App\Models\Article::where('category_id', $category_id)->get();
@@ -42,6 +40,8 @@ Route::get('/article/category/{category_id}', function ($category_id = null) {
 Route::middleware(['auth'])->group(function () {
     
     Route::resource('article', ArticleController::class);
+    Route::get("request/revisor", [RevisorController::class, 'view'] );
+    Route::post("request/revisor", [RevisorController::class, 'RevisorRequest'] )->name("revisor.request");
 
 });
 

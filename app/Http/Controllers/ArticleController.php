@@ -15,24 +15,17 @@ class ArticleController extends Controller
      */
     public function index(Request $request)
 {
-    $name = $request->query('name');
-    $description = $request->query('description');
-    $category_id = $request->query('category_id');
+    $search = $request->query('search');
+   
 
     $query = Article::query();
 
     $query->where('is_accepted', true);
 
-    if ($name) {
-        $query->where('name', 'like', "%$name%");
-    }
-
-    if ($description) {
-        $query->where('description', 'like', "%$description%");
-    }
-
-    if ($category_id) {
-        $query->where('category_id', $category_id);
+    if ($search) {
+        $query->where("name", "like", "%$search%")
+              ->orWhere("description", "like", "%$search%");
+        
     }
 
     $articles = $query->get();

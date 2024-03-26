@@ -16,13 +16,13 @@
             
                 
             <div class="col">
-                <input name="name" type="text" class="form-control custom-input" placeholder="Articolo.." aria-label="Articolo..">
+                <input name="search" type="text" class="form-control custom-input" placeholder="Cerca qualunque cosa!" aria-label="Cerca qualunque cosa!">
             </div>
-            <div class="col">
+            {{-- <div class="col">
                 <input name="description" type="text" class="form-control custom-input" placeholder="Descrizione.."
                     aria-label="Descrizione.." style="margin-top:10px;margin-bottom:10px">
-            </div>
-            <div class="col">
+            </div> --}}
+            {{-- <div class="col">
                 <select name="category_id" class="form-select  custom-input"
                     aria-label="Default select example"style="margin-top:10px;margin-bottom:10px">
                     <option value="{{null}}" selected>Seleziona una categoria</option>
@@ -37,7 +37,7 @@
                     <option value="9">Fai da te</option>
                     <option value="10">Food</option>
                 </select>
-            </div>
+            </div> --}}
             <div class="col">
                 <button type="submit" class="buttonSearch"><span><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
