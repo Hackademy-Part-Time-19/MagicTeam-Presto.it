@@ -7,7 +7,7 @@
 Ordine ricerca (FRONTEND E BACKEND) - Fra
 Input singolo nella index (FRONTEND E BACKEND) - Giangi
 Pagina revisione articoli - Fede
-Sistemare pagina dettaglio prodotto
+Sistemare pagina dettaglio prodotto 
 
 (Da footer) Vista "Lavora con noi" con form (FRONTEND) - Livia
 Sistema mail per "Lavora con noi" (BACKEND) - Giangi
