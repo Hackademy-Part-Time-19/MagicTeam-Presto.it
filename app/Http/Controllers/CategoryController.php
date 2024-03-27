@@ -12,8 +12,8 @@ class CategoryController extends Controller
     
 
         if ($category_id !== null)
-    
-            $articles = Article::where('category_id', $category_id)->get();
+
+            $articles = Article::where('is_accepted', true)->where('category_id', $category_id)->get();    
     
         else {
     
