@@ -19,7 +19,13 @@
                         <a href=""class="aFooter">Home</a>
                         <a href=""class="aFooter">Contact us</a>
                         <a href=""class="aFooter">Our Team</a>
-                        <a href=""class="aFooter">Lavora con noi</a>
+                        @guest
+                        <a href=" {{ route ('login') }}"class="aFooter">Lavora con noi</a>
+                        @endguest
+                        @auth
+                        <a href=" {{ route ('revisor.request') }}"class="aFooter">Lavora con noi</a>
+                        @endauth
+                        
                     </div>
 
                     <div class="copy">
