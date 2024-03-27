@@ -295,6 +295,16 @@ a {
     transition: all 0.3s ease-in-out;
 }
 
+.circleIconCategoryAbbigliamento {
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:300px;
+    width:60px;
+    height:60px;
+    background-color:#006837;
+}
+
 .titoloCategoriaAbbigliamento {
     font-family: IBM Plex Sans, sans-serif;
     font-weight: 600;
@@ -317,6 +327,16 @@ a {
 .titoloCategoriaAbbigliamento:hover {
     scale: 102%;
     transition: all 0.3s ease-in-out;
+}
+
+.circleIconCategoryCasa {
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:300px;
+    width:60px;
+    height:60px;
+    background-color:#29ABE2;
 }
 
 .titoloCategoriaCasa {
@@ -379,6 +399,15 @@ a {
     transition: all 0.3s ease-in-out;
 }
 
+.circleIconCategorySport {
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:300px;
+    width:60px;
+    height:60px;
+    background-color:#ED1C24;
+}
 
 .titoloCategoriaSport {
     font-family: IBM Plex Sans, sans-serif;
@@ -405,6 +434,15 @@ a {
     transition: all 0.3s ease-in-out;
 }
 
+.circleIconCategoryBeauty {
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:300px;
+    width:60px;
+    height:60px;
+    background-color:#E0C121;
+}
 
 .titoloCategoriaBeauty {
     font-family: IBM Plex Sans, sans-serif;
@@ -431,6 +469,15 @@ a {
     transition: all 0.3s ease-in-out;
 }
 
+.circleIconCategoryGioielli {
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:300px;
+    width:60px;
+    height:60px;
+    background-color:#00C508;
+}
 
 .titoloCategoriaGioielli {
     font-family: IBM Plex Sans, sans-serif;
@@ -457,6 +504,15 @@ a {
     transition: all 0.3s ease-in-out;
 }
 
+.circleIconCategoryLibri {
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:300px;
+    width:60px;
+    height:60px;
+    background-color:#93278F;
+}
 
 .titoloCategoriaLibri {
     font-family: IBM Plex Sans, sans-serif;
@@ -482,6 +538,15 @@ a {
     transition: all 0.3s ease-in-out;
 }
 
+.circleIconCategoryFaiDaTe {
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:300px;
+    width:60px;
+    height:60px;
+    background-color:#00A99D;
+}
 
 .titoloCategoriaFaiDaTe {
     font-family: IBM Plex Sans, sans-serif;
@@ -508,6 +573,15 @@ a {
     transition: all 0.3s ease-in-out;
 }
 
+.circleIconCategoryFood {
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:300px;
+    width:60px;
+    height:60px;
+    background-color:#ED751E;
+}
 
 .titoloCategoriaFood {
     font-family: IBM Plex Sans, sans-serif;
@@ -1176,6 +1250,7 @@ a {
 .main_card_container {
 
     margin-top: 60px;
+    margin-bottom: 130px;
 
 }
 
@@ -1183,7 +1258,7 @@ a {
 
     margin-left:20px;
     margin-right:20px;
-    margin-bottom:40px;
+    margin-bottom:70px;
     background: #FFFFFF;
     box-shadow: 0px 2px 9.3px rgba(0, 0, 0, 0.15);
     width:260px;
