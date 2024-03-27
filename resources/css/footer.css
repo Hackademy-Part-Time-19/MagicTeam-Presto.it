@@ -5,8 +5,6 @@
     list-style: none;
     padding: top 40px; 
     margin-top: auto;
-    position: absolute;
-     bottom: 0;
     width: 100%;
     height:30vh; 
       
@@ -55,7 +53,7 @@
     margin-top: 20px;
     text-align: center;
     font-size: 10px;
-     color: rgb(131, 131, 131); 
+    color: rgb(131, 131, 131); 
 }
 a {
     text-decoration: none;
