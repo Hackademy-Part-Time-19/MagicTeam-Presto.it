@@ -20,9 +20,15 @@ class RevisorController extends Controller
 
     }
 
-    public function view () {
+    public function form_request () {
 
         return view("revisorRequestTEST");
+
+    }
+
+    public function index () {
+
+        return view("testmiddleware");
 
     }
     

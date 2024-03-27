@@ -1067,6 +1067,145 @@ a {
     }
 }
 
+
+
+.BtnAccettaArticolo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 10%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    background-color: green;
+    margin-right:10px;
+}
+
+
+.signBtnAccettaArticolo {
+    width: 100%;
+    transition-duration: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign svg {
+    width: 17px;
+}
+
+.sign svg path {
+    fill: white;
+}
+
+.textBtnAccettaArticolo {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    transition-duration: .3s;
+}
+
+.BtnAccettaArticolo:hover {
+    width: 200px;
+    border-radius: 5px;
+    transition-duration: .3s;
+}
+
+.BtnAccettaArticolo:hover .sign {
+    width: 30%;
+    transition-duration: .3s;
+    padding-left: 20px;
+}
+
+.BtnAccettaArticolo:hover .textBtnAccettaArticolo {
+    opacity: 1;
+    width: 70%;
+    transition-duration: .3s;
+    padding-right: 10px;
+}
+
+.BtnAccettaArticolo:active {
+    transform: translate(2px, 2px);
+}
+
+.BtnRifiutaArticolo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 10%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    background-color: rgb(179, 44, 7);
+
+}
+
+
+.signBtnRifiutaArticolo {
+    width: 100%;
+    transition-duration: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign svg {
+    width: 17px;
+}
+
+.sign svg path {
+    fill: white;
+}
+
+.textBtnRifiutaArticolo {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    transition-duration: .3s;
+}
+
+.BtnRifiutaArticolo:hover {
+    width: 200px;
+    border-radius: 5px;
+    transition-duration: .3s;
+}
+
+.BtnRifiutaArticolo:hover .sign {
+    width: 30%;
+    transition-duration: .3s;
+    padding-left: 20px;
+}
+
+.BtnRifiutaArticolo:hover .textBtnRifiutaArticolo {
+    opacity: 1;
+    width: 70%;
+    transition-duration: .3s;
+    padding-right: 10px;
+}
+
+.BtnRifiutaArticolo:active {
+    transform: translate(2px, 2px);
+}
+
+
 .BtnContatti {
     display: flex;
     align-items: center;
@@ -1133,8 +1272,7 @@ a {
 .BtnContatti:active {
     transform: translate(2px, 2px);
 }
-
-
+----
 
 .containerBoxCategoria {
     display: flex;

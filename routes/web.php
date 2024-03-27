@@ -31,17 +31,20 @@ Route::middleware(['auth'])->group(function () {
 
     Route::resource('article', ArticleController::class, ['only' => ['store', 'edit', 'update', 'destroy', 'create']]);
 
-    
-
-
-    Route::get("request/revisor", [RevisorController::class, 'view'] );
+    Route::get("request/revisor", [RevisorController::class, 'form_request'] );
     Route::post("request/revisor", [RevisorController::class, 'RevisorRequest'] )->name("revisor.request");
+
+    Route::middleware(['revisor'])->group(function () {
+        
+        Route::get("/revisor/home", [RevisorController::class, 'index'])->name('revisor.index');
+
+    });
 
 });
 
 Route::resource('article', ArticleController::class, ['only' => ['index', 'show']]);
 
-Route::get("/revisor/home", [RevisorController::class, 'index'])->name('revisor.index');
+
 
 Route::patch("/accept/article/{article}", [RevisorController::class, 'acceptArticle'])->name("revisor.accept_article");
 
