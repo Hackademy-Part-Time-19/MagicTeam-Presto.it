@@ -1,6 +1,6 @@
 <x-layout>
 
-
+    
 
     <div class="col-lg-8 mx-auto col-10 custom-style-html">
 

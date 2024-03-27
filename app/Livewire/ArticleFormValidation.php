@@ -22,7 +22,7 @@ class ArticleFormValidation extends Component
     public function rules()
     {
         return [
-            'name' => 'required|max:50',
+            'name' => 'required|max:20',
             'description' => 'required|max:500',
             'price' => 'required|decimal:0,2|numeric|max:9999.99',
             'category_id' => 'required',
@@ -46,12 +46,12 @@ class ArticleFormValidation extends Component
         ]); */
 
         $validated = $this->validate();
-
+       
         Article::create(array_merge($validated,['user_id' => auth()->user()->id]));
 
-        session()->flash('status', 'Articolo aggiunto correttamente!');
+        
 
-        return $this->redirect("/");
+        return redirect()->to(route("article.create"))->with('is_succeded', true);
 
     }
 
