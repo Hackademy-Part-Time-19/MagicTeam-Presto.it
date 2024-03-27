@@ -27,12 +27,19 @@ Route::get('/article/category/{category_id}', [CategoryController::class, "Categ
 
 Route::middleware(['auth'])->group(function () {
     
-    Route::resource('article', ArticleController::class);
+    /* Route::resource('article', ArticleController::class); */
+
+    Route::resource('article', ArticleController::class, ['only' => ['store', 'edit', 'update', 'destroy', 'create']]);
+
+    
+
+
     Route::get("request/revisor", [RevisorController::class, 'view'] );
     Route::post("request/revisor", [RevisorController::class, 'RevisorRequest'] )->name("revisor.request");
 
 });
 
+Route::resource('article', ArticleController::class, ['only' => ['index', 'show']]);
 
 Route::get("/revisor/home", [RevisorController::class, 'index'])->name('revisor.index');
 
