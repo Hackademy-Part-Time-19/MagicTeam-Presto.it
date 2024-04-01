@@ -51,3 +51,4 @@ Route::patch("/accept/article/{article}", [RevisorController::class, 'acceptArti
 Route::patch("/refuse/article/{article}", [RevisorController::class, 'refuseArticle'])->name("revisor.refuse_article");
 
 
+
