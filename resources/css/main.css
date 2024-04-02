@@ -1,7 +1,7 @@
 a {
     text-decoration: none;
     color: #fff;
-    
+
 }
 
 
@@ -11,13 +11,13 @@ a {
     align-items: center;
     justify-content: center;
     position: fixed;
-    
+
     bottom: -50px;
     width: 100%;
     height: 300px;
     z-index: 100;
 
-    
+
 }
 
 .pSuccessArticle {
@@ -35,13 +35,13 @@ a {
     align-items: center;
     justify-content: center;
     position: fixed;
-    
+
     bottom: -50px;
     width: 100%;
     height: 300px;
     z-index: 100;
 
-    
+
 }
 
 .pErrorArticle {
@@ -60,218 +60,236 @@ a {
     display: flex;
     width: 100%;
     height: 80px;
-    background-color:white;
+    background-color: white;
     justify-content: center;
     align-items: center;
- }
+}
 
- ul {
-    
-    margin-left: 120px; 
+ul {
+
+    margin-left: 120px;
     display: flex;
     justify-content: space-between;
     color: black;
- 
- }
- .navbar-brand {
+
+}
+
+.navbar-brand {
     display: flex;
     justify-content: center;
-    position:relative;
+    position: relative;
     align-items: center;
     margin-left: 250px;
- }
- /* .nav-link {
+}
+
+/* .nav-link {
     color: black;
  
  } */
- 
- 
- .btn-1 {
+
+
+.btn-1 {
     display: flex;
-     justify-content: center;
-     align-items: center;
-      height: 30px;
-      width: 100px;
-      border-style: none; 
-      color: white; 
-      margin: 10px; 
-      padding: auto;
-      margin-right:30px;
-      border-radius: 20px; 
-    background: linear-gradient(135.95deg, #FDC627 11.74%, #EC6907 100%);
- 
- }
- 
- 
- 
- .btn-2 {
-    display: flex; 
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     height: 30px;
-    width: 100px; 
+    width: 100px;
+    border-style: none;
+    color: white;
+    margin: 10px;
+    padding: auto;
+    margin-right: 30px;
+    border-radius: 20px;
+    background: linear-gradient(135.95deg, #FDC627 11.74%, #EC6907 100%);
+
+}
+
+
+
+.btn-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 100px;
     border-style: solid;
-    border-color:#EC6907;
-    background-color: white; 
-    color:black; 
-    margin-left:0px; 
+    border-color: #EC6907;
+    background-color: white;
+    color: black;
+    margin-left: 0px;
     margin-right: 90px;
     border-radius: 20px;
- }
- 
- .btn-3 {
+}
+
+.btn-3 {
     display: flex;
-    justify-content: center; 
-    align-items: center; 
-    height: 35px; 
-    width: 35px; 
-    border-radius: 100%;  
-    background-color: rgba(238, 112, 10, 1); 
-    margin-top: 20px; 
-    border-style: none; 
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+    background-color: rgba(238, 112, 10, 1);
+    margin-top: 20px;
+    border-style: none;
     background-image: url(media/carello.png);
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
     background-position: center;
     margin-bottom: 30px;
     margin-right: 250px;
- }
- 
- .card1 {
-    display: flex; 
-    width: 150vh; 
-    height: 415px;
-    position: fixed; 
-    background-color:white;
-    justify-content: center; 
-    align-items: center; 
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
-    margin-left: 260px; 
-    margin-top: 50px;
- }
- .img-card {
-    margin-bottom:250px;  
-    position: absolute; 
-    left: 65vh;
- }
- .card-title1 {
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    position: absolute; 
-    left:  60vh;
- }
- .input :hover{
-    border-color: #EC6907;
- }
- /* Card First Page*/
- 
- .title-box {
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    position: absolute; 
-    left:  60vh; 
-    top: 150px;
- }
- .subtitle-box {
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    position: absolute; 
-    left:  55vh; 
-    top: 200px; 
-    color: #EC6907;
- }
- .div-imput {
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center;
- }
- .div-input1 {
-    display: flex; 
-    justify-content: center;
-    align-items: center; 
-    position: absolute; 
-    left:  60px; 
-    top: 250px;
- }
- .text-input1 {
-    text-align: center;
-    font-weight: 400;
-    font-size: large;  
-    margin-bottom: 120px; 
-    margin-left: 12px;
- }
- .input1 {
+}
+
+.card1 {
     display: flex;
-    position: absolute; 
-    left:  10px; 
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border-radius: 10px; 
-    width: 30vh;
- }
- .div-input2 {
-    display: flex; 
+    width: 150vh;
+    height: 415px;
+    position: fixed;
+    background-color: white;
     justify-content: center;
-    align-items: center; 
-    position: absolute; 
-    left: 400px; 
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-left: 260px;
+    margin-top: 50px;
+}
+
+.img-card {
+    margin-bottom: 250px;
+    position: absolute;
+    left: 65vh;
+}
+
+.card-title1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 60vh;
+}
+
+.input :hover {
+    border-color: #EC6907;
+}
+
+/* Card First Page*/
+
+.title-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 60vh;
+    top: 150px;
+}
+
+.subtitle-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 55vh;
+    top: 200px;
+    color: #EC6907;
+}
+
+.div-imput {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.div-input1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 60px;
     top: 250px;
- }
- .text-input2 {
+}
+
+.text-input1 {
     text-align: center;
     font-weight: 400;
-    font-size: large; 
-    margin-bottom: 120px; 
-    margin-left: 18px;
- }
- .input2 {
+    font-size: large;
+    margin-bottom: 120px;
+    margin-left: 12px;
+}
+
+.input1 {
     display: flex;
     position: absolute;
-     left:  10px; 
-     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-     border-radius: 10px; 
-     width: 30vh;
- }
- .div-input3 {
-    display: flex; 
+    left: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    width: 30vh;
+}
+
+.div-input2 {
+    display: flex;
     justify-content: center;
-    align-items: center; 
-    position: absolute; 
-    left:  600px; 
+    align-items: center;
+    position: absolute;
+    left: 400px;
     top: 250px;
- }
- .text-input3 {
+}
+
+.text-input2 {
+    text-align: center;
+    font-weight: 400;
+    font-size: large;
+    margin-bottom: 120px;
+    margin-left: 18px;
+}
+
+.input2 {
+    display: flex;
+    position: absolute;
+    left: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    width: 30vh;
+}
+
+.div-input3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 600px;
+    top: 250px;
+}
+
+.text-input3 {
     text-align: center;
     font-weight: 400;
     margin-bottom: 120px;
-    font-size: large; 
+    font-size: large;
     margin-left: 150px;
- }
- .input3 {
+}
+
+.input3 {
     display: flex;
-    position: absolute; 
-    left:  150px; 
+    position: absolute;
+    left: 150px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border-radius: 10px; 
+    border-radius: 10px;
     width: 30vh;
- }
- .btn-cerca {
-    display: flex; 
+}
+
+.btn-cerca {
+    display: flex;
     justify-content: center;
-    align-items: center; 
-    position: absolute; 
-    left: 120vh; 
+    align-items: center;
+    position: absolute;
+    left: 120vh;
     margin-left: 30px;
     bottom: 60px;
     height: 30px;
     width: 100px;
-    border-style: none; 
-    color: white; 
-    margin: 20px; 
-    border-radius: 20px; 
+    border-style: none;
+    color: white;
+    margin: 20px;
+    border-radius: 20px;
     background: linear-gradient(135.95deg, #FDC627 11.74%, #EC6907 100%);
- }
+}
 
 
 
@@ -294,6 +312,33 @@ a {
 
 /* V Codice Fede V */
 
+@media screen and (max-width: 1500px) {
+    .boxVuoiVenedereQualcosa {
+        margin: 20px 10px 20px 10px;
+        width: 480px;
+        height: 420px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .vendere-h2 {
+        text-align: center;
+    }
+  }
+  
+
+.boxVuoiVenedereQualcosa {
+    margin: 20px 10px 20px 60px;
+    width: 480px;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
 
 .titoloRicercaCategoria {
     font-family: IBM Plex Sans, sans-serif;
@@ -305,20 +350,20 @@ a {
 
 .cointainerCircleIconCategory {
     display: flex;
-    align-items:center;
-    justify-content:center;
-    margin-bottom:20px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 
 .circleIconCategoryElettronica {
     display: flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:300px;
-    width:60px;
-    height:60px;
-    background-color:#1F33E5
+    align-items: center;
+    justify-content: center;
+    border-radius: 300px;
+    width: 60px;
+    height: 60px;
+    background-color: #1F33E5
 }
 
 .titoloCategoriaElettronica {
@@ -334,10 +379,10 @@ a {
     height: 45px;
     margin-inline: 10px;
     padding-top: 8px;
-    width:250px;
+    width: 250px;
     font-size: 14px;
     margin-top: 10px;
-    margin-bottom:10px;
+    margin-bottom: 10px;
 }
 
 .titoloCategoriaElettronica:hover {
@@ -347,12 +392,12 @@ a {
 
 .circleIconCategoryAbbigliamento {
     display: flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:300px;
-    width:60px;
-    height:60px;
-    background-color:#006837;
+    align-items: center;
+    justify-content: center;
+    border-radius: 300px;
+    width: 60px;
+    height: 60px;
+    background-color: #006837;
 }
 
 .titoloCategoriaAbbigliamento {
@@ -368,10 +413,10 @@ a {
     height: 45px;
     margin-inline: 10px;
     padding-top: 8px;
-    width:250px;
+    width: 250px;
     font-size: 14px;
     margin-top: 10px;
-    margin-bottom:10px;
+    margin-bottom: 10px;
 }
 
 .titoloCategoriaAbbigliamento:hover {
@@ -381,12 +426,12 @@ a {
 
 .circleIconCategoryCasa {
     display: flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:300px;
-    width:60px;
-    height:60px;
-    background-color:#29ABE2;
+    align-items: center;
+    justify-content: center;
+    border-radius: 300px;
+    width: 60px;
+    height: 60px;
+    background-color: #29ABE2;
 }
 
 .titoloCategoriaCasa {
@@ -397,7 +442,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width:250px;
+    width: 250px;
     font-size: 14px;
     border: 2px solid #29ABE2;
     border-radius: 63px;
@@ -405,7 +450,7 @@ a {
     margin-inline: 10px;
     padding-top: 8px;
     margin-top: 10px;
-    margin-bottom:10px;
+    margin-bottom: 10px;
 
 }
 
@@ -416,12 +461,12 @@ a {
 
 .circleIconCategoryAnimali {
     display: flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:300px;
-    width:60px;
-    height:60px;
-    background-color:#D4145A;
+    align-items: center;
+    justify-content: center;
+    border-radius: 300px;
+    width: 60px;
+    height: 60px;
+    background-color: #D4145A;
 }
 
 .titoloCategoriaAnimali {
@@ -432,7 +477,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width:250px;
+    width: 250px;
     font-size: 14px;
     border: 2px solid #D4145A;
     border-radius: 63px;
@@ -440,7 +485,7 @@ a {
     margin-inline: 10px;
     padding-top: 8px;
     margin-top: 10px;
-    margin-bottom:10px;
+    margin-bottom: 10px;
 
 }
 
@@ -451,12 +496,12 @@ a {
 
 .circleIconCategorySport {
     display: flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:300px;
-    width:60px;
-    height:60px;
-    background-color:#ED1C24;
+    align-items: center;
+    justify-content: center;
+    border-radius: 300px;
+    width: 60px;
+    height: 60px;
+    background-color: #ED1C24;
 }
 
 .titoloCategoriaSport {
@@ -467,15 +512,15 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width:250px;
+    width: 250px;
     font-size: 14px;
     border: 2px solid #ED1C24;
     border-radius: 63px;
     height: 45px;
     margin-inline: 10px;
-    padding-top: 8px;            
+    padding-top: 8px;
     margin-top: 10px;
-    margin-bottom:10px;
+    margin-bottom: 10px;
 
 }
 
@@ -486,12 +531,12 @@ a {
 
 .circleIconCategoryBeauty {
     display: flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:300px;
-    width:60px;
-    height:60px;
-    background-color:#E0C121;
+    align-items: center;
+    justify-content: center;
+    border-radius: 300px;
+    width: 60px;
+    height: 60px;
+    background-color: #E0C121;
 }
 
 .titoloCategoriaBeauty {
@@ -502,7 +547,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width:250px;
+    width: 250px;
     font-size: 14px;
     border: 2px solid #E0C121;
     border-radius: 63px;
@@ -510,7 +555,7 @@ a {
     margin-inline: 10px;
     padding-top: 8px;
     margin-top: 10px;
-    margin-bottom:10px;
+    margin-bottom: 10px;
 
 }
 
@@ -521,12 +566,12 @@ a {
 
 .circleIconCategoryGioielli {
     display: flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:300px;
-    width:60px;
-    height:60px;
-    background-color:#00C508;
+    align-items: center;
+    justify-content: center;
+    border-radius: 300px;
+    width: 60px;
+    height: 60px;
+    background-color: #00C508;
 }
 
 .titoloCategoriaGioielli {
@@ -537,7 +582,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width:250px;
+    width: 250px;
     font-size: 14px;
     border: 2px solid #00C508;
     border-radius: 63px;
@@ -545,7 +590,7 @@ a {
     margin-inline: 10px;
     padding-top: 8px;
     margin-top: 10px;
-    margin-bottom:10px;
+    margin-bottom: 10px;
 
 }
 
@@ -556,12 +601,12 @@ a {
 
 .circleIconCategoryLibri {
     display: flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:300px;
-    width:60px;
-    height:60px;
-    background-color:#93278F;
+    align-items: center;
+    justify-content: center;
+    border-radius: 300px;
+    width: 60px;
+    height: 60px;
+    background-color: #93278F;
 }
 
 .titoloCategoriaLibri {
@@ -572,7 +617,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width:250px;
+    width: 250px;
     font-size: 14px;
     border: 2px solid #93278F;
     border-radius: 63px;
@@ -580,7 +625,7 @@ a {
     margin-inline: 10px;
     padding-top: 8px;
     margin-top: 10px;
-    margin-bottom:10px;
+    margin-bottom: 10px;
 }
 
 .titoloCategoriaLibri:hover {
@@ -590,12 +635,12 @@ a {
 
 .circleIconCategoryFaiDaTe {
     display: flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:300px;
-    width:60px;
-    height:60px;
-    background-color:#00A99D;
+    align-items: center;
+    justify-content: center;
+    border-radius: 300px;
+    width: 60px;
+    height: 60px;
+    background-color: #00A99D;
 }
 
 .titoloCategoriaFaiDaTe {
@@ -606,7 +651,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width:250px;
+    width: 250px;
     font-size: 14px;
     border: 2px solid #00A99D;
     border-radius: 63px;
@@ -614,7 +659,7 @@ a {
     margin-inline: 10px;
     padding-top: 8px;
     margin-top: 10px;
-    margin-bottom:10px;
+    margin-bottom: 10px;
 
 }
 
@@ -625,12 +670,12 @@ a {
 
 .circleIconCategoryFood {
     display: flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:300px;
-    width:60px;
-    height:60px;
-    background-color:#ED751E;
+    align-items: center;
+    justify-content: center;
+    border-radius: 300px;
+    width: 60px;
+    height: 60px;
+    background-color: #ED751E;
 }
 
 .titoloCategoriaFood {
@@ -641,7 +686,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width:250px;
+    width: 250px;
     font-size: 14px;
     border: 2px solid #ED751E;
     border-radius: 63px;
@@ -649,7 +694,7 @@ a {
     margin-inline: 10px;
     padding-top: 8px;
     margin-top: 10px;
-    margin-bottom:10px;
+    margin-bottom: 10px;
 
 }
 
@@ -694,7 +739,7 @@ a {
 .custom-style-html {
     background: #FFFFFF;
     box-shadow: 0px 1px 12.6px rgba(0, 0, 0, 0.15);
-    border-radius:10px;
+    border-radius: 10px;
 }
 
 .containerImgTxtFormRicercaHome {
@@ -1042,17 +1087,17 @@ a {
     margin-right: auto;
 }
 
-.containerBottoniNavBar{
-            display: flex;
-            justify-content: flex-end;
-        }
+.containerBottoniNavBar {
+    display: flex;
+    justify-content: flex-end;
+}
 
-        .separatoreTastiNavBar {
-            width:2px;
-            height:40px;
-            background-color:rgb(216, 216, 216);
-            margin: 10px;
-        }
+.separatoreTastiNavBar {
+    width: 2px;
+    height: 40px;
+    background-color: rgb(216, 216, 216);
+    margin: 10px;
+}
 
 .button2 {
     position: relative;
@@ -1133,7 +1178,7 @@ a {
     transition-duration: .3s;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
     background-color: green;
-    margin-right:10px;
+    margin-right: 10px;
 }
 
 
@@ -1322,9 +1367,8 @@ a {
 .BtnContatti:active {
     transform: translate(2px, 2px);
 }
-----
 
-.containerBoxCategoria {
+---- .containerBoxCategoria {
     display: flex;
     justify-content: center;
 
@@ -1362,7 +1406,7 @@ a {
     background: #FFFFFF;
     box-shadow: 0px 1px 12.6px rgba(0, 0, 0, 0.15);
     border-radius: 15px;
-    
+
     justify-content: center;
 }
 
@@ -1389,7 +1433,7 @@ a {
     color: #B6B6B6;
     text-align: center;
     font-size: 15px;
-    margin:  10px 20px 10px 20px;
+    margin: 10px 20px 10px 20px;
 }
 
 .prezzoInfoProdotto {
@@ -1410,32 +1454,32 @@ a {
 .main_card_div_bg {
 
     background: rgba(254, 234, 174, 0.53);
-    padding-top:10px;
+    padding-top: 10px;
 
 }
 
 
-.noarticle{
+.noarticle {
     background-color: #f3e2ad;
-    padding:13px;
-    height:50px;
-    color:rgb(81, 81, 81);
-    border-radius:6px;
+    padding: 13px;
+    height: 50px;
+    color: rgb(81, 81, 81);
+    border-radius: 6px;
 }
 
 /* Card Dettaglio  */
 
- .main_card_h2_titolo {
+.main_card_h2_titolo {
 
     font-family: IBM Plex Sans, sans-serif;
-    color:rgb(53, 53, 53);
-    text-align:center;
-    font-size:37px;
-    font-weight:700;
+    color: rgb(53, 53, 53);
+    text-align: center;
+    font-size: 37px;
+    font-weight: 700;
     margin-top: 15px;
 
 }
- 
+
 .main_card_container {
 
     margin-top: 60px;
@@ -1445,32 +1489,31 @@ a {
 
 .main_card_inner_container {
 
-    margin-left:20px;
-    margin-right:20px;
-    margin-bottom:70px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 70px;
     background: #FFFFFF;
     box-shadow: 0px 2px 9.3px rgba(0, 0, 0, 0.15);
-    width:260px;
+    width: 260px;
     height: 370px;
-    border-radius:15px;
-    display:flex;
-    align-items:center;
-    flex-direction:column;
-    position:relative
-
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative
 }
 
 .main_card_category_image_div {
 
-    display:flex;
-    justify-content:center;
-    height:30px; 
-    background-color:#2739fd;
-    border-radius:100px; 
-    position:absolute;
-    position:absolute;
-    top:-15px; 
-    margin-bottom:15px;
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    background-color: #2739fd;
+    border-radius: 100px;
+    position: absolute;
+    position: absolute;
+    top: -15px;
+    margin-bottom: 15px;
 
 }
 
@@ -1483,142 +1526,142 @@ a {
 
 .main_card_category_image_div_1 {
 
-    display:flex;
-    justify-content:center;
-    height:30px; 
-    background-color:#2739fd;
-    border-radius:100px; 
-    position:absolute;
-    position:absolute;
-    top:-15px; 
-    margin-bottom:15px;
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    background-color: #2739fd;
+    border-radius: 100px;
+    position: absolute;
+    position: absolute;
+    top: -15px;
+    margin-bottom: 15px;
 
 }
 
 .main_card_category_image_div_2 {
 
-    display:flex;
-    justify-content:center;
-    height:30px; 
-    background-color:#006837;
-    border-radius:100px; 
-    position:absolute;
-    position:absolute;
-    top:-15px; 
-    margin-bottom:15px;
-    
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    background-color: #006837;
+    border-radius: 100px;
+    position: absolute;
+    position: absolute;
+    top: -15px;
+    margin-bottom: 15px;
+
 
 }
 
 .main_card_category_image_div_3 {
 
-    display:flex;
-    justify-content:center;
-    height:30px; 
-    background-color:#29ABE2;
-    border-radius:100px; 
-    position:absolute;
-    position:absolute;
-    top:-15px; 
-    margin-bottom:15px;
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    background-color: #29ABE2;
+    border-radius: 100px;
+    position: absolute;
+    position: absolute;
+    top: -15px;
+    margin-bottom: 15px;
 
 }
 
 .main_card_category_image_div_4 {
 
-    display:flex;
-    justify-content:center;
-    height:30px; 
-    background-color:#D4145A;
-    border-radius:100px; 
-    position:absolute;
-    position:absolute;
-    top:-15px; 
-    margin-bottom:15px;
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    background-color: #D4145A;
+    border-radius: 100px;
+    position: absolute;
+    position: absolute;
+    top: -15px;
+    margin-bottom: 15px;
 
 }
 
 .main_card_category_image_div_5 {
 
-    display:flex;
-    justify-content:center;
-    height:30px; 
-    background-color:#ED1C24;
-    border-radius:100px; 
-    position:absolute;
-    position:absolute;
-    top:-15px; 
-    margin-bottom:15px;
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    background-color: #ED1C24;
+    border-radius: 100px;
+    position: absolute;
+    position: absolute;
+    top: -15px;
+    margin-bottom: 15px;
 
 }
 
 .main_card_category_image_div_6 {
 
-    display:flex;
-    justify-content:center;
-    height:30px; 
-    background-color:#E0C121;
-    border-radius:100px; 
-    position:absolute;
-    position:absolute;
-    top:-15px; 
-    margin-bottom:15px;
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    background-color: #E0C121;
+    border-radius: 100px;
+    position: absolute;
+    position: absolute;
+    top: -15px;
+    margin-bottom: 15px;
 
 }
 
 .main_card_category_image_div_7 {
 
-    display:flex;
-    justify-content:center;
-    height:30px; 
-    background-color:#00C508;
-    border-radius:100px; 
-    position:absolute;
-    position:absolute;
-    top:-15px; 
-    margin-bottom:15px;
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    background-color: #00C508;
+    border-radius: 100px;
+    position: absolute;
+    position: absolute;
+    top: -15px;
+    margin-bottom: 15px;
 
 }
 
 .main_card_category_image_div_8 {
 
-    display:flex;
-    justify-content:center;
-    height:30px; 
-    background-color:#93278F;
-    border-radius:100px; 
-    position:absolute;
-    position:absolute;
-    top:-15px; 
-    margin-bottom:15px;
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    background-color: #93278F;
+    border-radius: 100px;
+    position: absolute;
+    position: absolute;
+    top: -15px;
+    margin-bottom: 15px;
 
 }
 
 .main_card_category_image_div_9 {
 
-    display:flex;
-    justify-content:center;
-    height:30px; 
-    background-color:#00A99D;
-    border-radius:100px; 
-    position:absolute;
-    position:absolute;
-    top:-15px; 
-    margin-bottom:15px;
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    background-color: #00A99D;
+    border-radius: 100px;
+    position: absolute;
+    position: absolute;
+    top: -15px;
+    margin-bottom: 15px;
 
 }
 
 .main_card_category_image_div_10 {
 
-    display:flex;
-    justify-content:center;
-    height:30px; 
-    background-color:#ED751E;
-    border-radius:100px; 
-    position:absolute;
-    position:absolute;
-    top:-15px; 
-    margin-bottom:15px;
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    background-color: #ED751E;
+    border-radius: 100px;
+    position: absolute;
+    position: absolute;
+    top: -15px;
+    margin-bottom: 15px;
 
 }
 
@@ -1633,26 +1676,25 @@ a {
 
 .main_card_category_image {
 
-    width:25px;
-    margin-left:18px
-
+    width: 25px;
+    margin-left: 18px
 }
 
 .main_card_category_image_h5 {
 
     font-family: IBM Plex Sans, sans-serif;
-    color:rgb(255, 255, 255);
-    text-align:center;
-    font-size:15px;
-    font-weight:700;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
     margin-left: 7px;
-    margin-top:6px;
+    margin-top: 6px;
     margin-right: 18px;
 
 }
 
 .main_card_image_container {
-    width:250px; 
+    width: 250px;
     height: 180px;
     display: flex;
     align-items: center;
@@ -1661,31 +1703,31 @@ a {
 }
 
 .main_card_image {
-     border-radius:10px;
-    background:white;
-    margin-top:30px;
-    
+    border-radius: 10px;
+    background: white;
+    margin-top: 30px;
+
 }
 
 .main_card_h3 {
 
     font-family: IBM Plex Sans, sans-serif;
-    color:rgb(53, 53, 53);
-    width:200px;
-    text-align:center;
-    font-size:18px;
-    font-weight:700;
+    color: rgb(53, 53, 53);
+    width: 200px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
     margin-top: 15px;
-    
+
 }
 
 /* Mini_card */
 
 .main_card_h2 {
 
-    margin-top:10px;
-    margin-bottom:10px; 
-    font-family: 'IBM Plex Sans'; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'IBM Plex Sans';
     font-weight: 700;
     background: linear-gradient(96.64deg, #FDC627 7.25%, #EC6907 110.91%, #666666 110.92%);
     -webkit-background-clip: text;
@@ -1698,23 +1740,22 @@ a {
 
 .vendere-main-div {
 
-    margin-top:50px
-
+    margin-top: 50px
 }
 
 .vendere-img {
 
-    width:340px;
+    width: 340px;
 
 }
 
 .vendere-h2 {
 
     font-family: IBM Plex Sans, sans-serif;
-    color:rgb(53, 53, 53);
-    text-align:left;
-    font-size:37px;
-    font-weight:700;
+    color: rgb(53, 53, 53);
+    text-align: left;
+    font-size: 37px;
+    font-weight: 700;
     margin-top: 20px;
 
 }
@@ -1722,47 +1763,47 @@ a {
 .vendere-div-1 {
 
     display: flex;
-    margin-top:30px;
-
+    margin-top: 30px;
+   flex-wrap: wrap;
 }
 
 .vendere-div-colonna {
 
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
 
 }
 
 .vendere-div-3 {
 
-    display:flex;
-    align-items:center;
+    display: flex;
+    align-items: center;
+
 
 }
 
 .vendere-mini-img {
 
-    width:35px;
-    margin:10px
-
+    width: 35px;
+    margin: 10px
 }
 
 .vendere-mini-title {
 
     font-family: IBM Plex Sans, sans-serif;
-    margin-top:15px;
-    margin-right:20px;
-    color:rgb(53, 53, 53);
-    text-align:left;
-    font-size:17px;
-    font-weight:600;
+    margin-top: 15px;
+    margin-right: 20px;
+    color: rgb(53, 53, 53);
+    text-align: left;
+    font-size: 17px;
+    font-weight: 600;
 
 }
 
 .vendere-button {
 
     margin-top: 20px;
-    margin-bottom:20px;
+    margin-bottom: 20px;
 }
 
 
@@ -1820,14 +1861,14 @@ a {
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    background:  linear-gradient(101.43deg, #FDC627 12.64%, #EC6907 112.5%);
+    background: linear-gradient(101.43deg, #FDC627 12.64%, #EC6907 112.5%);
     font-family: "IBM Plex Sans", sans-serif;
     font-size: 15px;
     box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     cursor: pointer;
     border: none;
-    
+
 }
 
 .button1:after {
@@ -1867,11 +1908,11 @@ a {
     0% {
         transform: scale(1);
     }
-    
+
     50% {
         transform: scale(0.95);
     }
-    
+
     100% {
         transform: scale(1);
     }
@@ -1889,17 +1930,17 @@ a {
 
 
 body {
-    
+
     font-family: IBM Plex Sans, sans-serif;
 }
 
-.div-annuncio{
+.div-annuncio {
     background-color: white;
     border-radius: 20px;
     box-shadow: 0px 1px 12.6px rgba(0, 0, 0, 0.15);
 }
 
-.img-annuncio{
+.img-annuncio {
     width: 28%;
     height: 50%;
     padding-top: 2%;
@@ -1908,12 +1949,13 @@ body {
 .titolo-annuncio {
     font-family: 'IBM Plex Sans';
     color: #000000;
+    font-weight: 700;;
 }
 
-.sottotitolo-annuncio{
+.sottotitolo-annuncio {
     font-weight: 400;
     font-size: 16px;
-    color: #999999;
+    color: #cacaca;
 }
 
 .immagine-annuncio {
@@ -1942,20 +1984,20 @@ body {
     display: none;
 }
 
-#carica-immagine-annuncio ~ img {
+#carica-immagine-annuncio~img {
     width: 100%;
     height: auto;
     border-radius: 50%;
 }
 
-.label-annuncio{
+.label-annuncio {
     font-family: 'IBM Plex Sans';
     font-weight: 700;
     font-size: 16px;
     color: #000000;
 }
 
-.input-annuncio{
+.input-annuncio {
     font-size: 16px;
     background: #F6F6F6;
     box-shadow: -1px 1px 5.9px rgba(0, 0, 0, 0.08), inset -2px 2px 5.4px rgba(0, 0, 0, 0.11);
@@ -1963,12 +2005,12 @@ body {
     border: none;
 }
 
-.input-annuncio:focus{
-    border-color: linear-gradient(135.95deg, #FDC627 11.74%, #EC6907 100%); 
+.input-annuncio:focus {
+    border-color: linear-gradient(135.95deg, #FDC627 11.74%, #EC6907 100%);
     box-shadow: 0 0 0 0.2rem #FDC627;
 }
 
-.button-annuncio{
+.button-annuncio {
     background: linear-gradient(135.95deg, #FDC627 11.74%, #EC6907 100%);
     border-radius: 6px;
     border: none;
@@ -1978,29 +2020,56 @@ body {
     transition: transform 0.2s ease;
 }
 
-.button-annuncio:hover{
+.button-annuncio:hover {
     transform: scale(1.05);
     color: white;
 }
+@media screen and (max-width: 1500px) {
+    .boxVuoiVenedereQualcosa {
+        margin: 20px 10px 20px 10px;
+        width: 480px;
+        height: 420px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .vendere-h2 {
+        text-align: center;
+    }
+
+    .vendere-div-1 {
+
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        flex-wrap: wrap;
+    }
+
+    .vendere-mini-title {
+
+        font-family: IBM Plex Sans, sans-serif;
+        margin-top: 15px;
+
+        color: rgb(53, 53, 53);
+        text-align: left;
+        font-size: 17px;
+        font-weight: 600;
+    
+    }
+    
+  }
 
 
+  @media screen and (max-width: 490px) {
+    .vendere-div-3 {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
+            align-items: center;
+        
+        
+        
+    }
+}

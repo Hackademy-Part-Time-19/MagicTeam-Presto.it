@@ -60,3 +60,4 @@ Route::resource('article', ArticleController::class, ['only' => ['index', 'show'
 
 
 
+

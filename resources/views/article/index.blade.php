@@ -253,9 +253,10 @@
                     </div>
                 </div>
             </div>
+        </div>
 
     @endif
 
-    </div>
+    
     
 </x-layout>
