@@ -1,4 +1,4 @@
-.cont-princip {
+.cont-principLiv {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,20 +6,20 @@
    
 }
 
-.career {
+.careerLiv {
     
     box-shadow: 0px 1px 12.6px rgba(0, 0, 0, 0.15);
     
 }
 
-.card-title{
+.card-titleLiv{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 30px;
     margin-bottom: 20px;
 }
-.button-invia {
+.button-inviaLiv {
     background: linear-gradient(135.95deg, #FDC627 11.74%, #EC6907 100%);
     border-radius: 6px;
     border: none;
@@ -32,11 +32,11 @@
     width: 100px;
     
 }
-.button-invia:hover{
+.button-inviaLiv:hover{
     transform: scale(1.05);
     color: white;
 }
-.card-img-top {
+.card-img-topLiv {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,7 +44,7 @@
     margin-left: 30px;
 
 }
-.note {
+.noteLiv {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,15 +54,15 @@
     border: none ;
 }
 
-.card-5 {
+.card-5Liv {
     height: 80vh;
     padding-bottom: 30px;
 }
 
-.form-label {
+.form-labelLiv {
     margin-left: 20px;
 }
-.form-control {
+.form-controlLiv {
     width: 50vh;
     margin-left: 10px;
 }
