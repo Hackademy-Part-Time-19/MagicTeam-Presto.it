@@ -59,5 +59,9 @@ Route::resource('article', ArticleController::class, ['only' => ['index', 'show'
 
 
 
+Route::get('/language/{locale}', function ($locale){
+    session()->put('locale',$locale);
+    return redirect()->back();
 
+})->name('locale');
 

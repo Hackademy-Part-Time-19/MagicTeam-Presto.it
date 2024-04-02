@@ -31,6 +31,7 @@ class RevisorController extends Controller
         return view("testmiddleware");
 
     }
+
     
 
 }
