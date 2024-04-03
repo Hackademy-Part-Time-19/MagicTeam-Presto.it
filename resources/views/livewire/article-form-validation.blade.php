@@ -7,17 +7,20 @@
                     <h1 class="card-title text-center mt-3 titolo-annuncio">Inserisci Prodotto</h1>
                     <p class="card-text text-center mb-5 sottotitolo-annuncio">Inserisci tutti i campi per aumentare le tue probabilità di vendita</p>
 
-                    <form wire:submit="save" {{-- action="{{route("article.store")}}" id="productForm" method="POST" --}}>
+                    <form wire:submit="save">
                         @csrf
                         <div class="form-group text-center mb-3">
                             <div class="custom-file">
-                                <label for="carica-immagine-annuncio" class="immagine-annuncio">
+                                <label for="carica-immagine-annuncio" class="immagine-annuncio">    
+
+                                    
                                     <div class="circle" id="circle">
                                         <span class="icon">+</span>
                                     </div>
                                     <div id="preview-immagine-annuncio" style="display: none"></div>
+
                                 </label>
-                                <input id="carica-immagine-annuncio" type="file" onchange="previewImmagineAnnuncio()"/>
+                                <input wire:model="temporary_images" name="images" id="carica-immagine-annuncio" type="file" {{-- onchange="previewImmagineAnnuncio()" --}}/>
                             </div>
                         </div>
 
@@ -57,8 +60,24 @@
                         </div>
 
                         <button type="submit" class="btn d-block mx-auto button-annuncio" onclick="stampa()">Inserisci Annuncio</button>
-                    </form>
+                        @if ($images)
+                            
+                            @foreach ($images as $key => $image )
+                            
+                            <img src="{{$image->temporaryUrl()}}" alt="">
 
+                            <div style="background-image: url()"></div>
+                        
+                            @endforeach
+
+                        @endif
+                    </form>
+                        
+                    @if(session()->has('success'))  
+                        <x-success-article>{{session('success')}}</x-success-article>
+                    @endif
+                   
+                    
                 </div>
             </div>
         </div>
