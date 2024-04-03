@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
-    public function CategoryIndex ($category_id = null) {
+    
+    public function CategoryIndex ($category_id) {
 
     
 
@@ -24,3 +25,5 @@ class CategoryController extends Controller
         return view('article.index', ["articles" => $articles, "category_id"=> $category_id]);
     }
 }
+
+

@@ -3,6 +3,7 @@
 use \App\Models\Article;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\IndexController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\RevisorController;
 use App\Http\Controllers\CategoryController;
@@ -18,9 +19,9 @@ use App\Http\Controllers\CategoryController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-})->name("home");
+Route::get('/', [IndexController::class,"CardIndex"])->name("home");
+
+
 
 Route::get('/article/category/{category_id}', [CategoryController::class, "CategoryIndex"])->name("category");
 

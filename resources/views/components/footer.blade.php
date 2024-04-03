@@ -28,7 +28,7 @@
                         
                     </div>
                    <div>
-                    {{-- <x-flag-country-us style="width: 30px; height:30px"/>
+                   {{--  <x-flag-country-us style="width: 30px; height:30px"/>
                     <x-flag-country-fr style="width: 30px; height:30px"/> --}}
                    </div>
                     <div class="copy">

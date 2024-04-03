@@ -14,26 +14,27 @@ class ArticleController extends Controller
      * 
      */
     public function index(Request $request)
-{
-    $search = $request->query('search');
-   
+    {
+        $search = $request->query('search');
 
-    $query = Article::query();
 
-    $query->where('is_accepted', true);
+        $query = Article::query();
 
-    if ($search) {
-        $query->where("name", "like", "%$search%")
-              ->orWhere("description", "like", "%$search%");
-        
+        $query->where('is_accepted', true);
+
+        if ($search) {
+            $query->where("name", "like", "%$search%")
+                ->orWhere("description", "like", "%$search%");
+
+        }
+
+        SortByTime($query);
+
+        $articles = $query->get();
+
+
+        return view('article.index', compact('articles'));
     }
-
-    SortByTime($query);
-
-    $articles = $query->get();
-
-    return view('article.index', compact('articles'));
-}
 
     /**
      * Show the form for creating a new resource.
@@ -58,13 +59,13 @@ class ArticleController extends Controller
             "description" => $request->input("description"),
             "price" => $request->input("price"),
             "category_id" => $request->input("category_id"),
-            "user_id" =>  auth()->user()->id,    
+            "user_id" => auth()->user()->id,
 
         ]);
 
         return redirect()->route("article.index")->with("success", "Post created successfully");
 
-        
+
     }
 
     /**
@@ -74,7 +75,7 @@ class ArticleController extends Controller
     {
         //
 
-        return view("article.show",["article" => $article]);
+        return view("article.show", ["article" => $article]);
     }
 
     /**
@@ -84,7 +85,7 @@ class ArticleController extends Controller
     {
         //
 
-        return view("article.edit",["article" => $article]);
+        return view("article.edit", ["article" => $article]);
     }
 
     /**
@@ -100,11 +101,11 @@ class ArticleController extends Controller
             "description" => $request["description"],
             "price" => $request["price"],
             "category_id" => $request["category_id"],
-                 
+
 
         ]);
-       
-        
+
+
 
         return redirect()->route("article.index")->with("success", "Post updated successfully");
 
@@ -117,16 +118,21 @@ class ArticleController extends Controller
     {
         //
 
-        
-        
+
+
         $article->delete();
 
         return redirect()->route("article.index")->with("success", "Post deleted successfully");
     }
-     
+
 }
 
-function SortByTime($articoli){
+function SortByTime($articoli)
+{
     $articoli->orderByDesc("created_at");
     return $articoli;
 }
+
+
+
+
