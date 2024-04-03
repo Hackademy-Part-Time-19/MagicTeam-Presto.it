@@ -1,5 +1,5 @@
 <x-layout>
-     <div class="container mt-5">
+     <div class="container mt-5 mb-5">
         <div class="row">
             <div class="col-md-6 offset-md-3">
                 <div class="card div-annuncio">
@@ -8,7 +8,7 @@
                         <h1 class="card-title text-center mt-3 titolo-annuncio">Registrati</h1>
                         <p class="card-text text-center mb-5 sottotitolo-annuncio">Compila tutti i campi per registrarti sulla piattaforma <br><a href="{{route("login")}}" class="sottotitolo-annuncio">Hai già un account?</a></p>
                         
-                        <form action="{{route("register")}}" id="productForm" method="POST">
+                        <form action="{{route("register")}}" id="productForm" method="POST" style="margin-left:15px;margin-right:15px;">
                             
                             @csrf
                             <div class="form-group mb-3">
