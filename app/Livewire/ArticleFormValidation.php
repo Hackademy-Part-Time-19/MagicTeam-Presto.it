@@ -97,10 +97,10 @@ class ArticleFormValidation extends Component
                 
             } 
         
-            session()->flash('success', 'Article saved successfully.');
+            session()->flash('success');
 
             
-            $this->reset(['name', 'description', 'price', 'category_id', 'temporary_images']);
+            $this->reset(['name', 'description', 'price', 'category_id', 'temporary_images','images']);
         
 
         

@@ -74,7 +74,7 @@
                     </form>
                         
                     @if(session()->has('success'))  
-                        <x-success-article>{{session('success')}}</x-success-article>
+                        <x-success-article></x-success-article>
                     @endif
                    
                     
