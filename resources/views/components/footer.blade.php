@@ -28,8 +28,8 @@
                         
                     </div>
                    <div>
-                    <x-flag-country-us style="width: 30px; height:30px"/>
-                    <x-flag-country-fr style="width: 30px; height:30px"/>
+                   {{--  <x-flag-country-us style="width: 30px; height:30px"/>
+                    <x-flag-country-fr style="width: 30px; height:30px"/> --}}
                    </div>
                     <div class="copy">
                         <h5>Copyright ©2024; Designed by <span>MagicTeam</span></h5>
