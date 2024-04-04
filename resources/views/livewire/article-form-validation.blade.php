@@ -20,7 +20,7 @@
                                     <div id="preview-immagine-annuncio" style="display: none"></div>
 
                                 </label>
-                                <input wire:model="temporary_images" name="images" id="carica-immagine-annuncio" type="file" {{-- onchange="previewImmagineAnnuncio()" --}}/>
+                                <input wire:model="temporary_images" multiple name="images" id="carica-immagine-annuncio" type="file" {{-- onchange="previewImmagineAnnuncio()" --}}/>
                             </div>
                         </div>
 
