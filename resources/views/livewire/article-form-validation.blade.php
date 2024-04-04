@@ -72,9 +72,11 @@
 
                         @endif
                     </form>
-                        
-                    @if(session()->has('success'))  
+                    
+                    @if(session()->has('success') && session('success') === true)
+
                         <x-success-article></x-success-article>
+
                     @endif
                    
                     

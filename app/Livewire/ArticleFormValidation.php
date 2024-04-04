@@ -97,7 +97,7 @@ class ArticleFormValidation extends Component
                 
             } 
         
-            session()->flash('success');
+            redirect()->to("article/create")->with("success", true);
 
             
             $this->reset(['name', 'description', 'price', 'category_id', 'temporary_images','images']);
