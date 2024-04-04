@@ -305,6 +305,20 @@ ul {
     }
   }
   
+.footerMenu {
+    color: white;
+    font-family: IBM Plex Sans, sans-serif;
+    margin-top: 150px;
+    margin-bottom:15px;;
+}
+
+.footerMenu:hover {
+    color: #FDC627;
+    font-family: IBM Plex Sans, sans-serif;
+    margin-top: 150px;
+    margin-bottom:15px;;
+}
+
 
 .boxVuoiVenedereQualcosa {
     margin: 20px 10px 20px 60px;
