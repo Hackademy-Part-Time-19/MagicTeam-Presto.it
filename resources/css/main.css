@@ -305,6 +305,20 @@ ul {
     }
   }
   
+.footerMenu {
+    color: white;
+    font-family: IBM Plex Sans, sans-serif;
+    margin-top: 150px;
+    margin-bottom:15px;;
+}
+
+.footerMenu:hover {
+    color: #FDC627;
+    font-family: IBM Plex Sans, sans-serif;
+    margin-top: 150px;
+    margin-bottom:15px;;
+}
+
 
 .boxVuoiVenedereQualcosa {
     margin: 20px 10px 20px 60px;
@@ -705,6 +719,8 @@ ul {
     cursor: pointer;
     border: none;
     margin-bottom: 30px;
+    color: white;
+    font-weight: 600;
 }
 
 .buttonSearch:hover {
@@ -718,6 +734,14 @@ ul {
     border-radius: 10px;
 }
 
+.custom-style-html-lavora {
+    background: #FFFFFF;
+    box-shadow: 0px 1px 12.6px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding-bottom: 20px;
+    margin-bottom: 30px;;
+}
+
 .containerImgTxtFormRicercaHome {
     display: flex;
     flex-direction: column;
@@ -726,6 +750,11 @@ ul {
 
 .imgFormRicercaHome {
     width: 160px;
+    margin: 10px;
+}
+
+.imgFormLavoraConNoi {
+    height: 160px;
     margin: 10px;
 }
 
@@ -2049,3 +2078,4 @@ body {
         
     }
 }
+
