@@ -30,7 +30,7 @@ a {
 }
 
 
-/* Codice Livia */
+
 
 .navbar1 {
     display: flex;
@@ -266,23 +266,6 @@ ul {
     border-radius: 20px;
     background: linear-gradient(135.95deg, #FDC627 11.74%, #EC6907 100%);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1963,6 +1946,24 @@ body {
     color: #cacaca;
 }
 
+.carousel-item {
+    position: relative;
+}
+
+.remove-btn-annuncio {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
 .immagine-annuncio {
     display: inline-block;
     position: relative;
@@ -1994,6 +1995,7 @@ body {
     height: auto;
     border-radius: 50%;
 }
+
 
 .label-annuncio {
     font-family: 'IBM Plex Sans';
