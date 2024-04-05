@@ -167,7 +167,7 @@
 
         @endif
         {{-- @endif --}}
-
+                
         <div
             style="width:100%; border-radius:50px; background-color:red; display:flex; align-items:center; justify-content:center; margin-bottom:15px;margin-top:10px;">
 

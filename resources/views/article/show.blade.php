@@ -21,16 +21,32 @@
             <div class="carousel-inner">
 
                 {{-- Carosello pronto per le immagini  --}}
+                    @if (count($article->images) != 0)
+                        @foreach($article->images as $index => $image)
 
-                {{-- @foreach($article->images as $image)
-                <div class="carousel-item active">
-                    <img src="{{ asset('storage/' . $image->path) }}" class="d-block w-100" alt="">
-                </div>
-                @endforeach --}}
+                            @if ($index == 0)
+                                <div class="carousel-item active">
+
+                            @else 
+
+                                <div class="carousel-item">
+
+                            @endif
+                            
+                                <img src="{{ asset('storage/' . $image->path) }}" class="d-block w-100" alt="">
+                            </div>
+
+                        @endforeach 
+                    @else 
+                        <div class="carousel-item active">
+                            <img src="/img/default-img.gif" class="d-block w-100" alt="">
+                        </div>
+
+                    @endif
 
                 {{-- Carosello di default --}}
 
-                <div class="carousel-item active">
+                {{-- <div class="carousel-item active">
                     <img src="/img/prova2.png" class="d-block w-100 " alt="">
                 </div>
                 <div class="carousel-item">
@@ -38,7 +54,7 @@
                 </div>
                 <div class="carousel-item">
                     <img src="/img/prova1.png" class="d-block w-100" alt="">
-                </div>
+                </div> --}}
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
                 data-bs-slide="prev">

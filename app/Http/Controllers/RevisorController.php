@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use Illuminate\Http\Request;
 use App\Mail\RevisorRequestMail;
 use Illuminate\Support\Facades\Auth;
@@ -28,7 +29,11 @@ class RevisorController extends Controller
 
     public function index () {
 
-        return view("testmiddleware");
+        $query = Article::query();
+
+        $articles = $query->where("is_accepted", null)->get();
+
+        return view("testmiddleware", ["articles" => $articles]);
 
     }
 
