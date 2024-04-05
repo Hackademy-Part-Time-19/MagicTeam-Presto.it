@@ -66,7 +66,7 @@
                             
                             <img src="{{$image->temporaryUrl()}}" alt="">
 
-                            <div style="background-image: url()"></div>
+                            <button type="button" wire:click="removeImage({{$key}})" >X</button>
                         
                             @endforeach
 
