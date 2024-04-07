@@ -7,13 +7,18 @@
             <div class="bottom">
 
                 <div class="cent">
-
-                    <div class="iccons">
-                        <a href="" class="aFooter"><img style="width: 5vh;" src="images/facebook.png" alt=""></a>
-                        <a href=""class="aFooter"><img style="width: 4vh;" src="images/instagram.png" alt=""></a>
-                        <a href=""class="aFooter"><img style="width: 4vh;" src="images/twitter.png" alt=""></a>
-                        <a href=""class="aFooter"><img src="images/youtube.png" alt=""></a>
+                    <div>
+                        <div class="iccons">
+                        
+                            <a href="" class="aFooter"><img style="width: 5vh;" src="images/facebook.png" alt=""></a>
+                            <a href=""class="aFooter"><img style="width: 4vh;" src="images/instagram.png" alt=""></a>
+                            <a href=""class="aFooter"><img style="width: 4vh;" src="images/twitter.png" alt=""></a>
+                            <a href=""class="aFooter"><img src="images/youtube.png" alt=""></a>
+                            
+                            
+                        </div>
                     </div>
+                    
                     
                     <div class="container-list">
                         <a href=""class="aFooter">Home</a>
@@ -27,10 +32,7 @@
                         @endauth
                         
                     </div>
-                   <div>
-                    <x-flag-country-us style="width: 30px; height:30px"/>
-                    <x-flag-country-fr style="width: 30px; height:30px"/>
-                   </div>
+                   
                     <div class="copy">
                         <h5>Copyright ©2024; Designed by <span>MagicTeam</span></h5>
                     </div>

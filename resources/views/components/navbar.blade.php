@@ -6,9 +6,42 @@
           aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
       </button>
+        <div id="wrapper">
+            <div class="ln">
+                <a class="dropdown-button square" href="#">
+                @if (Session::get('locale') != 'en')
+                <img src="https://flagicons.lipis.dev/flags/4x3/{{Session::get('locale')}}.svg" >
+                @else
+                <img src="https://flagicons.lipis.dev/flags/4x3/gb.svg" >
+                @endif
+
+                    <p> 
+                        <span class="language-code">{{strtoupper(Session::get('locale'))}}</span>
+                        <span class="language-name">{{Config::get('constants.langs.'.Session::get('locale'))}}</span>
+                    </p>
+                </a>
+
+                @foreach (Config::get('constants.langs') as $code => $lang)
+                    @if (Session::get('locale') != $code)
+                        <a class="square squared" href="/language/{{$code}}" style="display: none;">
+                            @if ($code != 'en')
+                            <img src="https://flagicons.lipis.dev/flags/4x3/{{$code}}.svg">
+                            @else
+                            <img src="https://flagicons.lipis.dev/flags/4x3/gb.svg" >
+                            @endif
+                            
+                                <p>
+                                <span class="language-code">{{strtoupper($code)}}</span>
+                                <span class="language-name">{{$lang}}</span>
+                                </p>
+                        </a>
+                    @endif
+                @endforeach
+
+            </div>
+        </div>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
             <div class="navbar-nav text-end" style="font-family: IBM Plex Sans, sans-serif;margin-right:20px;">
-
               <a class="nav-link" href="{{route("article.index")}}">Annunci</a>
               @auth
                   <a class="nav-link" href="#">I miei articoli</a>

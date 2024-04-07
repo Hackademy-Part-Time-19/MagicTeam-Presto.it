@@ -1,10 +1,12 @@
 <?php
 
-use App\Http\Controllers\CategoryController;
+use \App\Models\Article;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\IndexController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\RevisorController;
-use \App\Models\Article;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +19,9 @@ use \App\Models\Article;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-})->name("home");
+Route::get('/', [IndexController::class,"CardIndex"])->name("home");
+
+
 
 Route::get('/article/category/{category_id}', [CategoryController::class, "CategoryIndex"])->name("category");
 
@@ -27,32 +29,39 @@ Route::get('/article/category/{category_id}', [CategoryController::class, "Categ
 
 Route::middleware(['auth'])->group(function () {
     
-    /* Route::resource('article', ArticleController::class); */
-
+    
+    /* Rotte articolo auth, tranne index e show */
     Route::resource('article', ArticleController::class, ['only' => ['store', 'edit', 'update', 'destroy', 'create']]);
 
+    /* Rotte form revisore */
     Route::get("request/revisor", [RevisorController::class, 'form_request'] );
     Route::post("request/revisor", [RevisorController::class, 'RevisorRequest'] )->name("revisor.request");
 
+    /* Rotte user */
+    Route::get("user/profile", [UserController::class, 'UserProfile'])->name("user.profile");
+    
+
+    /* Rotte auth revisore */
     Route::middleware(['revisor'])->group(function () {
         
         Route::get("/revisor/home", [RevisorController::class, 'index'])->name('revisor.index');
+
+        Route::patch("/accept/article/{article}", [RevisorController::class, 'acceptArticle'])->name("revisor.accept_article");
+
+        Route::patch("/refuse/article/{article}", [RevisorController::class, 'refuseArticle'])->name("revisor.refuse_article");
 
     });
 
 });
 
+/* Rotte articolo index e show pubbliche */
 Route::resource('article', ArticleController::class, ['only' => ['index', 'show']]);
 
 
 
-Route::patch("/accept/article/{article}", [RevisorController::class, 'acceptArticle'])->name("revisor.accept_article");
-
-Route::patch("/refuse/article/{article}", [RevisorController::class, 'refuseArticle'])->name("revisor.refuse_article");
 
 Route::get('/language/{locale}', function ($locale){
     session()->put('locale',$locale);
+    setrawcookie("googtrans", '/it/'.$locale, 0, '/');
     return redirect()->back();
-
 })->name('locale');
-

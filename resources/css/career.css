@@ -19,6 +19,10 @@
     margin-top: 30px;
     margin-bottom: 20px;
 }
+.mb-3Liv {
+    margin-bottom:15px;
+    margin-top: 15px;
+}
 .button-inviaLiv {
     background: linear-gradient(135.95deg, #FDC627 11.74%, #EC6907 100%);
     border-radius: 6px;
@@ -60,7 +64,8 @@
 }
 
 .form-labelLiv {
-    margin-left: 20px;
+    margin-left: 15px;
+    margin-bottom: 15px;
 }
 .form-controlLiv {
     width: 50vh;

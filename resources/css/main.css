@@ -2073,3 +2073,167 @@ body {
         
     }
 }
+
+
+
+/** START TRANSLATE **/
+#wrapper {
+    display: flex;
+  }
+  .ln {
+    overflow: visible;
+    margin-left: 20px;
+    height: 40px;
+  }
+  .square {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #212529;
+  }
+  
+  
+  .square img {
+    object-fit: cover;
+    height: 100%;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none; 
+  }
+  
+  .square p {
+    visibility: hidden;
+    position: absolute;
+    z-index: 2;
+    font-size: 20px;
+    font-family: sans-serif;
+    color: white;
+    font-weight: bold;
+    opacity: 0; 
+    transition: visibility 0.5s ease-in-out, opacity 0.5s ease-in-out; 
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+  }
+  .squared p {
+  visibility: hidden;
+    position: absolute;
+    z-index: 2; 
+    font-size: 20px;
+    font-family: sans-serif;
+    color: white;
+    font-weight: bold;
+    opacity: 0; 
+    transition: visibility 0.5s ease-in-out, opacity 0.5s ease-in-out; 
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    position: absolute;
+    top: 5px;
+      left: 12px;
+  
+  }
+  .square p span.language-code {
+  }
+  .square p span.language-name {
+    display: none;
+    white-space: nowrap;
+  }
+  
+  .square::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    visibility: hidden; 
+    opacity: 0; 
+    transition: visibility 0.5s ease-in-out, opacity 0.5s ease-in-out; 
+    box-shadow: rgb(255 255 255 / 84%) 0px 0px 2px 2px; 
+  }
+  
+  .square:hover::before {
+    visibility: visible; 
+    opacity: 1; 
+  }
+  
+  .square:hover p {
+    visibility: visible; 
+    opacity: 1; 
+  }
+  
+  .square::before {
+    z-index: 1; 
+  }
+  
+  .goog-te-banner-frame.skiptranslate {
+     display: none !important;
+   } 
+  
+   body > .skiptranslate {
+     display: none;
+   }
+  
+  .goog-logo-link{
+     display:none !important;
+   }
+  
+   .goog-te-gadget{
+      color:transparent!important;
+    }
+  
+   #goog-gt-tt, .goog-te-balloon-frame{
+      display: none !important;
+     }
+  
+  .goog-text-highlight { 
+      display: none !important;
+   } 
+  
+  .VIpgJd-ZVi9od-l4eHX-hSRGPd{
+    display: none;
+  }
+  body {
+    top:0 !important;
+  }
+  
+  @media only screen and (max-width: 1000px) {
+    .ln {
+      position: fixed;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      height: unset;
+      outline: 8px dashed black;
+      max-height: 100vh;
+      overflow: auto; 
+    }
+    .square {
+      width: 15vw;
+      font-size: unset;
+      overflow: hidden; 
+    }
+    .square img {
+      width: 100%;
+      height: unset;
+    }
+    .square p {
+      font-size: 34px;
+    }
+    .square::before {
+      box-shadow: inset rgb(255 255 255 / 84%) 0px 0px 2px 2px;
+    }
+  }
+  /** END TRANSALTE **/
