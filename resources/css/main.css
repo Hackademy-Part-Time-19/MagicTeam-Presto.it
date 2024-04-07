@@ -5,30 +5,6 @@ a {
 }
 
 
-.successArticle {
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-
-    bottom: -50px;
-    width: 100%;
-    height: 300px;
-    z-index: 100;
-
-
-}
-
-.pSuccessArticle {
-
-    text-align: center;
-    width: 20%;
-    border-radius: 8px;
-    background-color: #00C508;
-
-}
-
 .errorArticle {
 
     display: flex;
@@ -54,7 +30,7 @@ a {
 }
 
 
-/* Codice Livia */
+
 
 .navbar1 {
     display: flex;
@@ -293,23 +269,6 @@ ul {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* V Codice Fede V */
 
 @media screen and (max-width: 1500px) {
@@ -329,6 +288,20 @@ ul {
     }
   }
   
+.footerMenu {
+    color: white;
+    font-family: IBM Plex Sans, sans-serif;
+    margin-top: 150px;
+    margin-bottom:15px;;
+}
+
+.footerMenu:hover {
+    color: #FDC627;
+    font-family: IBM Plex Sans, sans-serif;
+    margin-top: 150px;
+    margin-bottom:15px;;
+}
+
 
 .boxVuoiVenedereQualcosa {
     margin: 20px 10px 20px 60px;
@@ -729,6 +702,8 @@ ul {
     cursor: pointer;
     border: none;
     margin-bottom: 30px;
+    color: white;
+    font-weight: 600;
 }
 
 .buttonSearch:hover {
@@ -742,6 +717,14 @@ ul {
     border-radius: 10px;
 }
 
+.custom-style-html-lavora {
+    background: #FFFFFF;
+    box-shadow: 0px 1px 12.6px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding-bottom: 20px;
+    margin-bottom: 30px;;
+}
+
 .containerImgTxtFormRicercaHome {
     display: flex;
     flex-direction: column;
@@ -750,6 +733,11 @@ ul {
 
 .imgFormRicercaHome {
     width: 160px;
+    margin: 10px;
+}
+
+.imgFormLavoraConNoi {
+    height: 160px;
     margin: 10px;
 }
 
@@ -1958,6 +1946,24 @@ body {
     color: #cacaca;
 }
 
+.carousel-item {
+    position: relative;
+}
+
+.remove-btn-annuncio {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
 .immagine-annuncio {
     display: inline-block;
     position: relative;
@@ -1989,6 +1995,7 @@ body {
     height: auto;
     border-radius: 50%;
 }
+
 
 .label-annuncio {
     font-family: 'IBM Plex Sans';

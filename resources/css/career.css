@@ -3,13 +3,16 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
-   
+    background: #FFFFFF;
+    box-shadow: 0px 1px 12.6px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+
 }
 
 .careerLiv {
-    
+
     box-shadow: 0px 1px 12.6px rgba(0, 0, 0, 0.15);
-    
+
 }
 
 .card-titleLiv{
@@ -34,7 +37,7 @@
     margin-left: 200px;
     margin-top: 50px;
     width: 100px;
-    
+
 }
 .button-inviaLiv:hover{
     transform: scale(1.05);

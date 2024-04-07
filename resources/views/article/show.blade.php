@@ -19,6 +19,17 @@
                     aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
+
+                {{-- Carosello pronto per le immagini  --}}
+
+                {{-- @foreach($article->images as $image)
+                <div class="carousel-item active">
+                    <img src="{{ asset('storage/' . $image->path) }}" class="d-block w-100" alt="">
+                </div>
+                @endforeach --}}
+
+                {{-- Carosello di default --}}
+
                 <div class="carousel-item active">
                     <img src="/img/prova2.png" class="d-block w-100 " alt="">
                 </div>
