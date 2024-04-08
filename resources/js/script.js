@@ -9,7 +9,8 @@ window.previewImmagineAnnuncio = function previewImmagineAnnuncio() {
         document.getElementById('circle').style.display = 'none';
     };
     reader.readAsDataURL(input.files[0]);
-    }window.previewImmagineAnnuncio = function previewImmagineAnnuncio() {
+    }
+    window.previewImmagineAnnuncio = function previewImmagineAnnuncio() {
         var input = document.getElementById('carica-immagine-annuncio');
         var reader = new FileReader();
         reader.onload = function() {
