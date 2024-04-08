@@ -7,13 +7,18 @@
             <div class="bottom">
 
                 <div class="cent">
-
-                    <div class="iccons">
-                        <a href="" class="aFooter"><img style="width: 5vh;" src="images/facebook.png" alt=""></a>
-                        <a href=""class="aFooter"><img style="width: 4vh;" src="images/instagram.png" alt=""></a>
-                        <a href=""class="aFooter"><img style="width: 4vh;" src="images/twitter.png" alt=""></a>
-                        <a href=""class="aFooter"><img src="images/youtube.png" alt=""></a>
+                    <div>
+                        <div class="iccons">
+                        
+                            <a href="" class="aFooter"><img style="width: 5vh;" src="images/facebook.png" alt=""></a>
+                            <a href=""class="aFooter"><img style="width: 4vh;" src="images/instagram.png" alt=""></a>
+                            <a href=""class="aFooter"><img style="width: 4vh;" src="images/twitter.png" alt=""></a>
+                            <a href=""class="aFooter"><img src="images/youtube.png" alt=""></a>
+                            
+                            
+                        </div>
                     </div>
+                    
                     
                     <div class="container-list">
                         <a href=""class="aFooter">Home</a>

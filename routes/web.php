@@ -62,7 +62,6 @@ Route::resource('article', ArticleController::class, ['only' => ['index', 'show'
 
 Route::get('/language/{locale}', function ($locale){
     session()->put('locale',$locale);
+    setrawcookie("googtrans", '/it/'.$locale, 0, '/');
     return redirect()->back();
-
 })->name('locale');
-

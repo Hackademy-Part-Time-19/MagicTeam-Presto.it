@@ -26,5 +26,11 @@
     {{$slot}}
     <x-footer></x-footer>
 
+    <!-- START TRANSLATE -->
+    <div id="google_translate_element" style="display:none;"></div>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <!-- END TRANSALATE -->
+
 </body>
+
 </html>
