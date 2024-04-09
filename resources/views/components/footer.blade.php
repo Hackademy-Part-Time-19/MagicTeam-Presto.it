@@ -71,7 +71,11 @@
                 @endguest
                 @auth
                     <div class="col" style="padding-top: 25px">
+                        @if (Auth::user()->is_revisor === 1)
+                        <a href=" {{ route('revisor.index') }}"class="footerMenu">Zona revisore</a>
+                        @else
                         <a href=" {{ route('revisor.request') }}"class="footerMenu">Lavora con noi</a>
+                        @endif
                     </div>
                 @endauth
 

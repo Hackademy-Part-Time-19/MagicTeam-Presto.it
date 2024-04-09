@@ -31,7 +31,7 @@ class RevisorRequestMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            from: new Address($this->user_->email, $this->user_->name),
+            from: new Address("workwithus@presto.it"),
             subject: 'Revisor Request',
             
             
@@ -45,8 +45,8 @@ class RevisorRequestMail extends Mailable
     public function content(): Content
     {
         return new Content(
-             view: 'revisorRequestTEST',
-             with: ["text" => $this->text_], 
+             view: 'emailRevisore',
+             with: ["user" => $this->user_], 
             
         );
     }

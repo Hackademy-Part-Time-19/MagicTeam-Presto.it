@@ -237,7 +237,15 @@
             </div>
             <div class="vendere-button" style>
                 <button class="button1">
-                    <span><a href="{{ route('register') }}">Unisciti a noi</a></span>
+
+                    @guest
+                        <span><a href="{{ route('register') }}">Unisciti a noi</a></span>
+                    @endguest
+
+                    @auth
+                        <span><a href="{{ route('article.create') }}">Inizia a vendere</a></span>
+                    @endauth
+                    
 
                 </button>
             </div>
@@ -340,10 +348,13 @@
                     </div>
 
                     <div class="main_card_image_container">
-                        <img id="productImage_{{ $article->id }}" src="/img/default-img.gif"
+                       
+                        <img id="productImage_{{ $article->id }}" @if (count($article->images) != 0)src="storage/{{$article->images[0]->path}}"@else 
+                            src="/img/default-img.gif" 
+                            @endif
                             class="img-fluid main_card_image" alt=""
-                            onmouseover="changeImage({{ $article->id }})"
-                            onmouseout="restoreImage({{ $article->id }})">
+                           {{--  onmouseover="changeImage({{ $article->id }})"
+                            onmouseout="restoreImage({{ $article->id }})" --}}>
                     </div>
 
                     <h3 class="main_card_h3">

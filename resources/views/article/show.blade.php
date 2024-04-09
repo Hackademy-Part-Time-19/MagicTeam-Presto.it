@@ -14,7 +14,6 @@
             <div class="carousel-inner">
 
 
-
                 @foreach ($article->images as $key => $image)
                     <div class="carousel-item active">
                         <img src="{{ $article->images()->get()->isEmpty()

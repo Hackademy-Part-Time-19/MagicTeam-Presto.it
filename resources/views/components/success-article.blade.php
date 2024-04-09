@@ -1,5 +1,5 @@
 <div id="successArticle" class="alert alert-success no-show" role="alert">
-   Prodotto inserito in attesa di approvazione
+   {{$slot}}
 </div>
 
 <style>

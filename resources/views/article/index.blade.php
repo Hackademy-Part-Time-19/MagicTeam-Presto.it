@@ -126,6 +126,8 @@
 
 
                         <script>
+       
+                            
                             function changeImage(id) {
                                 document.getElementById('productImage_' + id).src = '/img/default-img.gif';
                             }

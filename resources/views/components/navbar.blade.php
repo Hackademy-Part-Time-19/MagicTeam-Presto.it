@@ -19,7 +19,7 @@
                         <span class="language-name">{{Config::get('constants.langs.'.Session::get('locale'))}}</span>
                     </p>
                 </a>
-
+                
                 @foreach (Config::get('constants.langs') as $code => $lang)
                     @if (Session::get('locale') != $code)
                         <a class="square squared" href="/language/{{$code}}" style="display: none;">
