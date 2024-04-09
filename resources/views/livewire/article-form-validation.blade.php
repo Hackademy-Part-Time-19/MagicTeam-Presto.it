@@ -14,7 +14,7 @@
                         <div id="carouselExampleIndicators" class="carousel slide float-left">
                             <div class="carousel-inner">
                                 @foreach ($images as $key => $image)
-                                    <div class="carousel-item active">
+                                    <div class="carousel-item @if($loop->last) active @endif">
                                         <img src="{{ $image->temporaryUrl() }}" class="d-block w-100" alt="...">
 
                                         <button type="button" wire:click="removeImage({{ $key }})"

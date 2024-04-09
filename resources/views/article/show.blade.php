@@ -10,35 +10,21 @@
         </div>
         <div id="carouselExampleIndicators" class="carousel slide carousel-custom"
             style="margin:20px; background: #FFFFFF;box-shadow: 0px 1px 12.6px rgba(0, 0, 0, 0.15);border-radius: 15px;align-item:center;justify-content:center;">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
+
             <div class="carousel-inner">
 
-                {{-- Carosello pronto per le immagini  --}}
 
-                {{-- @foreach($article->images as $image)
-                <div class="carousel-item active">
-                    <img src="{{ asset('storage/' . $image->path) }}" class="d-block w-100" alt="">
-                </div>
-                @endforeach --}}
 
-                {{-- Carosello di default --}}
+                @foreach ($article->images as $key => $image)
+                    <div class="carousel-item active">
+                        <img src="{{ $article->images()->get()->isEmpty()
+                            ? $article->images()->first()->getUrl(512, 512)
+                            : 'C:\Users\Utente\Desktop\AULAB\Progetto Presto.it\MagicTeam-Presto.it\public\img\default-img.gif' }}"
+                            class="d-block w-100" alt="nessun immagine da mostrare">
+                    </div>
+                @endforeach
 
-                <div class="carousel-item active">
-                    <img src="/img/prova2.png" class="d-block w-100 " alt="">
-                </div>
-                <div class="carousel-item">
-                    <img src="/img/prova1.png" class="d-block w-100" alt="">
-                </div>
-                <div class="carousel-item">
-                    <img src="/img/prova1.png" class="d-block w-100" alt="">
-                </div>
+
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
                 data-bs-slide="prev">
@@ -58,7 +44,7 @@
 
 
         <div class="containerInfoProdotto">
-            <h5 class="dataInfoProdotto">12.12.12</h5>
+            <h5 class="dataInfoProdotto">{{$article->created_at}}</h5>
             <h2 class="titoloInfoProdotto">
                 {{ $article->name }}
             </h2>

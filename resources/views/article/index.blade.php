@@ -106,10 +106,10 @@
                             </div>
 
                             <div class="main_card_image_container">
-                                <img id="productImage_{{ $article->id }}" src="/img/default-img.gif"
-                                    class="img-fluid main_card_image" alt=""
-                                    onmouseover="changeImage({{ $article->id }})"
-                                    onmouseout="restoreImage({{ $article->id }})">
+                                <img id="productImage_{{ $article->id }}" src="{{ $article->images()->get()->isEmpty() ?
+                                    $article->images()->first()->getUrl(300,300) : 'C:\Users\Utente\Desktop\AULAB\ProgettoPresto.it\MagicTeam-Presto.it\public\img\default-img.gif' }}"
+                                    class="img-fluid main_card_image" alt="nessun immagine da mostrare"
+                                   >
                             </div>
 
                             <h3 class="main_card_h3">
