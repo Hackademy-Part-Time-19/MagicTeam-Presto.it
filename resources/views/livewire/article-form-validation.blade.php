@@ -106,8 +106,8 @@
                     </div>
 
                     <!-- Messaggio di successo -->
-                    @if (session()->has('success') && session('success') === true)
-                        <x-success-article></x-success-article>
+                    @if (session()->has('success'))
+                        <x-success-article>{{ session('success') }}</x-success-article>
                     @endif
                 </div>
             </div>
