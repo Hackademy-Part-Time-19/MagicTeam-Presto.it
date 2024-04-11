@@ -15,11 +15,19 @@
 
 
                 @foreach ($article->images as $key => $image)
+                    @if ($key == 0)
                     <div class="carousel-item active">
-                        <img src="{{ $article->images()->get()->isEmpty()
-                            ? $article->images()->first()->getUrl(512, 512)
-                            : 'C:\Users\Utente\Desktop\AULAB\Progetto Presto.it\MagicTeam-Presto.it\public\img\default-img.gif' }}"
-                            class="d-block w-100" alt="nessun immagine da mostrare">
+                    @else
+                    <div class="carousel-item">
+                    @endif
+
+                            <img id="productImage_{{ $article->id }}_{{$key}}"  @if (count($article->images) != 0)
+                            src="http://127.0.0.1:8000/storage/{{$article->images[$key]->path}}"@else 
+                            src="/img/default-img.gif" 
+                            @endif
+                                class="img-fluid main_card_image" alt="Nessun immagine da mostrare"
+                               >
+
                     </div>
                 @endforeach
 

@@ -104,11 +104,13 @@
                                     {{ $article->category->name }}</h5>
 
                             </div>
-
+                                
                             <div class="main_card_image_container">
-                                <img id="productImage_{{ $article->id }}" src="{{ $article->images()->get()->isEmpty() ?
-                                    $article->images()->first()->getUrl(300,300) : 'C:\Users\Utente\Desktop\AULAB\ProgettoPresto.it\MagicTeam-Presto.it\public\img\default-img.gif' }}"
-                                    class="img-fluid main_card_image" alt="nessun immagine da mostrare"
+                                <img id="productImage_{{ $article->id }}"  @if (count($article->images) != 0)
+                                src="storage/{{$article->images[0]->path}}"@else 
+                                src="/img/default-img.gif" 
+                                @endif
+                                    class="img-fluid main_card_image" alt="Nessun immagine da mostrare"
                                    >
                             </div>
 
