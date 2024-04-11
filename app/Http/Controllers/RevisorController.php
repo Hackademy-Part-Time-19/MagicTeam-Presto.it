@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use App\Models\Article;
 use Illuminate\Http\Request;
 use App\Mail\RevisorRequestMail;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Artisan;
 
 class RevisorController extends Controller
 {
@@ -17,6 +20,7 @@ class RevisorController extends Controller
         
 
         Mail::to('indirizzo@example.com')->send(new RevisorRequestMail($text,$user));
+        return redirect()->route("revisor.request")->with("success", "Richiesta inviata correttamente");
 
     }
 
@@ -28,7 +32,18 @@ class RevisorController extends Controller
 
     public function index () {
 
-        return view("testmiddleware");
+        $query = Article::query();
+
+        $articles = $query->where("is_accepted", null)->get();
+
+        return view("testmiddleware", ["articles" => $articles]);
+
+    }
+
+    public function make_revisor(User $user) {
+
+        Artisan::call("presto:makeUserRevisor", ["email" => $user->email]);
+
 
     }
 

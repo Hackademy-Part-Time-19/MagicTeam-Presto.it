@@ -2272,8 +2272,8 @@ body {
       left: 12px;
   
   }
- /*  .square p span.language-code {
-  } */
+  
+  
   .square p span.language-name {
     display: none;
     white-space: nowrap;
@@ -2339,18 +2339,23 @@ body {
   }
   
   @media only screen and (max-width: 1000px) {
+    #wrapper { 
+        width: 30%;
+        height: auto;
+
+    }
     .ln {
       position: fixed;
-      right: 0;
-      top: 50%;
+      right: 20px;
+  
       transform: translateY(-50%);
-      height: unset;
-      outline: 8px dashed black;
-      max-height: 100vh;
-      overflow: auto; 
+      
+      
+     
+      
     }
     .square {
-      width: 15vw;
+      width: 8vw;
       font-size: unset;
       overflow: hidden; 
     }
@@ -2359,10 +2364,11 @@ body {
       height: unset;
     }
     .square p {
-      font-size: 34px;
+      font-size: 14px;
     }
     .square::before {
       box-shadow: inset rgb(255 255 255 / 84%) 0px 0px 2px 2px;
     }
   }
+ 
   /** END TRANSALTE **/

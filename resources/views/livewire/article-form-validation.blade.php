@@ -14,7 +14,7 @@
                         <div id="carouselExampleIndicators" class="carousel slide float-left">
                             <div class="carousel-inner">
                                 @foreach ($images as $key => $image)
-                                    <div class="carousel-item active">
+                                    <div class="carousel-item @if($loop->last) active @endif">
                                         <img src="{{ $image->temporaryUrl() }}" class="d-block w-100" alt="...">
 
                                         <button type="button" wire:click="removeImage({{ $key }})"
@@ -106,8 +106,8 @@
                     </div>
 
                     <!-- Messaggio di successo -->
-                    @if (session()->has('success') && session('success') === true)
-                        <x-success-article></x-success-article>
+                    @if (session()->has('success'))
+                        <x-success-article>{{ session('success') }}</x-success-article>
                     @endif
                 </div>
             </div>

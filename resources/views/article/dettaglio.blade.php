@@ -12,7 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
-    @vite(['resources/css/app.css','resources/css/footer.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/css/footer.css', 'resources/js/app.js'])
     <style>
         .button2 {
             position: relative;
@@ -211,7 +211,7 @@
             color: #B6B6B6;
             text-align: center;
             font-size: 15px;
-            margin:  10px 20px 10px 20px;
+            margin: 10px 20px 10px 20px;
         }
 
         .prezzoInfoProdotto {
@@ -248,24 +248,13 @@
         </div>
         <div id="carouselExampleIndicators" class="carousel slide carousel-custom"
             style="margin:20px; background: #FFFFFF;box-shadow: 0px 1px 12.6px rgba(0, 0, 0, 0.15);border-radius: 15px;align-item:center;justify-content:center;">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="/img/prova2.png" class="d-block w-100 " alt="">
-                </div>
-                <div class="carousel-item">
-                    <img src="/img/prova1.png" class="d-block w-100" alt="">
-                </div>
-                <div class="carousel-item">
-                    <img src="/img/prova1.png" class="d-block w-100" alt="">
-                </div>
+                @foreach ($images as $key => $image)
+                    <div class="carousel-item active">
+                        <img src="{{ $article->images()->get()->isEmpty() ?
+                        $article->images()->first()->getUrl(600,600) : 'C:\Users\Utente\Desktop\AULAB\Progetto Presto.it\MagicTeam-Presto.it\public\img\default-img.gif' }}" class="d-block w-100" alt="nessun immagine da mostrare">
+                    </div>
+                @endforeach
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
                 data-bs-slide="prev">

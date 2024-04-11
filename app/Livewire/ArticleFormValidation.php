@@ -120,7 +120,7 @@ class ArticleFormValidation extends Component
             }
         }
 
-        redirect()->to("article/create")->with("success", true);
+        redirect()->to("article/create")->with("success", "Prodotto inserito in attesa di approvazione");
 
 
         $this->reset(['name', 'description', 'price', 'category_id', 'temporary_images', 'images']);

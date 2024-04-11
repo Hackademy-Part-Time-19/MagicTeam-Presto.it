@@ -104,12 +104,14 @@
                                     {{ $article->category->name }}</h5>
 
                             </div>
-
+                                
                             <div class="main_card_image_container">
-                                <img id="productImage_{{ $article->id }}" src="/img/default-img.gif"
-                                    class="img-fluid main_card_image" alt=""
-                                    onmouseover="changeImage({{ $article->id }})"
-                                    onmouseout="restoreImage({{ $article->id }})">
+                                <img id="productImage_{{ $article->id }}"  @if (count($article->images) != 0)
+                                src="storage/{{$article->images[0]->path}}"@else 
+                                src="/img/default-img.gif" 
+                                @endif
+                                    class="img-fluid main_card_image" alt="Nessun immagine da mostrare"
+                                   >
                             </div>
 
                             <h3 class="main_card_h3">
@@ -126,6 +128,8 @@
 
 
                         <script>
+       
+                            
                             function changeImage(id) {
                                 document.getElementById('productImage_' + id).src = '/img/default-img.gif';
                             }
