@@ -8,6 +8,7 @@ use App\Models\Category;
 use App\Jobs\resizeImage;
 use Livewire\WithFileUploads;
 use Livewire\Attributes\Validate;
+use App\Jobs\GoogleVisionSafeSearch;
 use Illuminate\Validation\Rules\File;
 use Illuminate\Support\Facades\Validator;
 
@@ -48,7 +49,8 @@ class ArticleFormValidation extends Component
     protected $messages = [
 
         'required' => 'Il campo è richiesto',
-        'max' => 'Il campo :attribute è troppo lungo',
+        'max' => 'Il campo indicato contiene troppi caratteri',
+        'numeric' => 'Il campo accetta solamente valori numerici',
         'decimal' => 'Il campo può avere un massimo di 2 decimali',
 
     ];
@@ -57,7 +59,7 @@ class ArticleFormValidation extends Component
     {
 
 
-        $validated = $this->validate();
+        /* $validated = $this->validate(); */
 
     }
 
@@ -116,6 +118,7 @@ class ArticleFormValidation extends Component
                 $newImage = $this->article->images()->create(['path' => $image->store($newFilename, 'public')]);
                 
                 dispatch(new resizeImage($newImage->path, 300, 300));
+                dispatch(new GoogleVisionSafeSearch($newImage->id));
 
             }
         }
