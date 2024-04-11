@@ -125,6 +125,8 @@ class ArticleController extends Controller
         return redirect()->route("article.index")->with("success", "Post deleted successfully");
     }
 
+    
+
 }
 
 function SortByTime($articoli)
