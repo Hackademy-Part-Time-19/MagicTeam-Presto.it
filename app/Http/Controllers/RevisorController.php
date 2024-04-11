@@ -36,7 +36,7 @@ class RevisorController extends Controller
 
         $articles = $query->where("is_accepted", null)->get();
 
-        return view("testmiddleware", ["articles" => $articles]);
+        return view("revisorPage", compact('articles'));
 
     }
 

@@ -11,7 +11,7 @@
             </div>
         </div>
     @else
-        <div id="carouselExampleControls" class="carousel slide">
+        <div id="carouselControls" class="carousel slide">
             <div class="carousel-inner">
                 @foreach ($articles as $article)
                     <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
@@ -24,26 +24,26 @@
 
                                 <div style="margin: 20px 10px 20px 10px;width:480px;height:420px;display:flex;">
                                     @if ($article->images)
-                                        <div id="carouselExampleIndicators" class="carousel slide carousel-custom"
+                                        <div id="carouselExampleControls" class="carousel slide carousel-custom"
                                             style="margin:20px; background: #FFFFFF;box-shadow: 0px 1px 12.6px rgba(0, 0, 0, 0.15);border-radius: 15px;align-item:center;justify-content:center;">
                                             <div class="carousel-inner">
-                                                @foreach ($article->images as $key => $image)
-                                                    <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
-                                                        <img src="{{ $image->getUrl(512, 512) }}" class="d-block w-100"
-                                                            alt="nessun immagine da mostrare">
-                                                    </div>
-                                                @endforeach
+                                                @if (count($article->images) > 0)
+                                                    @foreach ($article->images as $key => $image)
+                                                        <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
+                                                            <img src="{{ $image->getUrl(512, 512) }}"
+                                                                class="d-block w-100" alt="nessun immagine da mostrare">
+                                                        </div>
+                                                    @endforeach
+                                                @endif
                                             </div>
                                             <button class="carousel-control-prev" type="button"
                                                 data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                                                <span class="carousel-control-prev-icon" aria-hidden="true"
-                                                    style="background-color: #ffd401;padding:2px;border-radius:100%;"></span>
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                                 <span class="visually-hidden">Previous</span>
                                             </button>
                                             <button class="carousel-control-next" type="button"
                                                 data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                                                <span class="carousel-control-next-icon" aria-hidden="true"
-                                                    style="background-color: #ffd401;padding:2px;border-radius:100%;"></span>
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                                 <span class="visually-hidden">Next</span>
                                             </button>
                                         </div>
@@ -205,21 +205,31 @@
                     </div>
                 @endforeach
             </div>
-
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"
+                    style="background-color: #ffd401;padding:2px;border-radius:100%;"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"
+                    style="background-color: #ffd401;padding:2px;border-radius:100%;"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
     @endif
+    <script>
+        function approveArticle(button) {
+            var carouselItem = button.closest('.carousel-item');
+            carouselItem.parentNode.removeChild(carouselItem);
+            document.querySelector('.carousel').carousel('next');
+        }
+
+        function deleteArticle(button) {
+            var carouselItem = button.closest('.carousel-item');
+            carouselItem.parentNode.removeChild(carouselItem);
+            document.querySelector('.carousel').carousel('next');
+        }
+    </script>
 </x-layout>
-
-<script>
-    function approveArticle(button) {
-        var carouselItem = button.closest('.carousel-item');
-        carouselItem.parentNode.removeChild(carouselItem);
-        document.querySelector('.carousel').carousel('next');
-    }
-
-    function deleteArticle(button) {
-        var carouselItem = button.closest('.carousel-item');
-        carouselItem.parentNode.removeChild(carouselItem);
-        document.querySelector('.carousel').carousel('next');
-    }
-</script>
