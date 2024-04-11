@@ -17,39 +17,44 @@
                     <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
                         <div class="col-lg-8 mx-auto col-10 custom-style-html"
                             style="border-radius:10px;display: flex;flex-wrap:wrap; align-items:center; justify-content:center; margin: 20px 10px 20px 10px;">
+
+
+
+
+                            <div style="margin: 20px 10px 20px 10px;width:480px;height:420px;display:flex;">
+                                @if (count($article->images) != 0)
+                                    <div id="carouselExampleControls" class="carousel slide carousel-custom"
+                                        style="margin:20px; background: #FFFFFF;box-shadow: 0px 1px 12.6px rgba(0, 0, 0, 0.15);border-radius: 15px;align-item:center;justify-content:center;">
+
+                                        <div class="carousel-inner">
+
+                                            @foreach ($article->images as $key => $image)
+                                                <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+                                                    <img src="http://127.0.0.1:8000/storage/{{ $article->images[$key]->path }}"
+                                                        class="d-block w-100" style="width:100%;height:100%" alt="nessun immagine da mostrare">
+                                                </div>
+                                            @endforeach
+                                        </div>
+                                        <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button"
+                                            data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                @else
+                                    <div class="img-revisorPage">
+                                        <img src="/img/default-img.gif" class="d-block w-100"
+                                            alt="nessun immagine da mostrare">
+                                    </div>
+                                @endif
+                            </div>
                             <div
                                 style="margin: 20px 10px 20px 10px;width:480px;height:380px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;">
-
-
-
-                                <div style="margin: 20px 10px 20px 10px;width:480px;height:420px;display:flex;">
-                                    @if ($article->images)
-                                        <div id="carouselExampleControls" class="carousel slide carousel-custom"
-                                            style="margin:20px; background: #FFFFFF;box-shadow: 0px 1px 12.6px rgba(0, 0, 0, 0.15);border-radius: 15px;align-item:center;justify-content:center;">
-                                            <div class="carousel-inner">
-                                                @if (count($article->images) > 0)
-                                                    @foreach ($article->images as $key => $image)
-                                                        <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
-                                                            <img src="{{ $image->getUrl(512, 512) }}"
-                                                                class="d-block w-100" alt="nessun immagine da mostrare">
-                                                        </div>
-                                                    @endforeach
-                                                @endif
-                                            </div>
-                                            <button class="carousel-control-prev" type="button"
-                                                data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                <span class="visually-hidden">Previous</span>
-                                            </button>
-                                            <button class="carousel-control-next" type="button"
-                                                data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                <span class="visually-hidden">Next</span>
-                                            </button>
-                                        </div>
-                                    @endif
-                                </div>
-
                                 @if ($article->category_id ?? '')
                                     @if ($article->category_id == 1)
                                         <div class="cointainerCircleIconCategory">
