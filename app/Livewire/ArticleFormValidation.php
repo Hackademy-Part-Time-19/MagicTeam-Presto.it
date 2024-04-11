@@ -9,6 +9,7 @@ use App\Jobs\resizeImage;
 use Livewire\WithFileUploads;
 use Livewire\Attributes\Validate;
 use App\Jobs\GoogleVisionSafeSearch;
+use App\Jobs\GoogleVisionLabelImage;
 use Illuminate\Validation\Rules\File;
 use Illuminate\Support\Facades\Validator;
 
@@ -119,7 +120,7 @@ class ArticleFormValidation extends Component
                 
                 dispatch(new resizeImage($newImage->path, 300, 300));
                 dispatch(new GoogleVisionSafeSearch($newImage->id));
-
+                dispatch(new GoogleVisionLabelImage($newImage->id));
             }
         }
 
