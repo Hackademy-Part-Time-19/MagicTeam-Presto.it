@@ -4,25 +4,24 @@ namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class RevisorRequestMail extends Mailable
+class AcceptedArticleMail extends Mailable
 {
     use Queueable, SerializesModels;
 
     /**
      * Create a new message instance.
      */
-    public function __construct($text,$user)
+    public function __construct($article)
     {
-        $this->text_ = $text; 
-        $this->user_ = $user;
+        //
 
+        $this->article_ = $article; 
     }
 
     /**
@@ -32,10 +31,7 @@ class RevisorRequestMail extends Mailable
     {
         return new Envelope(
             from: new Address("presto@noreply.it"),
-            subject: 'Revisor Request',
-            
-            
-
+            subject: 'Articolo pubblicato!',
         );
     }
 
@@ -45,9 +41,8 @@ class RevisorRequestMail extends Mailable
     public function content(): Content
     {
         return new Content(
-             view: 'emailRevisore',
-             with: ["user" => $this->user_], 
-            
+            view: 'emailPublishedArticle',
+            with: ["article" => $this->article_], 
         );
     }
 

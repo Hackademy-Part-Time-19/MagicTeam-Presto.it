@@ -6,7 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.1",
-        "caouecs/laravel-lang": "*",
+        "google/cloud-vision": "*",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/fortify": "^1.21",
         "laravel/framework": "^10.10",

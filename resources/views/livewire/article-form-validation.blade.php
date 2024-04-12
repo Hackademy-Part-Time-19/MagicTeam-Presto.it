@@ -1,6 +1,7 @@
 <div class="container mt-5">
     <div class="row">
         <div class="col-md-6 offset-md-3">
+            
             <div class="card div-annuncio">
                 <div class="card-body div-annuncio">
                     <!-- Immagine, titolo e sottotitolo sopra il carosello -->
@@ -60,7 +61,7 @@
                                 <input wire:model.live="name" placeholder="Sgabello in legno.." name="name"
                                     type="text" class="form-control input-annuncio" id="title">
                                 @error('name')
-                                    <span class="error">{{ $message }}</span>
+                                    <span class="error text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
 
@@ -69,7 +70,7 @@
                                 <input wire:model.live="price" placeholder="0.00" name="price" type="text"
                                     class="form-control input-annuncio" id="price">
                                 @error('price')
-                                    <span class="error">{{ $message }}</span>
+                                    <span class="error text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
 
@@ -89,6 +90,9 @@
                                     <option value="9">Fai da te</option>
                                     <option value="10">Food</option>
                                 </select>
+                                @error('category_id')
+                                    <span class="error text-danger">{{ $message }}</span>
+                                @enderror
                             </div>
 
                             <div class="form-group text-left mb-3">
@@ -96,7 +100,7 @@
                                 <textarea wire:model.live="description" placeholder="Comodo, in legno d'abete.." name="description"
                                     class="form-control input-annuncio" id="description" rows="3"></textarea>
                                 @error('description')
-                                    <span class="error">{{ $message }}</span>
+                                    <span class="error text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
 
