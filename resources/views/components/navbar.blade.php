@@ -5,7 +5,7 @@
           aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
       </button>
-        <div id="wrapper">
+        {{-- <div id="wrapper">
             <div class="ln">
                 <a class="dropdown-button square" href="#">
                 @if (Session::get('locale') != 'en')
@@ -38,7 +38,7 @@
                 @endforeach
 
             </div>
-        </div>
+        </div> --}}
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
             <div class="navbar-nav text-end" style="font-family: IBM Plex Sans, sans-serif;margin-right:20px;">
               <a class="nav-link" href="{{route("article.index")}}">Annunci</a>

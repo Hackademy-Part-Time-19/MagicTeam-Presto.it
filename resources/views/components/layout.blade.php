@@ -21,7 +21,8 @@
 </head>
 <body>
     
-    <x-navbar></x-navbar> 
+    <x-navbarAuth></x-navbarAuth>
+    <div style="height: 140px;"></div>
 
     {{$slot}}
     <x-footer></x-footer>
