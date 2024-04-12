@@ -47,20 +47,6 @@ class RevisorController extends Controller
 
     }
 
-    public function acceptArticle(Article $article) {
-
-        $article->is_accepted = 1;
-        $article->save();
-
-
-    }
-
-    public function refuseArticle(Article $article) {
-
-        $article->is_accepted = 1;
-        $article->save();
-
-
-    }
+   
 
 }
