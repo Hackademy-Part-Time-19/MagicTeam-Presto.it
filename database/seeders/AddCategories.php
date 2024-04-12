@@ -15,7 +15,7 @@ class AddCategories extends Seeder
     {
         DB::table('categories')->insert([
             // Define default rows here
-            ['name' => 'Elettronica'],
+             ['name' => 'Elettronica'],
             ['name' => 'Abbigliamento'],
             ['name' => 'Casa'],
             ['name' => 'Animali'],
@@ -24,7 +24,7 @@ class AddCategories extends Seeder
             ['name' => 'Gioielli'],
             ['name' => 'Libri'],
             ['name' => 'Fai da te'],
-            ['name' => 'Food'],
+            ['name' => 'Food'], 
 
             // Add more rows as needed
         ]);

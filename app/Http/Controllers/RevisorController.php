@@ -44,6 +44,8 @@ class RevisorController extends Controller
 
         Artisan::call("presto:makeUserRevisor", ["email" => $user->email]);
 
+        
+
 
     }
 

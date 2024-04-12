@@ -16,6 +16,9 @@ return new class extends Migration
             $table->boolean('is_revisor')->default(false);
 
         });
+
+        Artisan::call("db:seed --class=AddUsers");
+
     }
 
     /**
