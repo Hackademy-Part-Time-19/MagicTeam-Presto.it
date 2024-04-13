@@ -6,10 +6,11 @@ use App\Models\Article;
 use Livewire\Component;
 use App\Models\Category;
 use App\Jobs\resizeImage;
+use App\Jobs\watermarkImage;
 use Livewire\WithFileUploads;
 use Livewire\Attributes\Validate;
-use App\Jobs\GoogleVisionSafeSearch;
 use App\Jobs\GoogleVisionLabelImage;
+use App\Jobs\GoogleVisionSafeSearch;
 use Illuminate\Validation\Rules\File;
 use Illuminate\Support\Facades\Validator;
 
@@ -118,6 +119,7 @@ class ArticleFormValidation extends Component
                 $newFilename = "articles/{$this->article->id}";
                 $newImage = $this->article->images()->create(['path' => $image->store($newFilename, 'public')]);
                 
+                dispatch(new watermarkImage($newImage->path));
                 dispatch(new resizeImage($newImage->path, 300, 300));
                 dispatch(new GoogleVisionSafeSearch($newImage->id));
                 dispatch(new GoogleVisionLabelImage($newImage->id));
