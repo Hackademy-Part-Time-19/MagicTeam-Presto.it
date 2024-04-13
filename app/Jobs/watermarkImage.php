@@ -2,7 +2,7 @@
 
 namespace App\Jobs;
 
-use Spatie\Image\Image;
+use App\Models\Image;
 use Spatie\Image\Enums\Fit;
 use Illuminate\Bus\Queueable;
 use Spatie\Image\Manipulations;
@@ -11,17 +11,19 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 
-class resizeImage implements ShouldQueue
+class watermarkImage implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
     private $fileName;
     private $path;
+    private $watermarkImage;
 
-    public function __construct($filePath , private $w , private $h)
+    public function __construct($filePath)
     {
         $this->path = dirname($filePath);
         $this->fileName = basename($filePath);
+        $this->watermarkImage = public_path('img\watermark.png');
     }
 
     /**
@@ -29,15 +31,14 @@ class resizeImage implements ShouldQueue
      */
     public function handle(): void
     {
-        $w = $this->w;
-        $h = $this->h;
         $srcPath = storage_path() . '/app/public/' . $this->path . '/' . $this->fileName;
-        $destPath = storage_path() . '/app/public/' . $this->path . "/" . $this->fileName;
+        $destPath = storage_path() . '/app/public/' . $this->path . "/original_" . $this->fileName;
         
-        /* "/crop_{$w}x{$h}_" */
+        //save the original
+        copy($srcPath,$destPath);
 
-        $croppedImage = Image::load($srcPath)
-                        ->crop(Manipulations::CROP_CENTER , $w , $h,)
-                        ->save($destPath);
+        $croppedImage = Image::make($srcPath)
+                        ->insert($this->watermarkImage , 'bottom-left', 5, 5)
+                        ->save($srcPath);
      }
 }
