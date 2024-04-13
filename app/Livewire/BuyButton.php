@@ -24,7 +24,37 @@ class BuyButton extends Component
             $handleUser->save();
 
 
-        }       
+        }  else if ($handleUser->cart != null) {
+
+            if(in_array($articleId, $handleUser->cart) == false) {
+
+                $actualArray = $handleUser->cart;
+                array_push($actualArray, $articleId);
+                $handleUser->cart = $actualArray;
+
+                
+                $handleUser->save();
+
+            } else if (in_array($articleId, $handleUser->cart) == true) {
+
+                    $actualArray = $handleUser->cart;
+                    $key = array_search($articleId, $actualArray);
+
+                    if ($key !== false) {
+
+                        
+                        unset($actualArray[$key]);
+                        $handleUser->cart = $actualArray;
+
+                        $handleUser->save();
+
+
+                    }
+
+
+            }
+
+        }     
 
 
     }
