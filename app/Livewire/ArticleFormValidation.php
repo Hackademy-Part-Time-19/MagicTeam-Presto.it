@@ -44,6 +44,7 @@ class ArticleFormValidation extends Component
         'price' => 'required|decimal:0,2|numeric|max:9999.99',
         'category_id' => 'required',
         'images.*' => 'image|max:1024',
+        'images' => 'max:4',
         /* 'temporary_images' => 'image|max:1024', */
     ];
 
@@ -54,6 +55,7 @@ class ArticleFormValidation extends Component
         'max' => 'Il campo indicato contiene troppi caratteri',
         'numeric' => 'Il campo accetta solamente valori numerici',
         'decimal' => 'Il campo può avere un massimo di 2 decimali',
+        'images.max' => 'Puoi caricare al massimo :max immagini',
 
     ];
 
