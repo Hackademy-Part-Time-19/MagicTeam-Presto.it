@@ -48,9 +48,9 @@ Route::middleware(['auth'])->group(function () {
 
         Route::get("revisor/accept_new/{user}",[RevisorController::class, "make_revisor"])->name("make.revisor");
 
-        Route::patch("/accept/article/{article}", [RevisorController::class, 'acceptArticle'])->name("revisor.accept_article");
+        Route::patch("/revisor/accept/{article}", [RevisorController::class, 'acceptArticle'])->name("revisor.accept_article");
 
-        Route::patch("/refuse/article/{article}", [RevisorController::class, 'refuseArticle'])->name("revisor.refuse_article");
+        Route::patch("/revisor/refuse/{article}", [RevisorController::class, 'refuseArticle'])->name("revisor.refuse_article");
 
     });
 

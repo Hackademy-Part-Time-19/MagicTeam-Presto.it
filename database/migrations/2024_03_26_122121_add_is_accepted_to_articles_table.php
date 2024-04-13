@@ -17,6 +17,8 @@ return new class extends Migration
             $table->boolean("is_accepted")->nullable();
 
         });
+
+        Artisan::call("db:seed --class=AddArticles");
     }
 
     /**

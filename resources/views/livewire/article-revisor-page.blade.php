@@ -1,5 +1,5 @@
-<x-layout>
-{{--     @if (count($articles) == 0)
+
+@if (count($articles) == 0)
         <div class="col-lg-8 mx-auto col-10 custom-style-html"
             style="border-radius:10px;display: flex;flex-wrap:wrap; align-items:center; justify-content:center; margin: 20px 10px 20px 10px;">
             <div
@@ -179,10 +179,9 @@
                                 <h2 class="prezzoInfoProdotto">{{ $article->price }}€</h2>
 
                                 <div class="containerBtnInfoProdotto">
-                                    <form action="{{route("revisor.accept_article",["article" => $article])}}" method="POST">
+                                    <form wire:submit="acceptArticle({{ $article }})">
                                         @csrf
-                                        @method("PATCH")
-                                   <button type="submit" class="BtnAccettaArticolo approve-btn"  onclick="approveArticle(this)" >
+                                   <button type="submit" class="BtnAccettaArticolo approve-btn">
                                     <div class="sign">
                                         <svg width="20" height="17" viewBox="0 0 20 17" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -194,9 +193,9 @@
                                     <div class="textBtnAccettaArticolo">Accetta</div>
                                 </button>
                                 </form>
-                                <form action="{{route("revisor.accept_article",["article" => $article])}}" method="POST">
+                                <form wire:submit="refuseArticle({{ $article }})">
                                     @csrf
-                                    <button type="submit" class="BtnRifiutaArticolo delete-btn" onclick="deleteArticle(this)">
+                                    <button type="submit" class="BtnRifiutaArticolo delete-btn" >
                                         <div class="sign">
                                             <svg width="17" height="17" viewBox="0 0 16 16" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -230,23 +229,4 @@
             </button>
         </div>
     @endif
-    <script>
-        function approveArticle(button) {
-            var carouselItem = button.closest('.carousel-item');
-            carouselItem.parentNode.removeChild(carouselItem);
-            document.querySelector('.carousel').carousel('next');
-        }
-
-        function deleteArticle(button) {
-            var carouselItem = button.closest('.carousel-item');
-            carouselItem.parentNode.removeChild(carouselItem);
-            document.querySelector('.carousel').carousel('next');
-        }
-    </script> --}}
-
-
-
-    <livewire:article-revisor-page />
-
-
-</x-layout>
+    

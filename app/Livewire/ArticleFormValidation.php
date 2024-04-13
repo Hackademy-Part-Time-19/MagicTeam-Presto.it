@@ -9,8 +9,8 @@ use App\Jobs\resizeImage;
 use App\Jobs\watermarkImage;
 use Livewire\WithFileUploads;
 use Livewire\Attributes\Validate;
-use App\Jobs\GoogleVisionLabelImage;
 use App\Jobs\GoogleVisionSafeSearch;
+use App\Jobs\GoogleVisionLabelImage;
 use Illuminate\Validation\Rules\File;
 use Illuminate\Support\Facades\Validator;
 
