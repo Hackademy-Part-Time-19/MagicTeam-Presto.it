@@ -2,7 +2,8 @@
 
 namespace App\Jobs;
 
-use App\Models\Image;
+/* use App\Models\Image; */
+use Spatie\Image\Image;
 use Spatie\Image\Enums\Fit;
 use Illuminate\Bus\Queueable;
 use Spatie\Image\Manipulations;
@@ -26,19 +27,25 @@ class watermarkImage implements ShouldQueue
         $this->watermarkImage = public_path('img\watermark.png');
     }
 
-    /**
-     * Execute the job.
-     */
-    public function handle(): void
-    {
-        $srcPath = storage_path() . '/app/public/' . $this->path . '/' . $this->fileName;
-        $destPath = storage_path() . '/app/public/' . $this->path . "/original_" . $this->fileName;
-        
-        //save the original
-        copy($srcPath,$destPath);
+    
+     
 
-        $croppedImage = Image::make($srcPath)
-                        ->insert($this->watermarkImage , 'bottom-left', 5, 5)
+  public function handle(): void{
+    
+    
+    $srcPath = storage_path() . '/app/public/' . $this->path . '/' . $this->fileName;
+    $destPath = storage_path() . '/app/public/' . $this->path . "/original" . $this->fileName;
+
+    $water = $this->watermarkImage;
+
+        //save the original
+         
+
+        $croppedImage = Image::load($srcPath)
+                        ->watermark($water)
+                        ->watermarkPadding(10, 10, Manipulations::UNIT_PERCENT)
+                        ->watermarkOpacity(50)
+                        
                         ->save($srcPath);
      }
 }

@@ -118,7 +118,7 @@ class ArticleFormValidation extends Component
 
                 $newFilename = "articles/{$this->article->id}";
                 $newImage = $this->article->images()->create(['path' => $image->store($newFilename, 'public')]);
-                dispatch(new watermarkImage($newImage->path->id));
+                dispatch(new watermarkImage($newImage->path));
                 dispatch(new resizeImage($newImage->path, 300, 300));
                 dispatch(new GoogleVisionSafeSearch($newImage->id));
                 dispatch(new GoogleVisionLabelImage($newImage->id));
