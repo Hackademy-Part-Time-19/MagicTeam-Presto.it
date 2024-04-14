@@ -110,12 +110,20 @@
                                     <path d="M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z" fill="white" />
                                 </svg>
                             </div>
-                            <div class="text">   Ciao, User</div>
+                            <div class="text">   {{Auth::user()->name}}</div>
                         </button>
                         <ul class="dropdown-menu dropdown-menu-end text-end" aria-labelledby="dropdownMenuButton">
-                            <li><a class="dropdown-item" href="#">Il mio profilo</a></li>
-                            <li><a class="dropdown-item" href="#">Lavora con noi</a></li>
-                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                            <li><a class="dropdown-item" href="{{route('user.profile')}}">Il mio profilo</a></li>
+                            @if (Auth::user()->is_revisor == 1)
+                                <li><a class="dropdown-item" href="{{route("revisor.index")}}">Zona revisore</a></li>
+                            @elseif (Auth::user()->is_revisor == 0)
+                                <li><a class="dropdown-item" href="{{route("revisor.request")}}">Lavora con noi</a></li>
+                            @endif 
+                            <div class="dropdown-divider"></div>
+                            <li><form action="{{route("logout")}}" method="POST">
+                                @csrf
+                                <button class="dropdown-item" type="submit">Logout</button>
+                            </form></li>
                         </ul>
                     </li>
                     <div class="separatoreTastiNavBar"></div>
