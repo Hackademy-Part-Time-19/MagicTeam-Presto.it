@@ -21,7 +21,13 @@
 </head>
 <body>
     
-    <x-navbarAuth></x-navbarAuth>
+    @auth
+        <x-navbarAuth></x-navbarAuth>
+    @endauth
+    @guest
+        <x-navbarGuest></x-navbarGuest>
+    @endguest
+   
     <div style="height: 140px;"></div>
 
     {{$slot}}

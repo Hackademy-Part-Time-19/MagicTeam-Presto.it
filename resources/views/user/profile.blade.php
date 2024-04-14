@@ -44,8 +44,15 @@
 
                                     <div class="main_card_image_container">
                                         <img id="productImage_{{ $article->id }}"
-                                            @if (count($article->images) != 0) src="storage/{{ $article->images[0]->path }}"@else 
-                            src="/img/default-img.gif" @endif
+                                            @if (count($article->images) != 0) 
+                                            
+                                                src="http://127.0.0.1:8000/storage/{{$article->images[0]->path}}"
+                                            
+                                            @else
+
+                                                 src="/img/default-img.gif" 
+                            
+                                        @endif
                                             class="img-fluid main_card_image" alt="Nessuna immagine da mostrare">
                                     </div>
 
@@ -82,7 +89,7 @@
 
                                     <div class="main_card_image_container">
                                         <img id="productImage_{{ $article_waiting->id }}"
-                                            @if (count($article_waiting->images) != 0) src="storage/{{ $article_waiting->images[0]->path }}"@else 
+                                            @if (count($article_waiting->images) != 0) src="http://127.0.0.1:8000/storage/{{ $article_waiting->images[0]->path }}"@else 
                                 src="/img/default-img.gif" @endif
                                             class="img-fluid main_card_image" alt="Nessun immagine da mostrare">
                                     </div>

@@ -43,6 +43,9 @@ class watermarkImage implements ShouldQueue
 
         $croppedImage = Image::load($srcPath)
                         ->watermark($water)
+                        ->watermarkPadding(7, 7, Manipulations::UNIT_PERCENT)
+                        ->watermarkOpacity(50)
+                        
                         ->save($srcPath);
      }
 }
