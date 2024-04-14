@@ -50,6 +50,7 @@
 
 
 <footer>
+   
     <div style="background-color:rgb(28, 28, 28);padding:top:20px;padding-bottom:20px;">
         <div class="col-lg-8 mx-auto col-10 text-center">
             <div class="row">

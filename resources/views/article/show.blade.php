@@ -56,14 +56,22 @@
                 {{ $article->name }}
             </h2>
 
-            <p class="descrizioneInfoProdotto">{{ $article->description }}
-            </p>
+                    <p class="descrizioneInfoProdotto">{{ $article->description }}
+                    </p>
 
             <h2 class="prezzoInfoProdotto">
                 {{ $article->price }}€
             </h2>
             <div class="containerBtnInfoProdotto">
-                <button class="button2" style="margin-inline: 5px;"><span>Acquista ora</span></button>
+                @auth
+                    
+                    <livewire:buy-button :articleId="$article->id" :user_="Auth::user()->id" />
+                        
+                @endauth
+                @guest
+                    <a href="{{route("login")}}"><button class="button2" style="margin-inline: 5px;"><span>Acquista ora</span></button></a>
+                @endguest 
+
                 <button class="BtnContatti">
                     <div class="sign"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -77,8 +85,9 @@
 
 
 
-            </div>
+                    </div>
 
+                </div>
+            </div>
         </div>
-    </div>
 </x-layout>

@@ -157,7 +157,7 @@
             justify-content: center;
             width: fit-content;
             height: 30px;
-            background-color: #2739fd;
+            background-color: #27fd4b;
             border-radius: 100px;
             margin-bottom: 15px;
             margin-top: 20px
