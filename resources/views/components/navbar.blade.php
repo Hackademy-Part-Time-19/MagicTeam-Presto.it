@@ -7,6 +7,7 @@
       </button>
         {{-- <div id="wrapper">
             <div class="ln">
+                
                 <a class="dropdown-button square" href="#">
                 @if (Session::get('locale') != 'en')
                 <img src="https://flagicons.lipis.dev/flags/4x3/{{Session::get('locale')}}.svg" >

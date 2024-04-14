@@ -286,20 +286,22 @@ ul {
     .vendere-h2 {
         text-align: center;
     }
-  }
-  
+}
+
 .footerMenu {
     color: white;
     font-family: IBM Plex Sans, sans-serif;
     margin-top: 150px;
-    margin-bottom:15px;;
+    margin-bottom: 15px;
+    ;
 }
 
 .footerMenu:hover {
     color: #FDC627;
     font-family: IBM Plex Sans, sans-serif;
     margin-top: 150px;
-    margin-bottom:15px;;
+    margin-bottom: 15px;
+    ;
 }
 
 
@@ -310,7 +312,7 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+
 }
 
 .titoloRicercaCategoria {
@@ -722,7 +724,8 @@ ul {
     box-shadow: 0px 1px 12.6px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
     padding-bottom: 20px;
-    margin-bottom: 30px;;
+    margin-bottom: 30px;
+    ;
 }
 
 .containerImgTxtFormRicercaHome {
@@ -744,7 +747,8 @@ ul {
 .txtFormRicercaHome {
     font-family: IBM Plex Sans, sans-serif;
     font-weight: 800;
-    margin: 10px
+    margin: 10px;
+    text-align: center;
 }
 
 .sottotitoloFormRicercaHome {
@@ -804,7 +808,8 @@ ul {
     overflow: hidden;
     cursor: pointer;
     border: none;
-    
+    min-width: 120px;
+
 }
 
 .button_navbar_1:after {
@@ -855,7 +860,7 @@ ul {
 }
 
 
-.BtnLogout {
+/* .BtnLogout {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -922,7 +927,7 @@ ul {
 
 .BtnLogout:active {
     transform: translate(2px, 2px);
-}
+} */
 
 .button_navbar_2 {
     position: relative;
@@ -933,11 +938,12 @@ ul {
     border-radius: 5px;
     background: #ffffff00;
     font-family: "IBM Plex Sans", sans-serif;
-    font-size: 15px;
+    font-size: 13px;
     box-shadow: 0px 6px px 0px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     cursor: pointer;
     border: solid 2px #EC6907;
+    min-width: 120px;
 }
 
 .button_navbar_2:after {
@@ -1006,8 +1012,8 @@ ul {
     overflow: hidden;
     transition-duration: .3s;
     background-color: #ffd401;
-
     margin-inline: 5px;
+
 }
 
 .sign {
@@ -1071,7 +1077,9 @@ ul {
 .custom-style {
     margin-left: auto;
     margin-right: auto;
-    height:95px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
 }
 
 .containerBottoniNavBar {
@@ -1470,7 +1478,7 @@ ul {
 .main_card_container {
 
     margin-top: 60px;
-    
+
 
 }
 
@@ -1872,7 +1880,7 @@ ul {
 
     display: flex;
     margin-top: 30px;
-   flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .vendere-div-colonna {
@@ -2057,7 +2065,8 @@ body {
 .titolo-annuncio {
     font-family: 'IBM Plex Sans';
     color: #000000;
-    font-weight: 700;;
+    font-weight: 700;
+    ;
 }
 
 .sottotitolo-annuncio {
@@ -2151,6 +2160,7 @@ body {
     transform: scale(1.05);
     color: white;
 }
+
 @media screen and (max-width: 1500px) {
     .boxVuoiVenedereQualcosa {
         margin: 20px 10px 20px 10px;
@@ -2184,35 +2194,43 @@ body {
         text-align: left;
         font-size: 17px;
         font-weight: 600;
-    
+
     }
-    
-  }
+
+}
 
 
-  @media screen and (max-width: 490px) {
+@media screen and (max-width: 490px) {
     .vendere-div-3 {
 
- 
-            align-items: center;
-        
-        
-        
+
+        align-items: center;
+
+
+
     }
 }
 
 
 
 /** START TRANSLATE **/
+
+
 #wrapper {
     display: flex;
-  }
-  .ln {
+    align-items: center;
+
+}
+
+.ln {
     overflow: visible;
-    margin-left: 20px;
-    height: 30px;
-  }
-  .square {
+    height: 20px;
+    z-index: 20000000;
+
+
+}
+
+.square {
     position: relative;
     width: 100%;
     height: 100%;
@@ -2220,159 +2238,171 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    border: 1px solid #212529;
+    border: none;
+    background-color: #1f1f1f;
+    padding: 2px;
+    ;
 
-  }
-  
-  
-  .square img {
+}
+
+
+.square img {
     object-fit: cover;
     height: 100%;
-  }
-  
-  a {
+}
+
+a {
     color: white;
-    text-decoration: none; 
-  }
-  
-  .square p {
+    text-decoration: none;
+}
+
+.square p {
     visibility: hidden;
     position: absolute;
     z-index: 2;
-    font-size: 20px;
+    font-size: 15px;
     font-family: sans-serif;
     color: white;
     font-weight: bold;
-    opacity: 0; 
-    transition: visibility 0.5s ease-in-out, opacity 0.5s ease-in-out; 
+    opacity: 0;
+    transition: visibility 0.5s ease-in-out, opacity 0.5s ease-in-out;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: inherit;
-  }
-  .squared p {
-  visibility: hidden;
+}
+
+.squared p {
+    visibility: hidden;
     position: absolute;
-    z-index: 2; 
-    font-size: 20px;
+    z-index: 2;
+    font-size: 14px;
+    text-align: center;
     font-family: sans-serif;
     color: white;
     font-weight: bold;
-    opacity: 0; 
-    transition: visibility 0.5s ease-in-out, opacity 0.5s ease-in-out; 
+    opacity: 0;
+    transition: visibility 0.5s ease-in-out, opacity 0.5s ease-in-out;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: inherit;
     position: absolute;
-    top: 5px;
-      left: 12px;
-  
-  }
-  .square p span.language-name {
+    bottom: 2px;
+    right: 2px;
+}
+
+.square p span.language-name {
     display: none;
     white-space: nowrap;
-  }
-  
-  .square::before {
+}
+
+.square::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
-    visibility: hidden; 
-    opacity: 0; 
-    transition: visibility 0.5s ease-in-out, opacity 0.5s ease-in-out; 
-    box-shadow: rgb(255 255 255 / 84%) 0px 0px 2px 2px; 
-  }
-  
-  .square:hover::before {
-    visibility: visible; 
-    opacity: 1; 
-  }
-  
-  .square:hover p {
-    visibility: visible; 
-    opacity: 1; 
-  }
-  
-  .square::before {
-    z-index: 1; 
-  }
-  
-  .goog-te-banner-frame.skiptranslate {
-     display: none !important;
-   } 
-  
-   body > .skiptranslate {
-     display: none;
-   }
-  
-  .goog-logo-link{
-     display:none !important;
-   }
-  
-   .goog-te-gadget{
-      color:transparent!important;
-    }
-  
-   #goog-gt-tt, .goog-te-balloon-frame{
-      display: none !important;
-     }
-  
-  .goog-text-highlight { 
-      display: none !important;
-   } 
-  
-  .VIpgJd-ZVi9od-l4eHX-hSRGPd{
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: visible;
+    opacity: 0;
+    transition: visibility 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    box-shadow: rgb(255 255 255 / 84%) 0px 0px 2px 2px;
+}
+
+.square:hover::before {
+    visibility: visible;
+    opacity: 1;
+}
+
+.square:hover p {
+    visibility: visible;
+    opacity: 1;
+}
+
+.square::before {
+    z-index: 1;
+}
+
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
+
+body>.skiptranslate {
     display: none;
-  }
-  body {
-    top:0 !important;
-  }
-  
-  @media only screen and (max-width: 1000px) {
-    #wrapper { 
+}
+
+.goog-logo-link {
+    display: none !important;
+}
+
+.goog-te-gadget {
+    color: transparent !important;
+}
+
+#goog-gt-tt,
+.goog-te-balloon-frame {
+    display: none !important;
+}
+
+.goog-text-highlight {
+    display: none !important;
+}
+
+.VIpgJd-ZVi9od-l4eHX-hSRGPd {
+    display: none;
+}
+
+body {
+    top: 0 !important;
+}
+
+@media only screen and (max-width: 1000px) {
+    #wrapper {
         width: 30%;
         height: auto;
 
     }
+
     .ln {
-      position: fixed;
-      right: 20px;
-  
-      transform: translateY(-50%);
-      
-      
-     
-      
+        position: fixed;
+        right: 20px;
+
+        transform: translateY(-50%);
+
+
+
+
     }
+
     .square {
-      width: 8vw;
-      font-size: unset;
-      overflow: hidden; 
+        width: 8vw;
+        font-size: unset;
+        overflow: hidden;
     }
+
     .square img {
-      width: 100%;
-      height: unset;
+        width: 100%;
+        height: unset;
     }
+
     .square p {
-      font-size: 14px;
+        font-size: 14px;
     }
+
     .square::before {
-      box-shadow: inset rgb(255 255 255 / 84%) 0px 0px 2px 2px;
+        box-shadow: inset rgb(255 255 255 / 84%) 0px 0px 2px 2px;
     }
-  }
- 
-  /** END TRANSALTE **/
+}
 
-  /* START REVISOR */
+/** END TRANSALTE **/
 
-  .img-revisorPage{
+/* START REVISOR */
+
+.img-revisorPage {
     display: flex;
     width: 80%;
     height: 80%;
@@ -2381,7 +2411,7 @@ body {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background-color: #f5f5f5;
     margin-top: 5vh;
-  }
+}
 
 
 
@@ -2404,26 +2434,30 @@ body {
 
 
 
-  /* NUOVE NAVBAR */
-  
-  .backgroundHeadLang {
-    width:100%;
-    height:30px;
-    background-color:rgb(25, 25, 25);
+/* NUOVE NAVBAR */
+
+.backgroundHeadLang {
+    width: 100%;
+    height: 30px;
+    background-color: rgb(25, 25, 25);
+    display: flex;
+
+    justify-content: end;
+
 }
 
 .containerHeadLang {
     display: flex;
-    align-items:center;
-    justify-content:end;
-    padding-top:5px;
+    align-items: center;
+    justify-content: end;
+    padding-top: 5px;
 }
 
 .txtLang {
     color: aliceblue;
-    font-size:14px;
-    margin-left:12px;
-    margin-right:5px;
+    font-size: 14px;
+    margin-left: 12px;
+    margin-right: 5px;
 }
 
 
@@ -2436,8 +2470,203 @@ body {
     display: none;
 }
 
-.separatoreTastiNavBar{
-    margin-right:15px;
-    margin-left: 15px;;
+.separatoreTastiNavBar {
+    margin-right: 15px;
+    margin-left: 15px;
+    ;
 }
 
+body{
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 100px;
+}
+footer{
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+}
+
+@media only screen and (max-width: 1000px) {
+    #wrapper {
+        width: 30%;
+        height: auto;
+
+    }
+
+    .ln {
+        position: fixed;
+        right: 20px;
+        transform: translateY(-50%);
+        top: 13px;
+    }
+
+}
+
+
+/* tasto user navbar */
+
+.Btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    background-color: rgb(253, 116, 17);
+    margin-inline: 5px;
+
+}
+
+/* plus sign */
+.sign {
+    width: 100%;
+    transition-duration: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign svg {
+    width: 17px;
+}
+
+.sign svg path {
+    fill: white;
+}
+
+/* text */
+.text {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    transition-duration: .3s;
+}
+
+/* hover effect on button width */
+.Btn:hover {
+    width: 125px;
+    border-radius: 40px;
+    transition-duration: .3s;
+}
+
+.Btn:hover .sign {
+    width: 30%;
+    transition-duration: .3s;
+    padding-left: 20px;
+}
+
+/* hover effect button's text */
+.Btn:hover .text {
+    opacity: 1;
+    width: 70%;
+    transition-duration: .3s;
+    padding-right: 10px;
+}
+
+/* button click effect*/
+.Btn:active {
+    transform: translate(2px ,2px);
+}
+
+
+.Btn.active {
+    width: 125px;
+    border-radius: 40px;
+    transition-duration: .3s;
+    position: relative;
+
+}
+
+.Btn.active .sign {
+    width: 30%;
+    transition-duration: .3s;
+    padding-left: 20px;
+}
+
+.Btn.active .text {
+    opacity: 1;
+    width: 70%;
+    transition-duration: .3s;
+    padding-right: 10px;
+}
+
+
+.Btn.active:hover {
+    width: 125px;
+    border-radius: 40px;
+
+}
+
+.Btn.active:hover .sign {
+    width: 30%;
+    padding-left: 20px;
+}
+
+.Btn.active:hover .text {
+    opacity: 1;
+    width: 70%;
+    padding-right: 10px;
+}
+
+.Btn::after {
+    display: none;
+}
+
+/* Dropdown menu styles */
+.custom-dropdown {
+    display: none;
+     border: none;
+    box-shadow: 0px 1px 12.6px rgba(0, 0, 0, 0.15);
+    background-color: rgba(245, 245, 245, 0.876);
+    padding: 10px;
+    margin-left: -15px;
+    margin-top: 15px;
+}
+
+.custom-dropdown.show {
+    display: block;
+    position: absolute;
+    top: 55px;;
+
+
+
+}
+
+.custom-dropdown li {
+    list-style: none;
+}
+
+.custom-dropdown li a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+    text-align: end;
+    margin-left: 15px;
+}
+
+.custom-dropdown li a:hover {
+    background-color: #f0f0f0;
+}
+
+@media only screen and (max-width: 1100px) {
+    .separatoreTastiNavBar {
+        display: none;
+
+    }
+
+    .button_navbar_1 {
+        display: none;
+    }
+}
