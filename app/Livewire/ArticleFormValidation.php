@@ -5,11 +5,13 @@ namespace App\Livewire;
 use App\Models\Article;
 use Livewire\Component;
 use App\Models\Category;
+use App\Jobs\RemoveFaces;
 use App\Jobs\resizeImage;
+use App\Jobs\watermarkImage;
 use Livewire\WithFileUploads;
 use Livewire\Attributes\Validate;
-use App\Jobs\GoogleVisionSafeSearch;
 use App\Jobs\GoogleVisionLabelImage;
+use App\Jobs\GoogleVisionSafeSearch;
 use Illuminate\Validation\Rules\File;
 use Illuminate\Support\Facades\Validator;
 
@@ -43,6 +45,7 @@ class ArticleFormValidation extends Component
         'price' => 'required|decimal:0,2|numeric|max:9999.99',
         'category_id' => 'required',
         'images.*' => 'image|max:1024',
+        'images' => 'max:4',
         /* 'temporary_images' => 'image|max:1024', */
     ];
 
@@ -53,6 +56,7 @@ class ArticleFormValidation extends Component
         'max' => 'Il campo indicato contiene troppi caratteri',
         'numeric' => 'Il campo accetta solamente valori numerici',
         'decimal' => 'Il campo può avere un massimo di 2 decimali',
+        'images.max' => 'Puoi caricare al massimo :max immagini',
 
     ];
 
@@ -118,9 +122,16 @@ class ArticleFormValidation extends Component
                 $newFilename = "articles/{$this->article->id}";
                 $newImage = $this->article->images()->create(['path' => $image->store($newFilename, 'public')]);
                 
-                dispatch(new resizeImage($newImage->path, 300, 300));
-                dispatch(new GoogleVisionSafeSearch($newImage->id));
-                dispatch(new GoogleVisionLabelImage($newImage->id));
+                RemoveFaces::withChain([
+
+                    new resizeImage($newImage->path, 300, 300),
+                    new watermarkImage($newImage->path),
+                    new GoogleVisionSafeSearch($newImage->id),
+                    new GoogleVisionLabelImage($newImage->id),
+
+
+                ])->dispatch($newImage->id);
+                
             }
         }
 

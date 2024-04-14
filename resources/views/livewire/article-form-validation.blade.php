@@ -53,6 +53,9 @@
                                     <input wire:model="temporary_images" multiple name="images"
                                         id="carica-immagine-annuncio" type="file" />
                                 </div>
+                                @error('images')
+                                    <span class="error text-danger">{{ $message }}</span>
+                                @enderror
                             </div>
 
                             <!-- Rimani con input normali -->
