@@ -1,3 +1,5 @@
+
+
 <div style="position: fixed; top: 0; width: 100%;z-index:100000">
     <div class="backgroundHeadLang">
 
@@ -137,36 +139,56 @@
 
                     <div style="display: flex;justify-content:end;">
                         <!-- Sidebar -->
-                        <div class="cust-sidebar" id="customSidebar" style="z-index: 200000000000;">
+
+                        <livewire:carrello />
+
+                       {{--  <div class="cust-sidebar" id="customSidebar" style="z-index: 200000000000;">
                             <button class="close-sidebar-btn" id="closeSidebarBtn">&times;</button>
                             <h4 style="text-align: end;margin-top:15px;margin-right:10px;">Carrello</h4>
+                            
+                            <div style="display:flex;flex-direction:column">
+                                
+                                @if(Auth::user()->cart != null)
+
+                                @foreach (Auth::user()->cart as $key => $cart_item)
 
                             <div style="height: 90%;">
                                 <div style="padding-top: 15px; padding-bottom: 20px; border-bottom: solid 1px gray; width: 100%; display: flex; flex-direction: column; align-items: end; margin-right: 10px; margin-top: 20px;">
                                     <div style="width: 90%;">
-                                        <div style="display: flex; align-items: end; margin-right: 10px;">
-                                            <div style="flex: 0.5; display: flex; justify-content: left;">
-                                                <h6 style="color: darkorange; font-weight: 600;">12,50€</h6>
-                                            </div>
+                                       
+                                                <div style="display: flex; align-items: end; margin-right: 10px;">
+                                                    <div style="flex: 0.5; display: flex; justify-content: left;">
+                                                        <h6 style="color: darkorange; font-weight: 600;">€{{Article::find(Auth::user()->cart[$key])->price}} </h6>
+                                                    </div>
+                                    
+                                                    <div style="flex: 3;">
+                                                        <h6 style="color: black; font-weight: 400;">{{Article::find(Auth::user()->cart[$key])->name}}</h6>
+                                                    </div>
+                                
+                                                </div>
+                                                <button class="eliminaCart">
+                                                    elimina
+                                                </button>
+                                            
+                                       
                             
-                                            <div style="flex: 3;">
-                                                <h6 style="color: black; font-weight: 400;">Nome Prodotto</h6>
-                                            </div>
-                            
-                                        </div>
-                            
-                                        <button class="eliminaCart">
-                                            elimina
-                                        </button>
+                                        
                                     </div>
                                 </div>
                                
                             </div>
+
+                            @endforeach
+
+                                        @else
+
+                                        @endif
+
                             <div style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%);">
                                 <button class="button3" style="margin-inline: 5px;"><span>Acquista
                                     ora</span></button></a>
-                            </div>
-
+                            </div> --}}
+                        </div>
 
 
                         </div>
