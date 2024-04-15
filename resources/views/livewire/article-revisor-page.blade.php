@@ -26,7 +26,7 @@
                                 @if (count($article->images) == 1)
                                     <div class="container img-conteiner-revisor">
                                         @foreach ($article->images as $key => $image)
-                                            <img wire:click="openImageModal('{{ asset($image->path) }}')"
+                                            <img wire:click="openImageModal('{{ asset('http://127.0.0.1:8000/storage/' . $image->path) }}')"
                                                 src="http://127.0.0.1:8000/storage/{{ $image->path }}"
                                                 class="d-block w-100 img-fluid img-thumbnail rounded"
                                                 style="width:100%;height:90%" alt="Immagine">
@@ -36,7 +36,7 @@
                                     <div class="container img-conteiner-revisor" style="width: 90%; height: 90%;">
                                         <div class="row row-cols-2" style="height:50%">
                                             @foreach ($article->images as $key => $image)
-                                                <img wire:click="openImageModal('{{ asset($image->path) }}')"
+                                                <img wire:click="openImageModal('{{ asset('http://127.0.0.1:8000/storage/' . $image->path) }}')"
                                                     src="http://127.0.0.1:8000/storage/{{ $image->path }}"
                                                     class="d-block w-100 img-fluid img-thumbnail rounded"
                                                     style="width:100%;height:90%" alt="Immagine">
@@ -49,7 +49,7 @@
 
                                             @foreach ($article->images as $key => $image)
                                                 <div class="col">
-                                                    <img wire:click="openImageModal('{{ asset($image->path) }}')"
+                                                    <img wire:click="openImageModal('{{ asset('http://127.0.0.1:8000/storage/' . $image->path) }}')"
                                                         src="http://127.0.0.1:8000/storage/{{ $image->path }}"
                                                         class="d-block w-100 img-fluid img-thumbnail rounded"
                                                         style="width:100%;height:90%" alt="Immagine">
@@ -65,7 +65,7 @@
 
                                             @foreach ($article->images as $key => $image)
                                                 <div class="col">
-                                                    <img wire:click="openImageModal('{{ asset($image->path) }}')"
+                                                    <img wire:click="openImageModal('{{ 'http://127.0.0.1:8000/storage/' . $image->path }}')"
                                                         src="http://127.0.0.1:8000/storage/{{ $image->path }}"
                                                         class="d-block w-100 img-fluid img-thumbnail rounded"
                                                         style="width:100%;height:90%" alt="Immagine">
@@ -81,18 +81,25 @@
                                 </div>
                             @endif
                         </div>
-                        {{-- <div wire:ignore.self class="modal fade" id="imageModal" tabindex="-1"
-                            aria-labelledby="imageModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered modal-lg">
-                                <div class="modal-content">
-                                    <div class="modal-body">
-                                        <img id="modalImage"
-                                            src="http://127.0.0.1:8000/storage/{{ $article->images[$key]->path }}"
-                                            class="d-block mx-auto img-fluid" alt="Immagine ingrandita">
+                        @if ($modalOpen == true)
+                            <form wire:submit="closeModal">
+                                @csrf
+                                <div class="modal">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header" style="align-items: center; justify-content:center">
+                                                <button type="submit" class="close btn-1" aria-label="Close" style="margin: auto">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img src="{{ $selectedImage }}" class="img-fluid" alt="Immagine">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div> --}}
+                            </form>
+                        @endif
                         <div
                             style="margin: 20px 10px 20px 10px;width:480px;height:380px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;">
                             @if ($article->category_id ?? '')

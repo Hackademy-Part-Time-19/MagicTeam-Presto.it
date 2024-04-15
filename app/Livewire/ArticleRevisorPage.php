@@ -25,8 +25,7 @@ class ArticleRevisorPage extends Component
         $article->is_accepted = 1;
         $article->save();
 
-        return Mail::to($article->user->email)->send(new AcceptedArticleMail($article));
-
+        Mail::to($article->user->email)->send(new AcceptedArticleMail($article));
     }
 
     public function refuseArticle(Article $article)
@@ -35,12 +34,22 @@ class ArticleRevisorPage extends Component
         $article->is_accepted = 0;
         $article->save();
 
-        return Mail::to($article->user->email)->send(new RefusedArticleMail($article));
+        Mail::to($article->user->email)->send(new RefusedArticleMail($article));
 
     }
+
+    public $modalOpen = false;
+    public $selectedImage;
 
     public function openImageModal($imageUrl)
     {
-        $this->dispatch('openImageModal', imageUrl: $imageUrl);
+        $this->selectedImage = $imageUrl;
+        $this->modalOpen = true;
     }
+
+    public function closeModal()
+    {
+        $this->modalOpen = false;
+    }
+
 }
