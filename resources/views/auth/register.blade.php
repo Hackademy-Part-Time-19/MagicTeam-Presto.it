@@ -1,5 +1,5 @@
 <x-layout>
-     <div class="container mt-5 mb-5">
+   {{--   <div class="container mt-5 mb-5">
         <div class="row">
             <div class="col-md-6 offset-md-3">
                 <div class="card div-annuncio">
@@ -15,10 +15,7 @@
                                 <label for="name" class="label-annuncio">Nome</label>
                                 <input type="text" class="form-control input-annuncio" name="name" id="name">
                             </div>
-                            {{-- <div class="form-group mb-3">
-                                <label for="number" class="label-annuncio">Numero di telefono</label>
-                                <input type="tel" class="form-control input-annuncio" name="number" id="number">
-                            </div> --}}
+                            
                             <div class="form-group mb-3">
                                 <label for="email" class="label-annuncio">E-mail</label>
                                 <input type="email" class="form-control input-annuncio" name="email" id="email">
@@ -41,5 +38,8 @@
                 </div>
             </div>
         </div>
-    </div>  
+    </div>  --}} 
+
+    <livewire:register-form />
+
 </x-layout>

@@ -24,7 +24,7 @@
 
 
             <div class="col-lg-8 mx-auto col-10 noarticle">
-                <p>NON HAI ANCORA CARICATO NESSUN ARTICOLO</p>
+                <p>Sembra che non ci siano ancora articoli qui! <a style="color: black" href="{{route("article.create")}}">Inizia a vendere ora!</a></p>
             </div>
         @else
             {{-- ARTICOLI APPROVATI --}}
@@ -73,7 +73,7 @@
             </div>
 
             {{-- ARTICOLI DA APPROVARE --}}
-
+            
             <div class="col-lg-8 mx-auto col-10 text-center">
                 <div class="cointainerBoxCategorie">
                     <h1 style="text-align: center">Ecco gli articoli in attesa di essere approvati:</h1>
