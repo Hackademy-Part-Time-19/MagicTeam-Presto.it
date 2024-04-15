@@ -94,7 +94,7 @@
                                 fill="#FC5555" />
                         </svg>
 
-                        <p>Articoli rifiutati: <b> {{ count($articles) }}</b></p>
+                        <p>Articoli rifiutati: <b> {{ count($refused_articles) }}</b></p>
                     </div>
 
                     <div style="position: absolute; bottom:10px; width:90%">
