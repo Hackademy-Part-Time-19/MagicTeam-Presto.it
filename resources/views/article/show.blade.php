@@ -30,53 +30,20 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-        </div>
-        <div id="carouselExampleIndicators" class="carousel slide float-left">
-            <div class="carousel-inner">
-                @foreach ($article->images as $key => $image)
-                    <div class="carousel-item @if($loop->last) active @endif">
-                        <img src="http://127.0.0.1:8000/storage/{{ $image->path }}" class="d-block w-100" alt="...">
-
-                        
-                    </div>
-                @endforeach
+        @else
+            <div class="img-revisorPage">
+                <img src="/img/default-img.gif" class="d-block w-100"
+                    alt="nessun immagine da mostrare">
             </div>
-            <button class="carousel-control-prev" type="button"
-                data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button"
-                data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
+        @endif
     </div>
-        <div class="containerInfoProdotto">
-            <h5 class="dataInfoProdotto">{{$article->created_at}}</h5>
-            <h2 class="titoloInfoProdotto">
-                {{ $article->name }}
-            </h2>
-
-            <p class="descrizioneInfoProdotto">{{ $article->description }}
-            </p>
-
-            <h2 class="prezzoInfoProdotto">
-                {{ $article->price }}€
-            </h2>
-            <div class="containerBtnInfoProdotto">
-                @auth
-                    
-                    <livewire:buy-button :articleId="$article->id" :user_="Auth::user()->id" />
-                        
-                @endauth
-                @guest
-                    <a href="{{route("login")}}"><button class="button2" style="margin-inline: 5px;"><span>Acquista ora</span></button></a>
-                @endguest 
-
-                <button class="BtnContatti">
-                    <div class="sign"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+    <div
+        style="margin: 20px 10px 20px 10px;width:480px;height:380px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;">
+        @if ($article->category_id ?? '')
+            @if ($article->category_id == 1)
+                <div class="cointainerCircleIconCategory">
+                    <div class="circleIconCategoryElettronica">
+                        <svg width="32" height="24" viewBox="0 0 36 28" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M26.3333 0.666672C28.1767 0.666672 29.5917 2.07167 30.64 3.58334L30.995 4.11834L31.32 4.65167C31.4233 4.825 31.5217 4.99834 31.6167 5.165C32.9283 7.51 34.07 10.5717 34.825 13.5967C35.575 16.5983 35.99 19.7333 35.725 22.1983C35.4583 24.6733 34.1833 27.3333 31.3333 27.3333C28.7767 27.3333 26.7617 25.9667 25.125 24.6317L23.275 23.08C21.7367 21.82 20.0533 20.6667 18 20.6667C15.9467 20.6667 14.2617 21.82 12.7267 23.08L10.8767 24.63C9.23667 25.9667 7.22167 27.3333 4.66667 27.3333C1.815 27.3333 0.540003 24.6733 0.275003 22.1983C0.0116697 19.7317 0.425003 16.5983 1.175 13.5967C1.93 10.5717 3.07167 7.51 4.38334 5.165L4.68 4.65L5.005 4.11834L5.36 3.58334C6.40834 2.07167 7.82334 0.666672 9.66667 0.666672C10.5167 0.666672 11.3617 0.873338 12.1917 1.11667L13.18 1.42001C13.3433 1.47001 13.505 1.51834 13.6667 1.56334C15.1083 1.97667 16.5833 2.33334 18 2.33334C19.4167 2.33334 20.8917 1.97667 22.3333 1.56334L23.8083 1.11834C24.6383 0.873338 25.4833 0.666672 26.3333 0.666672ZM12.1667 7.33334C11.0616 7.33334 10.0018 7.77233 9.22039 8.55373C8.43899 9.33513 8 10.3949 8 11.5C8 12.6051 8.43899 13.6649 9.22039 14.4463C10.0018 15.2277 11.0616 15.6667 12.1667 15.6667C13.2717 15.6667 14.3315 15.2277 15.1129 14.4463C15.8944 13.6649 16.3333 12.6051 16.3333 11.5C16.3333 10.3949 15.8944 9.33513 15.1129 8.55373C14.3315 7.77233 13.2717 7.33334 12.1667 7.33334ZM23.8333 7.33334C23.3913 7.33334 22.9674 7.50893 22.6548 7.82149C22.3423 8.13405 22.1667 8.55798 22.1667 9V9.83334H21.3333C20.8913 9.83334 20.4674 10.0089 20.1548 10.3215C19.8423 10.6341 19.6667 11.058 19.6667 11.5C19.6667 11.942 19.8423 12.366 20.1548 12.6785C20.4674 12.9911 20.8913 13.1667 21.3333 13.1667H22.1667V14C22.1667 14.442 22.3423 14.866 22.6548 15.1785C22.9674 15.4911 23.3913 15.6667 23.8333 15.6667C24.2754 15.6667 24.6993 15.4911 25.0119 15.1785C25.3244 14.866 25.5 14.442 25.5 14V13.1667H26.3333C26.7754 13.1667 27.1993 12.9911 27.5119 12.6785C27.8244 12.366 28 11.942 28 11.5C28 11.058 27.8244 10.6341 27.5119 10.3215C27.1993 10.0089 26.7754 9.83334 26.3333 9.83334H25.5V9C25.5 8.55798 25.3244 8.13405 25.0119 7.82149C24.6993 7.50893 24.2754 7.33334 23.8333 7.33334ZM12.1667 10.6667C12.3877 10.6667 12.5996 10.7545 12.7559 10.9107C12.9122 11.067 13 11.279 13 11.5C13 11.721 12.9122 11.933 12.7559 12.0893C12.5996 12.2455 12.3877 12.3333 12.1667 12.3333C11.9457 12.3333 11.7337 12.2455 11.5774 12.0893C11.4211 11.933 11.3333 11.721 11.3333 11.5C11.3333 11.279 11.4211 11.067 11.5774 10.9107C11.7337 10.7545 11.9457 10.6667 12.1667 10.6667Z"
