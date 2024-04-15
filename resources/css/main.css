@@ -2819,3 +2819,16 @@ footer{
 
     
 }
+
+.buttonLogout{
+    border: none;
+    font-size: 18px;
+    background-color: #ffffff00;
+}
+
+.buttonLogout:hover {
+    border: none;
+    font-size: 18px;
+    color: #ED1C24;
+    background-color: #ffffff00;
+}
