@@ -65,3 +65,62 @@ window.onload = function (e) {
 }
 /** END TRANSLATE **/
 
+<<<<<<< HEAD
+=======
+
+document.addEventListener('DOMContentLoaded', function () {
+        var btn = document.querySelector('.Btn');
+        var customDropdown = document.querySelector('.custom-dropdown');
+
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            btn.classList.toggle('active');
+            customDropdown.classList.toggle('show');
+        });
+
+        document.addEventListener('click', function (e) {
+            if (!btn.contains(e.target) && !customDropdown.contains(e.target)) {
+                btn.classList.remove('active');
+                customDropdown.classList.remove('show');
+            }
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var btnCarrello = document.querySelector('.BtnCarrello');
+        var customSidebar = document.getElementById('customSidebar');
+        
+        btnCarrello.addEventListener('click', function () {
+            // Aggiungi la classe 'show-sidebar' al body quando viene cliccato il bottone
+            document.body.classList.add('show-sidebar');
+        });
+    
+        // Chiudi la sidebar quando viene cliccato ovunque al di fuori di essa
+        document.addEventListener('click', function (event) {
+            if (!customSidebar.contains(event.target) && !btnCarrello.contains(event.target)) {
+                document.body.classList.remove('show-sidebar');
+            }
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var btnCarrello = document.querySelector('.BtnCarrello');
+        var customSidebar = document.getElementById('customSidebar');
+        var closeSidebarBtn = document.getElementById('closeSidebarBtn');
+        
+        btnCarrello.addEventListener('click', function () {
+            document.body.classList.add('show-sidebar');
+        });
+    
+        closeSidebarBtn.addEventListener('click', function () {
+            document.body.classList.remove('show-sidebar');
+        });
+    
+        document.addEventListener('click', function (event) {
+            if (!customSidebar.contains(event.target) && !btnCarrello.contains(event.target)) {
+                document.body.classList.remove('show-sidebar');
+            }
+        });
+    });
+    
+>>>>>>> ca217d236e5969b3952d1d64acbfa0d76f5dfbd3
