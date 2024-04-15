@@ -16,10 +16,11 @@ class ArticleRevisorPage extends Component
 
         $articles = $query->where("is_accepted", null)->get();
 
-        return view('livewire.article-revisor-page',compact('articles'));
+        return view('livewire.article-revisor-page', compact('articles'));
     }
 
-    public function acceptArticle(Article $article) {
+    public function acceptArticle(Article $article)
+    {
 
         $article->is_accepted = 1;
         $article->save();
@@ -28,12 +29,18 @@ class ArticleRevisorPage extends Component
 
     }
 
-    public function refuseArticle(Article $article) {
+    public function refuseArticle(Article $article)
+    {
 
         $article->is_accepted = 0;
         $article->save();
 
         return Mail::to($article->user->email)->send(new RefusedArticleMail($article));
 
+    }
+
+    public function openImageModal($imageUrl)
+    {
+        $this->dispatch('openImageModal', imageUrl: $imageUrl);
     }
 }

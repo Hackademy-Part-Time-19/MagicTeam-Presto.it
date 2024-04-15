@@ -1822,6 +1822,9 @@ ul {
     border-radius: 10px;
     background: white;
     margin-top: 30px;
+    object-fit: contain;
+    max-width: 250px;
+    max-height: 150px;
 
 }
 
