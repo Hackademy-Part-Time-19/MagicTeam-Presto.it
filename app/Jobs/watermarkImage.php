@@ -24,7 +24,7 @@ class watermarkImage implements ShouldQueue
     {
         $this->path = dirname($filePath);
         $this->fileName = basename($filePath);
-        $this->watermarkImage = public_path('img\watermark.png');
+        $this->watermarkImage = public_path('img/watermark.png');
     }
 
     
@@ -43,6 +43,9 @@ class watermarkImage implements ShouldQueue
 
         $croppedImage = Image::load($srcPath)
                         ->watermark($water)
+                        ->watermarkPadding(7, 7, Manipulations::UNIT_PERCENT)
+                        ->watermarkOpacity(50)
+                        
                         ->save($srcPath);
      }
 }

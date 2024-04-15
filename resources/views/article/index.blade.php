@@ -3,14 +3,21 @@
 
 
         <div class="col-lg-8 mx-auto col-10 noarticle">
-            <p>NON CI SONO ARTICOLI</p>
+            <h5>Oops! Sembra che non ci siano ancora articoli qui!</h5>
         </div>
     @else
         
 
         <div class="col-lg-8 mx-auto col-10 text-center">
             <div class="cointainerBoxCategorie">
-                <h1 style="text-align: center">Ecco qui i nostri articoli di</h1>
+
+                @if(Str::contains(Request::url(), '/category/'))
+                    <h1 style="text-align: center">Ecco qui la categoria <strong>"{{$articles[0]->category->name}}"</strong></h1>
+                @else
+                    <h1 style="text-align: center">Ecco qui tutti gli articoli</h1>
+                @endif
+
+                
 
 
                 <div class="container main_card_container">
@@ -107,7 +114,7 @@
                                 
                             <div class="main_card_image_container">
                                 <img id="productImage_{{ $article->id }}"  @if (count($article->images) != 0)
-                                src="storage/{{$article->images[0]->path}}"@else 
+                                src="http://127.0.0.1:8000/storage/{{$article->images[0]->path}}"@else 
                                 src="/img/default-img.gif" 
                                 @endif
                                     class="img-fluid main_card_image" alt="Nessun immagine da mostrare"

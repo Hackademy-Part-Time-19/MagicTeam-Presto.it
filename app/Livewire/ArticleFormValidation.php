@@ -5,6 +5,7 @@ namespace App\Livewire;
 use App\Models\Article;
 use Livewire\Component;
 use App\Models\Category;
+use App\Jobs\RemoveFaces;
 use App\Jobs\resizeImage;
 use App\Jobs\watermarkImage;
 use Livewire\WithFileUploads;
@@ -121,10 +122,16 @@ class ArticleFormValidation extends Component
                 $newFilename = "articles/{$this->article->id}";
                 $newImage = $this->article->images()->create(['path' => $image->store($newFilename, 'public')]);
                 
-                dispatch(new watermarkImage($newImage->path));
-                dispatch(new resizeImage($newImage->path, 300, 300));
-                dispatch(new GoogleVisionSafeSearch($newImage->id));
-                dispatch(new GoogleVisionLabelImage($newImage->id));
+                RemoveFaces::withChain([
+
+                    new resizeImage($newImage->path, 300, 300),
+                    new watermarkImage($newImage->path),
+                    new GoogleVisionSafeSearch($newImage->id),
+                    new GoogleVisionLabelImage($newImage->id),
+
+
+                ])->dispatch($newImage->id);
+                
             }
         }
 

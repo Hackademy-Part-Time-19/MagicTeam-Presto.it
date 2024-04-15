@@ -65,18 +65,22 @@ window.onload = function (e) {
 }
 /** END TRANSLATE **/
 
-document.addEventListener('livewire:load', function () {
-    const images = document.querySelectorAll('.img-fluid');
 
-    images.forEach(image => {
-        image.addEventListener('click', function () {
-            const imageUrl = this.getAttribute('src');
-            const modalImage = document.getElementById('modalImage');
-            modalImage.src = imageUrl;
+document.addEventListener('DOMContentLoaded', function () {
+        var btn = document.querySelector('.Btn');
+        var customDropdown = document.querySelector('.custom-dropdown');
 
-            const imageModal = document.getElementById('imageModal');
-            const modal = new bootstrap.Modal(imageModal);
-            modal.show();
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            btn.classList.toggle('active');
+            customDropdown.classList.toggle('show');
+        });
+
+        document.addEventListener('click', function (e) {
+            if (!btn.contains(e.target) && !customDropdown.contains(e.target)) {
+                btn.classList.remove('active');
+                customDropdown.classList.remove('show');
+            }
         });
     });
-});
+
