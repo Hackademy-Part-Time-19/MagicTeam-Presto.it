@@ -81,7 +81,7 @@
                                 </div>
                             @endif
                         </div>
-                        <div wire:ignore.self class="modal fade" id="imageModal" tabindex="-1"
+                        {{-- <div wire:ignore.self class="modal fade" id="imageModal" tabindex="-1"
                             aria-labelledby="imageModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered modal-lg">
                                 <div class="modal-content">
@@ -92,7 +92,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                         <div
                             style="margin: 20px 10px 20px 10px;width:480px;height:380px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;">
                             @if ($article->category_id ?? '')

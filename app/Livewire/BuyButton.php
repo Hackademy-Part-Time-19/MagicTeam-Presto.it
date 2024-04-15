@@ -59,8 +59,19 @@ class BuyButton extends Component
 
     }
 
-    public function render()
+    public function isInCart($articleId, $userId)
     {
-        return view('livewire.buy-button');
+        $user = User::find($userId);
+        if ($user && $user->cart != null) {
+            return in_array($articleId, $user->cart);
+        }
+        return false;
+    }
+
+    public function render()
+    {   
+        $isInCart = $this->isInCart($this->articleId, $this->user_);
+
+        return view('livewire.buy-button', ['isInCart' => $isInCart]);
     }
 }
