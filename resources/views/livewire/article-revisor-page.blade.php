@@ -2,7 +2,7 @@
     <div class="col-lg-8 mx-auto col-10 custom-style-html"
         style="border-radius:10px;display: flex;flex-wrap:wrap; align-items:center; justify-content:center; margin: 20px 10px 20px 10px;">
         <div
-            style="margin: 20px 10px 20px 10px;width:480px;height:380px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;">
+            style="margin: 20px 10px 20px 10px;width:480px;height:300px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;">
 
             <h2 class="text-center">Non ci sono annunci da revisionare!!</h2>
 
@@ -10,19 +10,18 @@
         </div>
     </div>
 @else
+
     <div id="carouselControls" class="carousel slide">
-        <div class="carousel-inner">
+        <h1 style="text-align: center">Articoli da revisionare</h1>
+        <div class="carousel-inner" style="display: flex">
             @foreach ($articles as $article)
                 <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
                     <div class="col-lg-8 mx-auto col-10 custom-style-html"
                         style="border-radius:10px;display: flex;flex-wrap:wrap; align-items:center; justify-content:center; margin: 20px 10px 20px 10px;">
 
-
-
-
                         <div
-                            style="margin: 20px 10px 20px 10px;width:480px;height:420px;display:flex;align-content: space-between; flex-wrap:wrap">
-                            @if (count($article->images) != 0)
+                        style="margin: 20px 10px 20px 10px;width:480px;display:flex;flex-direction:column;justify-content:center;align-items:center;">
+                        @if (count($article->images) != 0)
                                 @if (count($article->images) == 1)
                                     <div class="container img-conteiner-revisor">
                                         @foreach ($article->images as $key => $image)
@@ -80,6 +79,32 @@
                                         alt="nessun immagine da mostrare">
                                 </div>
                             @endif
+
+                            <div style="display: flex; margin-inline:15px;flex-wrap:wrap;justify-content:center">
+                                <div
+                                    style="font-size:14px;margin-inline:10px;width:160px;border-radius:10px;border: solid 2px rgb(243, 196, 53);margin-top:10px; padding:10px 15px 10px 15px;display:flex; flex-direction:column">
+                                    <p><b>Tags:</b></p>
+                                    <div
+                                        style="border:solid 1px black; padding-left:10px;padding-right:10px;width: fit-content;border-radius:20px; height:25px; font-size:12px;padding-top:3px">
+                                        <p>ciao </p>
+                                    </div>
+                                </div>
+
+                                <div
+                                    style="margin-inline:10px;width:160px;border-radius:10px; border: solid 2px rgb(246, 80, 19);margin-top:10px; padding:10px 15px 10px 15px;display:flex; flex-direction:column;font-size:14px;">
+                                    <p><b>Revisione Immagini</b></p>
+                                    <p>Violenza:</p>
+                                    <p>Violenza:</p>
+                                    <p>Violenza:</p>  <p>Violenza:</p>
+                                    <p>Violenza:</p>
+                                    <p>Violenza:</p>  <p>Violenza:</p>
+                                    <p>Violenza:</p>
+                                    <p>Violenza:</p>  <p>Violenza:</p>
+                                    <p>Violenza:</p>
+                                    <p>Violenza:</p>
+                                    
+                                </div>
+                            </div>
                         </div>
                         {{-- <div wire:ignore.self class="modal fade" id="imageModal" tabindex="-1"
                             aria-labelledby="imageModalLabel" aria-hidden="true">

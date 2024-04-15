@@ -10,6 +10,7 @@
                     <p class="card-text text-center mb-3 sottotitolo-annuncio">Inserisci tutti i campi per aumentare le
                         tue probabilità di vendita</p>
 
+                        
                     <!-- Carosello -->
                     @if ($images)
                         <div id="carouselExampleIndicators" class="carousel slide float-left">
