@@ -64,3 +64,19 @@ window.onload = function (e) {
     googleTranslateElementInit();
 }
 /** END TRANSLATE **/
+
+document.addEventListener('livewire:load', function () {
+    const images = document.querySelectorAll('.img-fluid');
+
+    images.forEach(image => {
+        image.addEventListener('click', function () {
+            const imageUrl = this.getAttribute('src');
+            const modalImage = document.getElementById('modalImage');
+            modalImage.src = imageUrl;
+
+            const imageModal = document.getElementById('imageModal');
+            const modal = new bootstrap.Modal(imageModal);
+            modal.show();
+        });
+    });
+});
