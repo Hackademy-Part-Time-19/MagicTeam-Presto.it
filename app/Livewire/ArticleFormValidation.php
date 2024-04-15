@@ -124,7 +124,7 @@ class ArticleFormValidation extends Component
                 
                 RemoveFaces::withChain([
 
-                    new resizeImage($newImage->path, 300, 300),
+                    new resizeImage($newImage->path, 500, 300),
                     new watermarkImage($newImage->path),
                     new GoogleVisionSafeSearch($newImage->id),
                     new GoogleVisionLabelImage($newImage->id),
