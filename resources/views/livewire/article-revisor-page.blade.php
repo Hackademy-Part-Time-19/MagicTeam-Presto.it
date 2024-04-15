@@ -86,22 +86,43 @@
                                     <p><b>Tags:</b></p>
                                     <div
                                         style="border:solid 1px black; padding-left:10px;padding-right:10px;width: fit-content;border-radius:20px; height:25px; font-size:12px;padding-top:3px">
-                                        <p>ciao </p>
+                                        
+                                        @if(count($article->images) > 0)
+
+                                            @if($article->images[0]->labels != null) 
+
+                                            @foreach ($article->images[0]->labels as $label)
+                                                
+                                                <p>{{$label}}</p>
+
+                                            @endforeach
+
+                                            @else
+
+                                            @endif
+
+                                        @else
+
+                                        
+
+                                        @endif
+
                                     </div>
                                 </div>
 
                                 <div
                                     style="margin-inline:10px;width:160px;border-radius:10px; border: solid 2px rgb(246, 80, 19);margin-top:10px; padding:10px 15px 10px 15px;display:flex; flex-direction:column;font-size:14px;">
                                     <p><b>Revisione Immagini</b></p>
-                                    <p>Violenza:</p>
-                                    <p>Violenza:</p>
-                                    <p>Violenza:</p>  <p>Violenza:</p>
-                                    <p>Violenza:</p>
-                                    <p>Violenza:</p>  <p>Violenza:</p>
-                                    <p>Violenza:</p>
-                                    <p>Violenza:</p>  <p>Violenza:</p>
-                                    <p>Violenza:</p>
-                                    <p>Violenza:</p>
+                                    @if(count($article->images) > 0)
+                                    <p class="{{$article->images[0]->adult}}"><strong>Contenuto sessuale</strong></p>
+                                    <p class="{{$article->images[0]->spoof}}"><strong>Satira</strong></p>
+                                    <p class="{{$article->images[0]->medical}}"><strong>Sensibile</strong></p>
+                                    <p class="{{$article->images[0]->violence}}"><strong>Violenza</strong></p>
+                                    <p class="{{$article->images[0]->racy}}"><strong>Ammiccante</strong></p>
+                                    @else
+                                        <p>Non sono presenti immagini!</p>
+                                    @endif
+
                                     
                                 </div>
                             </div>
