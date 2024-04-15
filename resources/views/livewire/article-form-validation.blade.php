@@ -1,25 +1,28 @@
 <div class="container mb-4" style="height: 140vh">
     <div class="row">
-        <div class="col-md-6 offset-md-3">
-            
+        <div class="col-lg-6 offset-md-3">
+
             <div class="card div-annuncio">
-                <div class="card-body div-annuncio">
+                <div class="card-body">
                     <!-- Immagine, titolo e sottotitolo sopra il carosello -->
                     <img src="/img/annuncio-8.webp" alt="Logo" class="img-fluid mx-auto d-block img-annuncio">
                     <h1 class="card-title text-center mt-3 titolo-annuncio">Inserisci Prodotto</h1>
-                    <p class="card-text text-center mb-5 sottotitolo-annuncio">Inserisci tutti i campi per aumentare le
+                    <p class="card-text text-center mb-3 sottotitolo-annuncio">Inserisci tutti i campi per aumentare le
                         tue probabilità di vendita</p>
 
                     <!-- Carosello -->
                     @if ($images)
                         <div id="carouselExampleIndicators" class="carousel slide float-left">
-                            <div class="carousel-inner">
+                            <div class="carousel-inner"style="display: flex">
                                 @foreach ($images as $key => $image)
-                                    <div class="carousel-item @if($loop->last) active @endif">
-                                        <img src="{{ $image->temporaryUrl() }}" class="d-block w-100" alt="...">
+                                    <div class="carousel-item @if ($loop->last) active @endif" >
+                                        <div style="width:300px;height:300px;display:flex;align-items:center;justify-content:center;">
+                                            <img src="{{ $image->temporaryUrl() }}" class="d-block img-fluid" style="width:100%;object-fit:cover; "
+                                                alt="...">
 
-                                        <button type="button" wire:click="removeImage({{ $key }})"
-                                            class="remove-btn-annuncio">Remove</button>
+                                            <button type="button" wire:click="removeImage({{ $key }})"
+                                                class="remove-btn-annuncio">Remove</button>
+                                        </div>
                                     </div>
                                 @endforeach
                             </div>
@@ -42,7 +45,7 @@
                             @csrf
 
                             <!-- Div Circle -->
-                            <div class="form-group text-center mb-3">
+                            <div class="form-group text-center mb-3 mt-3">
                                 <div class="custom-file">
                                     <label for="carica-immagine-annuncio" class="immagine-annuncio">
                                         <div class="circle" id="circle">
