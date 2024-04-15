@@ -31,6 +31,7 @@
     <div style="height: 140px;"></div>
 
     {{$slot}}
+
     <x-footer></x-footer>
 
     <!-- START TRANSLATE -->
