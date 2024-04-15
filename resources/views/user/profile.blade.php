@@ -1,6 +1,6 @@
 <x-layout>
     <div style="background-color: #fef4d4">
-        <nav class="navbar bg-body-tertiary mt-0 pt-0">
+{{--         <nav class="navbar bg-body-tertiary mt-0 pt-0">
             <div class="container-fluid">
                 <span class="navbar-text mb-0 h1">
                     <h1>Benvenuto {{ $user->name }}</h1>
@@ -15,7 +15,18 @@
                     <h4>Articoli da approvare: {{count($articles_waiting)}}</h4>
                 </span>
             </div>
-        </nav>
+        </nav> --}}
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Enable both scrolling & backdrop</button>
+
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel" style="margin-top: 140px;">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <p>Try scrolling the rest of the page to see this option in action.</p>
+          </div>
+        </div>
 
 
 
@@ -24,7 +35,7 @@
 
 
             <div class="col-lg-8 mx-auto col-10 noarticle">
-                <p>NON HAI ANCORA CARICATO NESSUN ARTICOLO</p>
+                <p>Sembra che non ci siano ancora articoli qui! <a style="color: black" href="{{route("article.create")}}">Inizia a vendere ora!</a></p>
             </div>
         @else
             {{-- ARTICOLI APPROVATI --}}
@@ -73,7 +84,7 @@
             </div>
 
             {{-- ARTICOLI DA APPROVARE --}}
-
+            
             <div class="col-lg-8 mx-auto col-10 text-center">
                 <div class="cointainerBoxCategorie">
                     <h1 style="text-align: center">Ecco gli articoli in attesa di essere approvati:</h1>
@@ -113,7 +124,7 @@
         @endif
     </div>
 
-
+    
     <script>
         function changeImage(id) {
             document.getElementById('productImage_' + id).src = '/img/default-img.gif';
@@ -123,4 +134,6 @@
             document.getElementById('productImage_' + id).src = '/img/default-img.gif';
         }
     </script>
+
+
 </x-layout>

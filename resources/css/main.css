@@ -2794,6 +2794,17 @@ footer{
     }
 }
 
+@media only screen and (max-width: 1100px) {
+.noarticle {
+    background-color: #f3e2ad;
+    padding: 13px;
+    height: 80px;
+    color: rgb(81, 81, 81);
+    border-radius: 6px;
+    font-size: 12px;
+}
+}
+
 
 body{
 	position: relative;

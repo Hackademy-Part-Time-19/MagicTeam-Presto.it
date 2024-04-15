@@ -1,6 +1,5 @@
-<x-layout>
-    
-    {{--  <div class="container mt-2 mb-3" >
+<div>
+    <div class="container mt-2 mb-3" >
         <div class="row">
             <div class="col-md-6 offset-md-3">
                 <div class="card div-annuncio">
@@ -8,16 +7,22 @@
                         <img src="/img/login-8.webp" alt="Logo" class="img-fluid mx-auto d-block img-annuncio">
                         <h1 class="card-title text-center mt-3 titolo-annuncio">Login</h1>
                         <p class="card-text text-center mb-5 sottotitolo-annuncio">Entra nella piattaforma e inizia a pubblicare annunci<br><a href="{{route("register")}}" class="sottotitolo-annuncio">Non hai ancora un account?</a></p>
-                        <form action="{{route("login")}}" method="POST" id="productForm" style="padding-right:25px;padding-left:25px;">
+                        <form wire:submit="submit" id="productForm" style="padding-right:25px;padding-left:25px;">
                             @csrf
                             <div class="form-group mb-3 ">
                                 <label for="email" class="label-annuncio">E-mail</label>
-                                <input type="email" class="form-control input-annuncio" name="email" id="email">
+                                <input wire:model="email" type="email" class="form-control input-annuncio" name="email" id="email">
+                                @error('email')
+                                    <span class="error text-danger">{{ $message }}</span>
+                                @enderror
                             </div>
                             <div class="form-group mb-3">
                                 <label for="password" class="label-annuncio">Password</label>
-                                <input type="password" class="form-control input-annuncio" name="password"
+                                <input wire:model="password" type="password" class="form-control input-annuncio" name="password"
                                     id="password">
+                                @error('password')
+                                <span class="error text-danger">{{ $message }}</span>
+                                @enderror
                             </div>
 
 
@@ -28,8 +33,5 @@
                 </div>
             </div>
         </div>
-    </div> --}}
-
-    <livewire:login-form />
-
-</x-layout>
+    </div>
+</div>

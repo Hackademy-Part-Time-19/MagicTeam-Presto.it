@@ -24,7 +24,7 @@ class watermarkImage implements ShouldQueue
     {
         $this->path = dirname($filePath);
         $this->fileName = basename($filePath);
-        $this->watermarkImage = public_path('img\watermark.png');
+        $this->watermarkImage = public_path('img/watermark.png');
     }
 
     

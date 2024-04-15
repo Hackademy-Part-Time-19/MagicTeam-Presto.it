@@ -5,7 +5,7 @@
 
 
 
-    <div style="margin: 20px 10px 20px 10px;width:480px;height:420px;display:flex;">
+    <div style="margin: 20px 10px 20px 10px;width:480px;height:420px;display:flex;justify-content:center">
         @if (count($article->images) != 0)
             <div id="carouselExampleControls" class="carousel slide carousel-custom"
                 style="margin:20px; background: #FFFFFF;box-shadow: 0px 1px 12.6px rgba(0, 0, 0, 0.15);border-radius: 15px;align-item:center;justify-content:center;">

@@ -113,12 +113,12 @@
                             <div class="text">   {{Auth::user()->name}}</div>
                         </button>
                         <ul class="dropdown-menu dropdown-menu-end text-end" aria-labelledby="dropdownMenuButton">
-                            <li><a class="dropdown-item" href="{{route('user.profile')}}">Il mio profilo</a></li>
-                            @if (Auth::user()->is_revisor == 1)
-                                <li><a class="dropdown-item" href="{{route("revisor.index")}}">Zona revisore</a></li>
-                            @elseif (Auth::user()->is_revisor == 0)
-                                <li><a class="dropdown-item" href="{{route("revisor.request")}}">Lavora con noi</a></li>
-                            @endif 
+                            <li><a class="dropdown-item" href="{{ route('user.profile') }}">Il mio profilo</a></li>
+                            @if(Auth::user()->is_revisor == 0)
+                                <li><a class="dropdown-item" href="{{ route('revisor.request') }}">Lavora con noi</a></li>
+                            @elseif(Auth::user()->is_revisor == 1)
+                                <li><a class="dropdown-item" href="{{ route('revisor.index') }}">Zona revisore</a></li>
+                            @endif
                             <div class="dropdown-divider"></div>
                             <li><form action="{{route("logout")}}" method="POST">
                                 @csrf
