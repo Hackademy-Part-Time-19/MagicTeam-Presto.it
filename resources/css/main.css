@@ -1157,6 +1157,69 @@ ul {
     }
 }
 
+.button3 {
+    position: relative;
+    height: 35px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: linear-gradient(101.43deg, #FDC627 12.64%, #EC6907 112.5%);
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 15px;
+    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+}
+
+.button3:after {
+    content: " ";
+    width: 0%;
+    height: 100%;
+    background: #ffd401;
+    position: absolute;
+    transition: all 0.4s ease-in-out;
+    right: 0;
+}
+
+.button3:hover::after {
+    right: auto;
+    left: 0;
+    width: 100%;
+}
+
+.button3 span {
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    padding: 18px 15px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    z-index: 20;
+    transition: all 0.3s ease-in-out;
+}
+
+.button3:hover span {
+    color: #183153;
+    animation: scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
 
 
 .BtnAccettaArticolo {
@@ -2841,4 +2904,58 @@ footer{
     font-size: 18px;
     color: #ED1C24;
     background-color: #ffffff00;
+}
+
+.cust-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 250px;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+
+/* Mostra la sidebar quando il body ha la classe 'show-sidebar' */
+.show-sidebar .cust-sidebar {
+    transform: translateX(0);
+}
+
+.close-sidebar-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px; /* Posizionamento a sinistra */
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+.close-sidebar-btn:hover {
+    color: #000;
+}
+
+.eliminaCart{
+    margin-right:10px;
+    width:90%; 
+    height:30px;
+    border:solid 1px red;
+     border-radius:5px;
+     color:red;
+     text-align:center;
+}
+
+.eliminaCart:hover{
+    margin-right:10px;
+    width:90%; 
+    height:30px;
+    border:none;
+     border-radius:5px;
+     color:rgb(255, 255, 255);
+     text-align:center;
+     background-color: red;
 }

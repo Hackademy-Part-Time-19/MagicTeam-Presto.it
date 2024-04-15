@@ -84,3 +84,40 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    document.addEventListener('DOMContentLoaded', function () {
+        var btnCarrello = document.querySelector('.BtnCarrello');
+        var customSidebar = document.getElementById('customSidebar');
+        
+        btnCarrello.addEventListener('click', function () {
+            // Aggiungi la classe 'show-sidebar' al body quando viene cliccato il bottone
+            document.body.classList.add('show-sidebar');
+        });
+    
+        // Chiudi la sidebar quando viene cliccato ovunque al di fuori di essa
+        document.addEventListener('click', function (event) {
+            if (!customSidebar.contains(event.target) && !btnCarrello.contains(event.target)) {
+                document.body.classList.remove('show-sidebar');
+            }
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var btnCarrello = document.querySelector('.BtnCarrello');
+        var customSidebar = document.getElementById('customSidebar');
+        var closeSidebarBtn = document.getElementById('closeSidebarBtn');
+        
+        btnCarrello.addEventListener('click', function () {
+            document.body.classList.add('show-sidebar');
+        });
+    
+        closeSidebarBtn.addEventListener('click', function () {
+            document.body.classList.remove('show-sidebar');
+        });
+    
+        document.addEventListener('click', function (event) {
+            if (!customSidebar.contains(event.target) && !btnCarrello.contains(event.target)) {
+                document.body.classList.remove('show-sidebar');
+            }
+        });
+    });
+    

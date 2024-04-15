@@ -102,35 +102,79 @@
 
                     <div class="separatoreTastiNavBar"></div>
 
-                    <li class="nav-item dropdown text-end" style="margin-top: 10px;display:flex;flex-direction:column;align-items:end">
+                    <li class="nav-item dropdown text-end"
+                        style="margin-top: 10px;display:flex;flex-direction:column;align-items:end">
                         <button class="Btn nav-link dropdown-toggle" type="button" id="dropdownMenuButton"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             <div class="sign">
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z" fill="white" />
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z"
+                                        fill="white" />
                                 </svg>
                             </div>
-                            <div class="text">   {{Auth::user()->name}}</div>
+                            <div class="text"> {{ Auth::user()->name }}</div>
                         </button>
                         <ul class="dropdown-menu dropdown-menu-end text-end" aria-labelledby="dropdownMenuButton">
                             <li><a class="dropdown-item" href="{{ route('user.profile') }}">Il mio profilo</a></li>
-                            @if(Auth::user()->is_revisor == 0)
-                                <li><a class="dropdown-item" href="{{ route('revisor.request') }}">Lavora con noi</a></li>
+                            @if (Auth::user()->is_revisor == 0)
+                                <li><a class="dropdown-item" href="{{ route('revisor.request') }}">Lavora con noi</a>
+                                </li>
                             @elseif(Auth::user()->is_revisor == 1)
                                 <li><a class="dropdown-item" href="{{ route('revisor.index') }}">Zona revisore</a></li>
                             @endif
                             <div class="dropdown-divider"></div>
-                            <li><form action="{{route("logout")}}" method="POST">
-                                @csrf
-                                <button class="dropdown-item" type="submit">Logout</button>
-                            </form></li>
+                            <li>
+                                <form action="{{ route('logout') }}" method="POST">
+                                    @csrf
+                                    <button class="dropdown-item" type="submit">Logout</button>
+                                </form>
+                            </li>
                         </ul>
                     </li>
                     <div class="separatoreTastiNavBar"></div>
-                    <div style="display: flex;justify-content:end;">
-                        <button class="BtnCarrello" style="margin-top: 10px">
 
-                            <div class="sign"><svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                    <div style="display: flex;justify-content:end;">
+                        <!-- Sidebar -->
+                        <div class="cust-sidebar" id="customSidebar" style="z-index: 200000000000;">
+                            <button class="close-sidebar-btn" id="closeSidebarBtn">&times;</button>
+                            <h4 style="text-align: end;margin-top:15px;margin-right:10px;">Carrello</h4>
+
+                            <div style="height: 90%;">
+                                <div style="padding-top: 15px; padding-bottom: 20px; border-bottom: solid 1px gray; width: 100%; display: flex; flex-direction: column; align-items: end; margin-right: 10px; margin-top: 20px;">
+                                    <div style="width: 90%;">
+                                        <div style="display: flex; align-items: end; margin-right: 10px;">
+                                            <div style="flex: 0.5; display: flex; justify-content: left;">
+                                                <h6 style="color: darkorange; font-weight: 600;">12,50€</h6>
+                                            </div>
+                            
+                                            <div style="flex: 3;">
+                                                <h6 style="color: black; font-weight: 400;">Nome Prodotto</h6>
+                                            </div>
+                            
+                                        </div>
+                            
+                                        <button class="eliminaCart">
+                                            elimina
+                                        </button>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                            <div style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%);">
+                                <button class="button3" style="margin-inline: 5px;"><span>Acquista
+                                    ora</span></button></a>
+                            </div>
+
+
+
+                        </div>
+
+                        <!-- Bottone Carrello -->
+                        <button class="BtnCarrello" style="margin-top: 10px">
+                            <div class="sign">
+                                <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M5.68952 16C6.3878 16 6.95386 15.4339 6.95386 14.7357C6.95386 14.0374 6.3878 13.4713 5.68952 13.4713C4.99124 13.4713 4.42517 14.0374 4.42517 14.7357C4.42517 15.4339 4.99124 16 5.68952 16Z"
@@ -143,14 +187,17 @@
                                         fill="white" />
                                 </svg>
                             </div>
-
                             <div class="textCarrello">Carrello</div>
                         </button>
+
                     </div>
+
+
                 </div>
             </div>
-
         </div>
+
+</div>
 </div>
 </nav>
 </div>
