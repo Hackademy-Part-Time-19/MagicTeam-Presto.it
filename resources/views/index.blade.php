@@ -10,6 +10,7 @@
             <h4 class="sottotitoloFormRicercaHome">
                 Se stai cercando qualcosa, hai finito di cercare</h4>
         </div>
+        
         <div class="col-lg-6 mx-auto col-10 text-center">
             <form
                 action="{{ route('article.index', ['name' => $name ?? '', 'category_id' => $category_id ?? '', 'description' => $description ?? '']) }}">
