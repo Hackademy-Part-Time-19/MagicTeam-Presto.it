@@ -20,7 +20,7 @@
                         style="border-radius:10px;display: flex;flex-wrap:wrap; align-items:center; justify-content:center; margin: 20px 10px 20px 10px;">
 
                         <div
-                        style="margin: 20px 10px 20px 10px;width:480px;display:flex;flex-direction:column;justify-content:center;align-items:center;">
+                        style="margin: 20px 10px 20px 10px;width:480px;display:flex;justify-content:center;align-items:center;">
                         @if (count($article->images) != 0)
                                 @if (count($article->images) == 1)
                                     <div class="container img-conteiner-revisor">
