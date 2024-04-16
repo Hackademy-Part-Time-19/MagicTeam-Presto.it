@@ -12,6 +12,7 @@ class BuyButton extends Component
 
     public $articleId;
     public $user_;
+    protected $listeners = ['buttonUpdated'];
 
     public function buttonLogic($articleId, $user_) {
 
@@ -49,6 +50,7 @@ class BuyButton extends Component
                         $handleUser->save();
 
 
+
                     }
 
 
@@ -56,6 +58,7 @@ class BuyButton extends Component
 
         }     
 
+        $this->dispatch('cartUpdated');
 
     }
 
@@ -66,6 +69,12 @@ class BuyButton extends Component
             return in_array($articleId, $user->cart);
         }
         return false;
+    }
+
+    public function buttonUpdated()
+    {
+        // Refresh the cart component
+        $this->dispatch("render")->self();
     }
 
     public function render()

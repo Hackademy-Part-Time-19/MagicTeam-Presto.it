@@ -10,6 +10,15 @@ class Carrello extends Component
 
     public $article_id;
 
+
+    protected $listeners = ['cartUpdated'];
+
+    public function cartUpdated()
+    {
+        // Refresh the cart component
+        $this->dispatch("render")->self();
+    }
+
     public function removeArticle($article_id){
 
         $newCart = [];
@@ -21,6 +30,8 @@ class Carrello extends Component
         Auth::user()->cart = $newCart;
 
         Auth::user()->save();
+
+        $this->dispatch('buttonUpdated');
 
     }
 
